@@ -1,3 +1,62 @@
 @charset "utf-8";
 
-/* pageContents--aaaa */
+/* page-contents--login */
+/* page-contents--signup */
+.page-contents--login,
+.page-contents--signup {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+/* page-contents--empty-chart */
+/* page-contents--chart-waiting */
+/* page-contents--empty-receipt */
+.page-contents--empty-chart,
+.page-contents--chart-waiting,
+.page-contents--empty-receipt {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* page-contents--library-medical-info */
+.page-contents--library-medical-info {
+  padding-bottom: 20px;
+}
+.page-contents--library-medical-info .search-box {
+  margin-top: 24px;
+}
+
+/* layer-appointment-check-setting */
+.layer-appointment-check-setting .ui-layer__body-inner > .flex-box > .flex-box__cell:nth-child(2) {
+  margin-top: 76px;
+}
+.layer-appointment-check-setting .ui-layer__body-inner > .flex-box > .flex-box__cell:nth-child(3) .section-head {
+  margin-bottom: 56px;
+}
+
+/* layer-my-info */
+.layer-my-info .ui-form + .section {
+  margin-top: 36px;
+}
+.layer-my-info [data-checkbox-tab-panel='layerMyInfoChangePassword'].is-opened + .info-text {
+  display: none;
+}
+
+/* page-contents--error */
+.page-contents--error {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}

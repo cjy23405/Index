@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <g transform="translate(-.306 -.306)">
+        <circle data-name="타원 215" cx="11" cy="11" r="11" transform="translate(.306 .306)" style="fill:#b2b2b2"/>
+        <g data-name="그룹 6479" transform="rotate(-45 15.41 2.621)">
+            <rect data-name="사각형 21883" width="2" height="12" rx="1" transform="translate(5.368 -.211)" style="fill:#fff"/>
+            <rect data-name="사각형 21884" width="2" height="12" rx="1" transform="rotate(90 3.788 8.579)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

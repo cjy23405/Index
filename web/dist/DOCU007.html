@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- DD : 프린트 화면에서만 추가 -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/print-style.css" />
+		<!-- //DD : 프린트 화면에서만 추가 -->
+		<!-- //style -->
+	</head>
+	<body>
+		<!-- Page 1 -->
+		<div class="document">
+			<div class="document-head">
+				<div class="document-head__row">
+					<h1 class="document-head__title">처방전</h1>
+				</div>
+			</div>
+
+			<ul class="ui-list ui-list--nano">
+				<li class="ui-list__item">
+					<div class="ui-list__text">[&nbsp;&nbsp;&nbsp;&nbsp;]에는 해당되는 곳에 ∨표를 합니다.</div>
+				</li>
+			</ul>
+
+			<div class="print-info print-info--per-500 row-item-group">
+				<dl class="print-info__list">
+					<div class="print-info__item">
+						<dt class="print-info__key">발급 연월일</dt>
+						<dd class="print-info__val">
+							<span class="inline-block" style="width: 40px"></span>년<span class="inline-block" style="width: 40px"></span>월<span class="inline-block" style="width: 40px"></span>일
+						</dd>
+					</div>
+					<div class="print-info__item">
+						<dt class="print-info__key">발급 번호</dt>
+						<dd class="print-info__val"></dd>
+					</div>
+				</dl>
+			</div>
+
+			<div class="print-line-group row-item-group">
+				<p class="nano-text color-gray align-center">
+					<span class="font-weight-medium">처방전 유효기간</span><span class="inline-block" style="width: 20px"></span>발급일로부터 (<span class="inline-block" style="width: 40px"></span>) 일간 처방전
+					유효기간 내에 구매해야 합니다.
+				</p>
+			</div>
+
+			<div class="print-table row-item-group">
+				<div class="print-table__table">
+					<table>
+						<tbody>
+							<tr>
+								<th rowspan="4">개별처방 [<span class="inline-block" style="width: 10px"></span>]</th>
+								<th>동물의 이름</th>
+								<td></td>
+								<th rowspan="4">
+									동물의<br />
+									소유자 [<span class="inline-block" style="width: 10px"></span>]<br />
+									관리인 [<span class="inline-block" style="width: 10px"></span>]
+								</th>
+								<th>성명</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>동물의 종류</th>
+								<td></td>
+								<th>전화번호</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th rowspan="2">성별/연령/체중 등</th>
+								<td rowspan="2">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--flexible">암 &middot; 수</div>
+										<div class="flex-box__cell color-blur">세</div>
+									</div>
+									<div class="flex-box row-item-mini">
+										<div class="flex-box__cell flex-box__cell--flexible">임신여부</div>
+										<div class="flex-box__cell color-blur">kg</div>
+									</div>
+								</td>
+								<th>생년월일</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>농장 명</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th rowspan="3">군별처방 [<span class="inline-block" style="width: 10px"></span>]</th>
+								<th>축사번호</th>
+								<td></td>
+								<th rowspan="3">
+									동물병원 [<span class="inline-block" style="width: 10px"></span>]<br />
+									축산농장 [<span class="inline-block" style="width: 10px"></span>]
+								</th>
+								<th>명칭</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>동물의 종류</th>
+								<td></td>
+								<th>전화번호</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>마릿수</th>
+								<td></td>
+								<th>사업자등록번호</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>처방 수의사</th>
+								<td colspan="2">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--flexible">성명</div>
+										<div class="flex-box__cell color-blur">(서명 또는 날인)</div>
+									</div>
+								</td>
+								<th>수의사 면허번호</th>
+								<td colspan="2" class="color-gray-secondary font-weight-regular">제<span class="inline-block" style="width: 140px"></span>호</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="print-table row-item-group">
+				<div class="print-table__table">
+					<table>
+						<colgroup>
+							<col style="width: 70px" />
+							<col />
+							<col style="width: 130px" />
+							<col style="width: 70px" />
+							<col style="width: 100px" />
+							<col style="width: 70px" />
+							<col style="width: 100px" />
+							<col style="width: 90px" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th rowspan="2">필/선</th>
+								<th rowspan="2">성분명</th>
+								<th class="print-table__no-vertical-line"></th>
+								<th rowspan="2">
+									용량<br />
+									(1회 투약량)
+								</th>
+								<th rowspan="2">용법</th>
+								<th rowspan="2">
+									처방일수<br />
+									(투약일수)
+								</th>
+								<th rowspan="2">
+									판매수량<br />
+									(포장단위)
+								</th>
+								<th rowspan="2">비고</th>
+							</tr>
+							<tr>
+								<th>권장 제품명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<section class="row-contents-group">
+				<div class="print-line-group print-line-group--secondary row-item-group">
+					<h2 class="nano-text color-gray font-weight-medium align-center">의약품 판매 내용</h2>
+				</div>
+
+				<div class="print-table row-item-group">
+					<div class="print-table__table">
+						<table>
+							<tbody>
+								<tr>
+									<th>판매 기관</th>
+									<th>명칭</th>
+									<td></td>
+									<th>대표자 성명</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th>판매 약사</th>
+									<th>성명</th>
+									<td class="color-blur align-right">(서명 또는 날인)</td>
+									<th>면허번호</th>
+									<td></td>
+								</tr>
+								<tr>
+									<th colspan="2">판매 연월일</th>
+									<td></td>
+									<th>비고</th>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="print-table row-item-group">
+					<div class="print-table__table">
+						<table>
+							<colgroup>
+								<col style="width: 70px" />
+								<col />
+								<col style="width: 130px" />
+								<col style="width: 100px" />
+								<col style="width: 100px" />
+								<col style="width: 100px" />
+								<col style="width: 100px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>필/선</th>
+									<th>판매 제품명(제조사)</th>
+									<th>규격(포장 단위)</th>
+									<th>판매량</th>
+									<th>유통기간</th>
+									<th>휴약기간</th>
+									<th>비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- //Page 1 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

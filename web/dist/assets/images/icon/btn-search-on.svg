@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.817" height="15.819" viewBox="0 0 15.817 15.819">
+    <g data-name="타원 1" style="stroke-width:2px;stroke:#243b57;fill:none">
+        <circle cx="7" cy="7" r="7" style="stroke:none"/>
+        <circle cx="7" cy="7" r="6" style="fill:none"/>
+    </g>
+    <g data-name="사각형 19473" transform="rotate(-45 19.053 -6.476)" style="fill:#888;stroke:#243b57">
+        <rect width="2" height="6" rx="1" style="stroke:none"/>
+        <rect x=".5" y=".5" width="1" height="5" rx=".5" style="fill:none"/>
+    </g>
+</svg>

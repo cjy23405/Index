@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- header -->
+				<header class="header">
+					<div class="header__head">
+						<h1 class="header__logo">
+							<a href="" class="header__logo-link">
+								<!-- Case : 이미지 등록 안했을 때
+								<div class="header__logo-image"></div>
+								-->
+								<div class="header__logo-image"><img src="./assets/images/_dummy/img-logo-hospital.png" alt="" onerror="this.parentNode.className += ' is-error';" /></div>
+								<div class="header__logo-text">X Caliber EVR</div>
+							</a>
+						</h1>
+					</div>
+					<div class="header__body">
+						<div class="header__body-scroller ui-scroller">
+							<div class="header__body-inner">
+								<nav class="gnb">
+									<h2 class="for-a11y">Global navigation bar</h2>
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--001"></span>
+												<span class="gnb__text">원무</span>
+											</a>
+										</li>
+										<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+										<li class="gnb__item is-active">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--002"></span>
+												<span class="gnb__text">진료</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--003"></span>
+												<span class="gnb__text">검사</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--004"></span>
+												<span class="gnb__text">입원</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--005"></span>
+												<span class="gnb__text">일정</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--006"></span>
+												<span class="gnb__text">통계</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--007"></span>
+												<span class="gnb__text">관리</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--008"></span>
+												<span class="gnb__text">라이브러리</span>
+											</a>
+										</li>
+									</ul>
+									<!-- 2022.10.28 : add : 메뉴 추가 -->
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--009"></span>
+												<span class="gnb__text">메뉴얼</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--010"></span>
+												<span class="gnb__text">오픈소스 라이선스</span>
+											</a>
+										</li>
+									</ul>
+									<!-- //2022.10.28 : add : 메뉴 추가 -->
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- 2022.10.28 : mod : 하단 영역 구성 변경 -->
+					<div class="header__foot">
+						<div class="header__my">
+							<a href="" class="header__my-link">
+								<div class="header__my-icon">
+									<div class="header__my-icon-text">민수</div>
+								</div>
+								<div class="header__my-contents">
+									<div class="header__my-name">김민수</div>
+									<div class="header__my-room">진료실 1</div>
+								</div>
+							</a>
+							<a href="" class="header__my-logout">
+								<span class="for-a11y">로그아웃</span>
+							</a>
+						</div>
+					</div>
+					<!-- //2022.10.28 : mod : 하단 영역 구성 변경 -->
+				</header>
+				<!-- //header -->
+
+				<!-- 접수/예약 -->
+				<div class="side-widget">
+					<!-- DD : data-sizes 속성으로 처음 세팅 할 사이즈 지정. (백분율 수치) | 기본 값 50, 50 으로 해주세요. -->
+					<div class="ui-split" id="receptionDesk" data-sizes="65, 35">
+						<div class="ui-split__cell">
+							<!-- 접수 -->
+							<section class="widget">
+								<div class="widget__head">
+									<div class="widget-head">
+										<div class="widget-head__left">
+											<h2 class="widget-head__title">접수</h2>
+										</div>
+										<div class="widget-head__right">
+											<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-widget-sorting">
+												<div class="ui-dropdown__head">
+													<div class="ui-dropdown__text js-ui-dropdown__watch">김민수</div>
+													<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+														<span class="for-a11y">
+															menu
+															<span class="open-text">open</span>
+															<span class="close-text">close</span>
+														</span>
+													</button>
+												</div>
+												<div class="ui-dropdown__layer js-ui-dropdown__layer">
+													<div class="ui-dropdown__contents">
+														<ul class="ui-dropdown__list">
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="김민수">김민수</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="홍길동">홍길동</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="미카엘 르마노프">미카엘 르마노프</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="widget__body">
+									<div class="widget__body-scroller ui-scroller">
+										<div class="widget__body-inner">
+											<!-- Case : 목록 없을 때 -->
+											<div class="ui-empty">
+												<div class="ui-empty__object ui-empty__object--reception"></div>
+												<p class="ui-empty__text">접수 이력이 없습니다</p>
+											</div>
+											<!-- //Case : 목록 없을 때 -->
+
+											<!-- list -->
+											<div class="patients">
+												<ul class="patients__list">
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">호루스</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<span class="info-tags__item">초진</span>
+																	<span class="info-tags__item">비대성심근병증</span>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--ongoing-fill">진료중</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">바히티</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">감기</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">베누</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">기타 : 식욕부진</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">케프리</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">케프리</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">몽타루트</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">중성화 수술</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- //list -->
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- //접수 -->
+						</div>
+						<div class="ui-split__cell">
+							<!-- 예약 -->
+							<section class="widget">
+								<div class="widget__head">
+									<div class="widget-head">
+										<div class="widget-head__left">
+											<h2 class="widget-head__title">예약</h2>
+										</div>
+										<div class="widget-head__right">
+											<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-widget-sorting">
+												<div class="ui-dropdown__head">
+													<div class="ui-dropdown__text js-ui-dropdown__watch">김민수</div>
+													<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+														<span class="for-a11y">
+															menu
+															<span class="open-text">open</span>
+															<span class="close-text">close</span>
+														</span>
+													</button>
+												</div>
+												<div class="ui-dropdown__layer js-ui-dropdown__layer">
+													<div class="ui-dropdown__contents">
+														<ul class="ui-dropdown__list">
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="김민수">김민수</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="홍길동">홍길동</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="미카엘 르마노프">미카엘 르마노프</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="widget__body">
+									<div class="widget__body-scroller ui-scroller">
+										<div class="widget__body-inner">
+											<!-- Case : 목록 없을 때 -->
+											<div class="ui-empty">
+												<div class="ui-empty__object ui-empty__object--appointment"></div>
+												<p class="ui-empty__text">예약 이력이 없습니다</p>
+											</div>
+											<!-- //Case : 목록 없을 때 -->
+
+											<!-- list -->
+											<div class="patients">
+												<ul class="patients__list">
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">호루스</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">바히티</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">베누</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">케프리</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">몽타루트</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- //list -->
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- //예약 -->
+						</div>
+					</div>
+					<div class="side-widget__foot">
+						<div class="ui-buttons ui-buttons--regular ui-buttons--no-margin">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<a href="" class="ui-basic-button ui-basic-button--regular">
+										<span class="ui-basic-button__text">신규 등록</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //접수/예약 -->
+
+				<!-- 채팅 -->
+				<div class="chat">
+					<section class="widget widget--chat">
+						<div class="widget__head">
+							<div class="widget-head">
+								<div class="widget-head__left">
+									<h2 class="widget-head__title">채팅</h2>
+								</div>
+								<!-- 2022.12.02 : add : 정상/에러 케이스 추가 -->
+								<div class="widget-head__right">
+									<!-- Case : 정상 -->
+									<div class="ui-light is-online"></div>
+									<!-- //Case : 정상 -->
+									<!-- Case : 에러 -->
+									<div class="ui-light is-error"></div>
+									<!-- //Case : 에러 -->
+								</div>
+								<!-- //2022.12.02 : add : 정상/에러 케이스 추가 -->
+							</div>
+						</div>
+						<div class="widget__body">
+							<!-- DD : uiJSScrollTo($('#chatScroller'), [0, 'last']); 함수 호출로 새 메세지 수신/발신 시 스크롤 값 조절 -->
+							<div class="widget__body-scroller ui-scroller" data-init-y="last" id="chatScroller">
+								<div class="widget__body-inner">
+									<div class="chat-view">
+										<ul class="chat-view__list">
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여하고 X-Ray (Thorax, Abdomen)을 촬영해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2022.12.02 : add : 에러 케이스 추가 -->
+						<!-- Case : 에러 -->
+						<div class="widget__error">
+							<p class="widget__error-text">
+								연결이 해제되었습니다.<br />
+								페이지를 새로고침하거나 다시 로그인 해주세요.
+							</p>
+						</div>
+						<!-- //Case : 에러 -->
+						<!-- //2022.12.02 : add : 에러 케이스 추가 -->
+						<div class="widget__foot">
+							<div class="chat-form">
+								<div class="chat-form__area">
+									<textarea class="chat-form__input js-auto-height-textarea" title="메세지"></textarea>
+								</div>
+								<button type="button" class="ui-button chat-form__submit">
+									<span class="for-a11y">전송</span>
+								</button>
+							</div>
+						</div>
+					</section>
+				</div>
+				<!-- //채팅 -->
+
+				<!-- 검색 -->
+				<div class="search-bar">
+					<div class="search-bar__form">
+						<div class="ui-input-block">
+							<input type="text" class="ui-input" title="환자 검색" placeholder="환자, 보호자를 검색해 주세요." />
+						</div>
+					</div>
+					<div class="search-bar__layer">
+						<div class="search-bar__layer-body ui-scroller">
+							<!-- list -->
+							<div class="search-result">
+								<ul class="search-result__list">
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- 2022.12.02 : mod : 태그 구조 수정 -->
+						<a href="" class="search-bar__layer-foot">
+							<p class="search-bar__layer-foot-text">등록된 환자 또는 보호자가 없나요?<span class="search-bar__layer-foot-link">등록하기</span></p>
+						</a>
+						<!-- //2022.12.02 : mod : 태그 구조 수정 -->
+					</div>
+				</div>
+				<!-- //검색 -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<div class="chart-head row-contents">
+							<div class="chart-head__left">
+								<div class="chart-head__title-area">
+									<h2 class="chart-title">G20220301001&nbsp;&nbsp;보호자이름</h2>
+								</div>
+								<div class="chart-head__cell">
+									<p class="basic-text color-blue-black">010-4879-9873</p>
+								</div>
+								<!-- 2022.10.24 : mod : chart-head__cell--small 클래스 추가 -->
+								<div class="chart-head__cell chart-head__cell--small">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">
+												<span class="ui-basic-button__text">보호자 조회</span>
+											</button>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary">
+												<span class="ui-basic-button__text">예치금 관리</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="chart-head__right">
+								<div class="chart-head__cell">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<!-- 2022.12.02 : mod : 구조 변경 -->
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+												<span class="ui-basic-button__text">문서발급</span>
+											</button>
+											<!-- //2022.12.02 : mod : 구조 변경 -->
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small">
+												<span class="ui-basic-button__text">예약</span>
+											</button>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+												<span class="ui-basic-button__text">입원</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- 2022.10.11 : del : 기능 삭제
+								<div class="chart-head__cell">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<div class="ui-select-block ui-select-block--secondary ui-select-block--small input-width-status">
+												<select class="ui-select" title="업무 선택">
+													<option value="">원무</option>
+													<option value="">option 1</option>
+													<option value="">option 2</option>
+													<option value="">option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<div class="ui-select-block ui-select-block--secondary ui-select-block--small input-width-status">
+												<select class="ui-select" title="상태 선택">
+													<option value="">수납대기</option>
+													<option value="" selected>수납완료</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+												<span class="ui-basic-button__text">변경</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								-->
+							</div>
+						</div>
+
+						<div class="ui-tab side-margin-contents">
+							<div class="ui-tab__scroller ui-scroller">
+								<ul class="ui-tab__list">
+									<li class="ui-tab__item">
+										<a href="" class="ui-tab__link">
+											<span class="ui-tab__link-text">수납대기</span>
+										</a>
+									</li>
+									<li class="ui-tab__item">
+										<a href="" class="ui-tab__link is-active">
+											<span class="ui-tab__link-text">수납완료</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<h3 class="for-a11y">수납완료</h3>
+
+						<div class="panel side-margin-contents">
+							<div class="panel__head">
+								<div class="panel-head">
+									<div class="panel-head__left">
+										<!-- 2022.10.11 : mod : 구조 수정 -->
+										<form action="">
+											<div class="flex-box">
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<div class="flex-box js-datepicker-range">
+														<div class="flex-box__cell flex-box__cell--small-margin">
+															<div class="ui-input-block ui-input-block--date ui-input-block--small input-width-date">
+																<input type="text" class="ui-input js-datepicker-range__min" title="수납완료 시작 날짜" placeholder="연도.월.일" value="2022.07.01" />
+															</div>
+														</div>
+														<div class="flex-box__cell flex-box__cell--small-margin">
+															<!-- 2022.11.03 : mod : 텍스트 수정 -->
+															<div class="small-text color-blue-black">~</div>
+														</div>
+														<div class="flex-box__cell flex-box__cell--small-margin">
+															<div class="ui-input-block ui-input-block--date ui-input-block--small input-width-date">
+																<input type="text" class="ui-input js-datepicker-range__max" title="수납완료 마지막 날짜" placeholder="연도.월.일" value="2022.07.30" />
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+														<span class="ui-basic-button__text">조회</span>
+													</button>
+												</div>
+											</div>
+										</form>
+										<!-- //2022.10.11 : mod : 구조 수정 -->
+									</div>
+								</div>
+							</div>
+							<div class="panel__body">
+								<div class="panel__body-scroller ui-scroller">
+									<div class="panel__body-inner">
+										<div class="ui-empty">
+											<div class="ui-empty__object ui-empty__object--payment"></div>
+											<p class="ui-empty__text">수납 내역이 없습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel--transparent side-margin-contents"></div>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- 2022.10.11 : add : 테스트 소스 추가 -->
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //2022.10.11 : add : 테스트 소스 추가 -->
+		<!-- //script -->
+	</body>
+</html>

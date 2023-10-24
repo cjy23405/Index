@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- header -->
+				<header class="header">
+					<div class="header__head">
+						<h1 class="header__logo">
+							<a href="" class="header__logo-link">
+								<!-- Case : 이미지 등록 안했을 때
+								<div class="header__logo-image"></div>
+								-->
+								<div class="header__logo-image"><img src="./assets/images/_dummy/img-logo-hospital.png" alt="" onerror="this.parentNode.className += ' is-error';" /></div>
+								<div class="header__logo-text">X Caliber EVR</div>
+							</a>
+						</h1>
+					</div>
+					<div class="header__body">
+						<div class="header__body-scroller ui-scroller">
+							<div class="header__body-inner">
+								<nav class="gnb">
+									<h2 class="for-a11y">Global navigation bar</h2>
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--001"></span>
+												<span class="gnb__text">원무</span>
+											</a>
+										</li>
+										<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+										<li class="gnb__item is-active">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--002"></span>
+												<span class="gnb__text">진료</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--003"></span>
+												<span class="gnb__text">검사</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--004"></span>
+												<span class="gnb__text">입원</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--005"></span>
+												<span class="gnb__text">일정</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--006"></span>
+												<span class="gnb__text">통계</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--007"></span>
+												<span class="gnb__text">관리</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--008"></span>
+												<span class="gnb__text">라이브러리</span>
+											</a>
+										</li>
+									</ul>
+									<!-- 2022.10.28 : add : 메뉴 추가 -->
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--009"></span>
+												<span class="gnb__text">메뉴얼</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--010"></span>
+												<span class="gnb__text">오픈소스 라이선스</span>
+											</a>
+										</li>
+									</ul>
+									<!-- //2022.10.28 : add : 메뉴 추가 -->
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- 2022.10.28 : mod : 하단 영역 구성 변경 -->
+					<div class="header__foot">
+						<div class="header__my">
+							<a href="" class="header__my-link">
+								<div class="header__my-icon">
+									<div class="header__my-icon-text">민수</div>
+								</div>
+								<div class="header__my-contents">
+									<div class="header__my-name">김민수</div>
+									<div class="header__my-room">진료실 1</div>
+								</div>
+							</a>
+							<a href="" class="header__my-logout">
+								<span class="for-a11y">로그아웃</span>
+							</a>
+						</div>
+					</div>
+					<!-- //2022.10.28 : mod : 하단 영역 구성 변경 -->
+				</header>
+				<!-- //header -->
+
+				<!-- 채팅 -->
+				<div class="chat">
+					<section class="widget widget--chat">
+						<div class="widget__head">
+							<div class="widget-head">
+								<div class="widget-head__left">
+									<h2 class="widget-head__title">채팅</h2>
+								</div>
+								<!-- 2022.12.02 : add : 정상/에러 케이스 추가 -->
+								<div class="widget-head__right">
+									<!-- Case : 정상 -->
+									<div class="ui-light is-online"></div>
+									<!-- //Case : 정상 -->
+									<!-- Case : 에러 -->
+									<div class="ui-light is-error"></div>
+									<!-- //Case : 에러 -->
+								</div>
+								<!-- //2022.12.02 : add : 정상/에러 케이스 추가 -->
+							</div>
+						</div>
+						<div class="widget__body">
+							<!-- DD : uiJSScrollTo($('#chatScroller'), [0, 'last']); 함수 호출로 새 메세지 수신/발신 시 스크롤 값 조절 -->
+							<div class="widget__body-scroller ui-scroller" data-init-y="last" id="chatScroller">
+								<div class="widget__body-inner">
+									<div class="chat-view">
+										<ul class="chat-view__list">
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여하고 X-Ray (Thorax, Abdomen)을 촬영해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2022.12.02 : add : 에러 케이스 추가 -->
+						<!-- Case : 에러 -->
+						<div class="widget__error">
+							<p class="widget__error-text">
+								연결이 해제되었습니다.<br />
+								페이지를 새로고침하거나 다시 로그인 해주세요.
+							</p>
+						</div>
+						<!-- //Case : 에러 -->
+						<!-- //2022.12.02 : add : 에러 케이스 추가 -->
+						<div class="widget__foot">
+							<div class="chat-form">
+								<div class="chat-form__area">
+									<textarea class="chat-form__input js-auto-height-textarea" title="메세지"></textarea>
+								</div>
+								<button type="button" class="ui-button chat-form__submit">
+									<span class="for-a11y">전송</span>
+								</button>
+							</div>
+						</div>
+					</section>
+				</div>
+				<!-- //채팅 -->
+
+				<!-- 검색 -->
+				<div class="search-bar">
+					<div class="search-bar__form">
+						<div class="ui-input-block">
+							<input type="text" class="ui-input" title="환자 검색" placeholder="환자, 보호자를 검색해 주세요." />
+						</div>
+					</div>
+					<div class="search-bar__layer">
+						<div class="search-bar__layer-body ui-scroller">
+							<!-- list -->
+							<div class="search-result">
+								<ul class="search-result__list">
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- 2022.12.02 : mod : 태그 구조 수정 -->
+						<a href="" class="search-bar__layer-foot">
+							<p class="search-bar__layer-foot-text">등록된 환자 또는 보호자가 없나요?<span class="search-bar__layer-foot-link">등록하기</span></p>
+						</a>
+						<!-- //2022.12.02 : mod : 태그 구조 수정 -->
+					</div>
+				</div>
+				<!-- //검색 -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents page-contents--library-medical-info">
+						<!-- Tab -->
+						<div class="ui-tab side-margin-contents">
+							<div class="ui-tab__scroller ui-scroller">
+								<ul class="ui-tab__list">
+									<li class="ui-tab__item">
+										<a href="" class="ui-tab__link is-active">
+											<span class="ui-tab__link-text">의료정보</span>
+										</a>
+									</li>
+									<li class="ui-tab__item">
+										<a href="" class="ui-tab__link">
+											<span class="ui-tab__link-text">템플릿</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Tab -->
+
+						<h2 class="for-a11y">라이브러리 - 의료정보</h2>
+
+						<div class="flex-box side-margin-contents">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-medium">
+									<div class="ui-dropdown__head">
+										<div class="ui-dropdown__text">백신/예방약 제품</div>
+										<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+											<span class="for-a11y">
+												menu
+												<span class="open-text">open</span>
+												<span class="close-text">close</span>
+											</span>
+										</button>
+									</div>
+									<div class="ui-dropdown__layer js-ui-dropdown__layer">
+										<div class="ui-dropdown__contents">
+											<ul class="ui-dropdown__list">
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">행위/수가 코드</a>
+												</li>
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">백신/예방약 제품</a>
+												</li>
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">진단검사 목록</a>
+												</li>
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">약속검사 그룹</a>
+												</li>
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">성분 코드</a>
+												</li>
+												<li class="ui-dropdown__item">
+													<a href="" class="ui-dropdown__link">의약품 코드</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 2022.12.02 : add : 진행중 문구 추가 -->
+							<div class="flex-box__cell">
+								<div class="download">
+									<div class="download__text">다운로드 진행중 [1280/4480]</div>
+								</div>
+							</div>
+							<!-- //2022.12.02 : add : 진행중 문구 추가 -->
+							<!-- 2022.12.02 : mod : flex-box__cell--medium-margin 클래스 값 추가 -->
+							<div class="flex-box__cell flex-box__cell--medium-margin">
+								<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+									<span class="ui-basic-button__text">최신 데이터 다운로드</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- Search box -->
+						<div class="search-box side-margin-contents">
+							<form action="">
+								<div class="search-box__body">
+									<div class="search-box__contents">
+										<div class="search-form">
+											<dl class="search-form__list">
+												<div class="search-form__item">
+													<dt class="search-form__key">코드</dt>
+													<dd class="search-form__val">
+														<div class="ui-input-block ui-input-block--small input-width-regular">
+															<input type="text" class="ui-input" title="코드" />
+														</div>
+													</dd>
+												</div>
+												<div class="search-form__item">
+													<dt class="search-form__key">축종</dt>
+													<dd class="search-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular-small">
+															<select class="ui-select" title="축종">
+																<option value="">전체</option>
+																<option value="">개</option>
+																<option value="">고양이</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="search-form__item">
+													<dt class="search-form__key">백신 명</dt>
+													<dd class="search-form__val">
+														<div class="ui-input-block ui-input-block--small input-width-medium">
+															<input type="text" class="ui-input" title="백신 명" />
+														</div>
+													</dd>
+												</div>
+												<div class="search-form__item">
+													<dt class="search-form__key">유효성</dt>
+													<dd class="search-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular-small">
+															<select class="ui-select" title="유효성">
+																<option value="">Y</option>
+																<option value="">N</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="search-form__item">
+													<dt class="search-form__key">사용여부</dt>
+													<dd class="search-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular-small">
+															<select class="ui-select" title="사용여부">
+																<option value="">전체</option>
+																<option value="">Y</option>
+																<option value="">N</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+									<div class="search-box__button-area">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+											<span class="ui-basic-button__text">조회</span>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- //Search box -->
+
+						<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--right side-margin-contents">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button board-button board-button--download">
+										<span class="for-a11y">다운로드</span>
+									</button>
+								</li>
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button board-button board-button--add">
+										<span class="for-a11y">추가</span>
+									</button>
+								</li>
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button board-button board-button--save">
+										<span class="for-a11y">저장하기</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+
+						<!-- List -->
+						<div class="ui-table side-margin-contents row-item-group-small">
+							<table>
+								<colgroup>
+									<col style="width: 160px" />
+									<col style="width: 80px" />
+									<col />
+									<col />
+									<col style="width: 80px" />
+									<col style="width: 80px" />
+									<col style="width: 80px" />
+									<col style="width: 80px" />
+									<col style="width: 160px" />
+									<col style="width: 160px" />
+									<col style="width: 83px" />
+									<col style="width: 83px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>코드</th>
+										<th>축종</th>
+										<th>분류코드</th>
+										<th>백신 명</th>
+										<th>경로</th>
+										<th>기본 간격</th>
+										<th>기본 차수</th>
+										<th>추가 간격</th>
+										<th>Download date</th>
+										<th>Updated date</th>
+										<th>유효성</th>
+										<th>사용여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL 내용이 길어지면 말줄임 처리 내용이 길어지면 말줄임 처리">DHPPL 내용이 길어지면 말줄임 처리 내용이 길어지면 말줄임 처리</td>
+										<td class="align-center ellipsis" title="DHPPL 내용이 길어지면 말줄임 처리 내용이 길어지면 말줄임 처리">DHPPL 내용이 길어지면 말줄임 처리 내용이 길어지면 말줄임 처리</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="14" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="5" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="14" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="2" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="14" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="2" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="14" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="2" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="14" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="2" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="1" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="1" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="주사" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<td class="align-center">개</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 -->
+										<!-- 2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<td class="align-center ellipsis" title="DHPPL">DHPPL</td>
+										<!-- //2022.12.02 : mod : 수정불가 케이스 추가 및 ellipsis 클래스 값, title 속성 추가 -->
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="경구" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="개" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="개" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="개" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="개" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="고양이" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="고양이" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="align-center">VCC001</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="축종" value="고양이" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="분류코드" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="백신 명" value="DHPPL" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="경로" value="바르는 약" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 간격" value="30" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="기본 차수" value="-" />
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-right" title="추가 간격" value="-" />
+												</div>
+											</div>
+										</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">Y</td>
+										<td>
+											<div class="ui-table__input-cell">
+												<div class="ui-input-block ui-input-block--cell">
+													<input type="text" class="ui-input align-center" title="사용여부" value="Y" />
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="ui-table__foot">
+								<div class="ui-table__cell-left"></div>
+								<div class="ui-table__cell-center">
+									<nav class="pagination">
+										<h3 class="for-a11y">Pagination</h3>
+										<ul class="pagination__list">
+											<li class="pagination__item">
+												<!-- DD : 첫번째 페이지일 경우 disabled 속성 추가 -->
+												<button type="button" class="ui-button pagination__link pagination__link--prev">
+													<span class="for-a11y">이전</span>
+												</button>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">1</a>
+											</li>
+											<li class="pagination__item">
+												<span class="pagination__ellipsis">...</span>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">7</a>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">8</a>
+											</li>
+											<li class="pagination__item">
+												<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+												<a href="" class="pagination__link is-active">9</a>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">10</a>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">11</a>
+											</li>
+											<li class="pagination__item">
+												<span class="pagination__ellipsis">...</span>
+											</li>
+											<li class="pagination__item">
+												<a href="" class="pagination__link">999</a>
+											</li>
+											<li class="pagination__item">
+												<!-- DD : 마지막 페이지일 경우 disabled 속성 추가 -->
+												<button type="button" class="ui-button pagination__link pagination__link--next">
+													<span class="for-a11y">다음</span>
+												</button>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="ui-table__cell-right"></div>
+							</div>
+						</div>
+						<!-- //List -->
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

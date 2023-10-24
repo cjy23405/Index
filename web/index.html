@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="_guide">
     <head>
         <title></title>
 
@@ -8,1048 +8,2332 @@
 
         <!-- style -->
         <link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
-        <style>
-            body {
-                margin: 0;
-            }
-            .isEmphasis {
-                font-weight: 700;
-                color: #ff706e;
-            }
-            .indexWrap {
-                box-sizing: border-box;
-                min-width: 1900px;
-                padding: 20px;
-            }
-            .indexTitle {
-                font-size: 30px;
-                line-height: 40px;
-                margin: 0 0 20px;
-            }
-            .indexLinks:before {
-                content: '';
-                display: table;
-            }
-            .indexLinks__inner {
-                margin: -10px 0 0 -10px;
-            }
-            .indexLinks__inner:after {
-                content: '';
-                display: table;
-                clear: both;
-            }
-            .indexLinks a {
-                display: block;
-                margin: 10px 0 0 10px;
-                float: left;
-                padding: 5px 15px;
-                font-size: 14px;
-                line-height: 20px;
-                color: #fff;
-                text-decoration: none;
-                border-radius: 5px;
-                background: #666;
-            }
-            .indexGnb {
-                margin: 20px 0;
-            }
-            .indexBottom {
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                min-width: 1900px;
-                box-sizing: border-box;
-                padding: 10px 20px;
-                background: rgba(0, 0, 0, 0.4);
-            }
-            .indexBottom a {
-                background-color: #066cb3;
-            }
-            .indexSection {
-                border-radius: 5px;
-                background-color: #fff;
-            }
-            .indexSection + .indexSection {
-                margin-top: 20px;
-            }
-            .indexSection--clicked {
-                -webkit-animation: indexSection-clicked 0.8s linear;
-                animation: indexSection-clicked 0.8s linear;
-            }
-            @-webkit-keyframes indexSection-clicked {
-                0% {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-                30% {
-                    background-color: rgba(255, 202, 222, 1);
-                }
-                70% {
-                    background-color: rgba(255, 202, 222, 1);
-                }
-                100% {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-            }
-            @keyframes indexSection-clicked {
-                0% {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-                30% {
-                    background-color: rgba(255, 202, 222, 1);
-                }
-                70% {
-                    background-color: rgba(255, 202, 222, 1);
-                }
-                100% {
-                    background-color: rgba(255, 255, 255, 1);
-                }
-            }
-            .indexSection__title {
-                margin: 0;
-                padding: 5px 15px;
-                font-size: 14px;
-                line-height: 20px;
-                color: #fff;
-                border-radius: 5px 5px 0 0;
-                background: #333;
-            }
-            .indexTable > table {
-                width: 100%;
-                table-layout: fixed;
-                margin: 0;
-                padding: 0;
-                border-spacing: 0;
-                box-sizing: border-box;
-            }
-            .indexTable > table > thead > tr > th,
-            .indexTable > table > tbody > tr > th,
-            .indexTable > table > tbody > tr > td {
-                box-sizing: border-box;
-                font-size: 12px;
-                line-height: 18px;
-                text-align: left;
-                padding: 5px 10px;
-                border: 0 solid #cdcdcd;
-                border-width: 0 1px 1px 0;
-                background: none;
-                word-break: keep-all;
-                word-wrap: break-word;
-            }
-            .indexTable > table > tbody > tr:hover > th,
-            .indexTable > table > tbody > tr:hover > td {
-                background-color: #f6f6f6;
-            }
-            .indexTable > table > thead > tr > th:first-child,
-            .indexTable > table > tbody > tr > th:first-child,
-            .indexTable > table > tbody > tr > td:first-child {
-                border-left-width: 1px;
-            }
-            .indexTable > table > thead > tr > th {
-                border-top-width: 1px;
-            }
-            .indexTable > table > thead > tr > th,
-            .indexTable > table > tbody > tr > th {
-                background-color: #e8e8e8;
-            }
-            .indexTable > table > tbody > tr:last-child > td:first-child {
-                border-radius: 0 0 0 5px;
-            }
-            .indexTable > table > tbody > tr:last-child > td:last-child {
-                border-radius: 0 0 5px 0;
-            }
-            .indexStatus {
-                display: inline-block;
-                vertical-align: top;
-                padding: 3px 8px;
-                margin: -3px 0;
-                background: #999;
-                color: #fff;
-                border-radius: 5px;
-            }
-            .indexStatus--ing {
-                background-color: #cf8800;
-            }
-            .indexStatus--end {
-                background-color: #00a6a0;
-            }
-            .indexStatus--moding {
-                background-color: #ff4594;
-            }
-            .indexLog {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-            .indexLog__item {
-                position: relative;
-                padding-left: 80px;
-            }
-            .indexLog__itemDate {
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-            .indexText {
-                margin-bottom: 20px;
-            }
-        </style>
         <!-- //style -->
+
+        <!-- guide style -->
+        <link type="text/css" rel="stylesheet" href="./guide/assets/css/default.css" />
+        <!-- //guide style -->
     </head>
     <body>
-        <div class="indexWrap">
-            <h1 class="indexTitle"></h1>
-            <div class="indexGnb">
-                <div class="indexLinks">
-                    <div class="indexLinks__inner">
-                        <a href="./guide-popup.html" target="_blank">레이어 팝업 가이드</a>
-                        <a href="./guide-component.html" target="_blank">컴포넌트 가이드</a>
-                        <a href="./guide-script.html" target="_blank">스크립트 가이드</a>
+        <div id="wrap">
+            <div class="_guideIndexWrap">
+                <header class="_guideHeader">
+                    <h1 class="_guideHeader__title">
+                        <a href="./index.html" class="_guideHeader__titleLink"></a>
+                    </h1>
+                    <div class="_guideHeader__nav">
+                        <ul class="_guideHeader__navList">
+                            <li class="_guideHeader__navItem">
+                                <a href="./guide/guide-popup.html" target="_blank" class="_guideHeader__navLink">레이어 팝업 가이드</a>
+                            </li>
+                            <li class="_guideHeader__navItem">
+                                <a href="./guide/guide-component.html" target="_blank" class="_guideHeader__navLink">컴포넌트 가이드</a>
+                            </li>
+                            <li class="_guideHeader__navItem">
+                                <a href="./guide/guide-script.html" target="_blank" class="_guideHeader__navLink">스크립트 가이드</a>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-            <div class="indexBottom">
-                <div class="indexLinks">
-                    <div class="indexLinks__inner" id="nav"></div>
-                </div>
-            </div>
+                </header>
 
-            <!--
-            <div class="indexText">기타 문구</div>
-            -->
+                <div id="guideIndexDatas"></div>
 
-            <div class="index-datas" id="indexTable"></div>
+                <section class="_guideIndexSection">
+                    <h2 class="_guideIndexSection__title"></h2>
+                    <div class="_guideIndexTable">
+                        <table>
+                            <colgroup>
+                                <col style="width: 2px" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="" class="_guideIndexTable__link"></a>
+                                    </td>
+                                    <td>
+                                        <ul class="_guideIndexLog">
+                                            <li class="_guideIndexLog__item">
+                                                <span class="_guideIndexLog__date"></span>
+                                                <span class="_guideIndexLog__text"></span>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
         </div>
 
-        <div class="index-fake-botttom"></div>
-
         <!-- script -->
-        <script type="text/javascript" src="./dist/assets/lib/jquery/jquery-1.8.3.min.js"></script>
-        <script>
-            var title = 'AP The Fin - 주택담보대출';
-            var tableData = [
-                /*
-                {
-                    depth1: '',
-                    data: [
-                        {
-                            id: '',
-                            depth2: '',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '',
-                            status: 'end',
-                            create: '2023.10.20',
-                            update: '',
-                            log: [
-                                //{ date: '', text: '', },
-                            ],
-                        },
-                    ],
-                },
-                */
-                {
-                    depth1: '공통',
-                    data: [
-                        {
-                            id: '',
-                            depth2: '로딩 레이어',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_loading.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: '',
-                            depth2: '레이아웃',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_layout.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: '',
-                            depth2: '얼럿 레이어 팝업',
-                            depth3: '타이틀 + 메세지 + 버튼 한개',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_alert1.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: '',
-                            depth2: '얼럿 레이어 팝업',
-                            depth3: '메세지 + 버튼 두개',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_alert2.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: '',
-                            depth2: '얼럿 레이어 팝업',
-                            depth3: '타이틀 + 버튼 두개',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_alert3.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: '',
-                            depth2: '토스트 얼럿',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/_toastAlert.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_01_001',
-                            depth2: '휴대폰 본인인증',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_01_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_02_001',
-                            depth2: '주민등록번호 뒷자리',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_02_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_03_001',
-                            depth2: '아파트 정보 입력',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_03_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_03_002',
-                            depth2: '아파트 정보 입력',
-                            depth3: '담보 아파트 검색 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_03_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_04_001',
-                            depth2: '주담대 대출희망금액',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_04_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_05_001',
-                            depth2: '직업 선택',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_05_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_06_001',
-                            depth2: '직장 정보 입력',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_06_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_06_002',
-                            depth2: '직장 정보 입력',
-                            depth3: '직장명 검색 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_06_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_06_003',
-                            depth2: '사업장 정보 입력',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_06_003.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_06_004',
-                            depth2: '사업장 정보 입력',
-                            depth3: '사업장명 검색 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_06_004.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_07_001',
-                            depth2: '소득정보 입력',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_07_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_08_001',
-                            depth2: '신용점수 확인',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_08_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'com_09_001',
-                            depth2: '결과 로딩',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/common/com_09_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                    ],
-                },
-                {
-                    depth1: '주택담보대출',
-                    data: [
-                        {
-                            id: 'HRL_01_001',
-                            depth2: '소개화면',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_01_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_01_002',
-                            depth2: '소개화면',
-                            depth3: '대출 목적 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_01_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_01_003',
-                            depth2: '소개화면',
-                            depth3: '서비스 이용동의 수집 - 2023년 12월까지 이용',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_01_003.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_01_003',
-                            depth2: '소개화면',
-                            depth3: '서비스 이용동의 수집 - 2024년 01월부터 이용 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_01_003p.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_05_001',
-                            depth2: '대환대출',
-                            depth3: '마이데이터 연결 이동 안내',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_05_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_05_003',
-                            depth2: '대환대출',
-                            depth3: '마이데이터 연결 이동 안내',
-                            depth4: '서비스 이용동의 수집 (팝업)',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_05_003.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_05_002',
-                            depth2: '대환대출',
-                            depth3: '대환대출 신청 불가능 시간 안내',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_05_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_06_001',
-                            depth2: '대환대출',
-                            depth3: '주택담보대출 계좌 선택',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_06_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_06_002',
-                            depth2: '대환대출',
-                            depth3: '주택담보대출 계좌 없음 안내',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_06_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_07_001',
-                            depth2: '대환대출',
-                            depth3: '갈아탈 계좌 선택',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_07_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_07_002',
-                            depth2: '대환대출',
-                            depth3: '갈아탈 수 있는 계좌 없음 안내',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_07_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_07_003',
-                            depth2: '대환대출',
-                            depth3: '대환대출 불가사유 안내',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_07_003.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_15_001',
-                            depth2: '대환대출',
-                            depth3: '결과 리스트',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_15_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_15_002',
-                            depth2: '대환대출',
-                            depth3: '미승인내역 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_15_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HRL_16_001',
-                            depth2: '대환대출',
-                            depth3: '상품 상세정보',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HRL/HRL_16_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HL_12_001',
-                            depth2: '신규대출',
-                            depth3: '결과 리스트',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HL/HL_12_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HL_12_002',
-                            depth2: '신규대출',
-                            depth3: '미승인내역 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HL/HL_12_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HL_13_001',
-                            depth2: '신규대출',
-                            depth3: '상품 상세정보',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HL/HL_13_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HLST_11_001',
-                            depth2: '사업자대출',
-                            depth3: '결과 리스트',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HLST/HLST_11_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'HLST_12_001',
-                            depth2: '사업자대출',
-                            depth3: '상품 상세정보',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/HLST/HLST_12_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                    ],
-                },
-                {
-                    depth1: '신용대출',
-                    data: [
-                        {
-                            id: 'CL_01_001',
-                            depth2: '소개화면',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_01_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'CL_01_002',
-                            depth2: '소개화면',
-                            depth3: '서비스 이용동의 수집 (팝업)',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_01_002.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'CL_04_001',
-                            depth2: '대출희망금액',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_04_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'CL_08_001',
-                            depth2: '추가정보 입력',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_08_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'CL_10_001',
-                            depth2: '결과 리스트',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_10_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                        {
-                            id: 'CL_11_001',
-                            depth2: '상품 상세정보',
-                            depth3: '',
-                            depth4: '',
-                            depth5: '',
-                            depth6: '',
-                            path: '/CL/CL_11_001.html',
-                            status: 'end',
-                            create: '2023.10.20',
-                            log: [],
-                        },
-                    ],
-                },
-            ];
-
-            var html = '';
-            var navHTML = '';
-            var totalIndex = 0;
-            var dates = (function () {
-                var array = [];
-
-                function add(date) {
-                    if (typeof date === 'string' && date.length && array.indexOf(date) === -1) {
-                        array.push(date);
-                    }
-                }
-
-                $.each(tableData, function (i) {
-                    var sectionData = tableData[i].data;
-                    $.each(sectionData, function (j) {
-                        add(this.create);
-                        $.each(sectionData[j].log, function (l) {
-                            add(this.date);
-                        });
-                    });
-                });
-
-                array.sort();
-
-                return array;
-            })();
-            var latestDate = dates[dates.length - 1];
-
-            $.each(tableData, function (i) {
-                var sectionIndex = i;
-                var sectionData = tableData[i].data;
-                var tableHTML = '';
-
-                $.each(sectionData, function (j) {
-                    var returnVal = function (key, secondTestKey) {
-                        var val = sectionData[j][key];
-                        var secondTestVal = sectionData[j][secondTestKey];
-                        var prevIndex = j - 1;
-                        var isPrint = true;
-                        if (prevIndex >= 0) {
-                            if (sectionData[prevIndex][key] === val) {
-                                isPrint = false;
-                            }
-                            if (typeof secondTestKey === 'string' && secondTestKey.length && !sectionData[j].depthOnly) {
-                                if (sectionData[prevIndex][key] === val && sectionData[prevIndex][secondTestKey] === secondTestVal) {
-                                    isPrint = false;
-                                } else {
-                                    isPrint = true;
-                                }
-                            }
-                        }
-                        return isPrint ? val.replace(/\n/g, '<br>') : '';
-                    };
-                    var id = returnVal('id');
-                    var depth2 = returnVal('depth2');
-                    var depth3 = returnVal('depth3');
-                    var depth4 = returnVal('depth4');
-                    var depth5 = returnVal('depth5');
-                    var depth6 = returnVal('depth6');
-                    var path = (function () {
-                        var val = sectionData[j].path;
-                        var href = '';
-                        if (val.match(/^\.\//g)) {
-                            href = val;
-                        } else {
-                            href = './dist/html' + val;
-                        }
-                        return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
-                    })();
-                    var status = (function () {
-                        var val = sectionData[j].status;
-                        var text = '';
-                        if (val === 'ing') {
-                            text = '작업중';
-                        } else if (val === 'end') {
-                            text = '작업완료';
-                        } else if (val === 'moding') {
-                            text = '수정중';
-                        }
-                        return val.length ? '<span class="indexStatus indexStatus--' + val + '">' + text + '</span>' : '';
-                    })();
-                    var create = this.create;
-                    var update = '';
-                    var log = (function () {
-                        var val = sectionData[j].log;
-                        var length = val.length;
-                        var html = '<ul class="indexLog">';
-                        $.each(val, function (l) {
-                            var date = this.date;
-                            html +=
-                                '<li class="indexLog__item' +
-                                (date === latestDate ? ' isEmphasis' : '') +
-                                '"><div class="indexLog__itemDate">[' +
-                                date +
-                                ']</div>' +
-                                this.text.replace(/\n/g, '<br>') +
-                                '</li>';
-                            if (length - 1 === l) {
-                                update = date;
-                            }
-                        });
-                        html += '</ul>';
-
-                        return html;
-                    })();
-
-                    tableHTML +=
-                        '<tr>' +
-                        '<td>' +
-                        (j + 1) +
-                        '</td>' +
-                        '<td>' +
-                        id +
-                        '</td>' +
-                        '<td>' +
-                        depth2 +
-                        '</td>' +
-                        '<td>' +
-                        depth3 +
-                        '</td>' +
-                        '<td>' +
-                        depth4 +
-                        '</td>' +
-                        '<td>' +
-                        depth5 +
-                        '</td>' +
-                        '<td>' +
-                        depth6 +
-                        '</td>' +
-                        '<td>' +
-                        path +
-                        '</td>' +
-                        '<td>' +
-                        status +
-                        '</td>' +
-                        '<td class="' +
-                        (create === latestDate ? ' isEmphasis' : '') +
-                        '">' +
-                        create +
-                        '</td>' +
-                        '<td class="' +
-                        (update === latestDate ? ' isEmphasis' : '') +
-                        '">' +
-                        update +
-                        '</td>' +
-                        '<td>' +
-                        log +
-                        '</td>' +
-                        '</tr>';
-
-                    totalIndex++;
-                });
-
-                navHTML += '<a href="#section' + i + '">' + tableData[i].depth1 + '</a>';
-
-                html +=
-                    '<div class="indexSection" id="section' +
-                    i +
-                    '">' +
-                    '<h2 class="indexSection__title">' +
-                    tableData[i].depth1 +
-                    '</h2>' +
-                    '<div class="indexTable">' +
-                    '<table>' +
-                    '<colgroup>' +
-                    '<col width="50px" />' +
-                    '<col width="160px" />' +
-                    '<col width="160px" />' +
-                    '<col width="160px" />' +
-                    '<col width="160px" />' +
-                    '<col width="160px" />' +
-                    '<col width="160px" />' +
-                    '<col width="" />' +
-                    '<col width="100px" />' +
-                    '<col width="110px" />' +
-                    '<col width="110px" />' +
-                    '<col width="300px" />' +
-                    '</colgroup>' +
-                    '<thead>' +
-                    '<tr>' +
-                    '<th>No</th>' +
-                    '<th>ID</th>' +
-                    '<th>depth2</th>' +
-                    '<th>depth3</th>' +
-                    '<th>depth4</th>' +
-                    '<th>depth5</th>' +
-                    '<th>depth6</th>' +
-                    '<th>path</th>' +
-                    '<th>status</th>' +
-                    '<th>create</th>' +
-                    '<th>update</th>' +
-                    '<th>log</th>' +
-                    '</tr>' +
-                    '</thead>' +
-                    '<tbody>' +
-                    tableHTML +
-                    '</tbody>' +
-                    '</table>' +
-                    '</div>' +
-                    '</div>';
-            });
-
-            $('title, .indexTitle').text(title);
-            $('#nav').append(navHTML);
-            $('#indexTable').append(html);
-
-            var $nav = $('.indexBottom');
-            var $doc = $(document);
-            var $win = $(window);
-
-            function paddingBottom() {
-                $('.index-fake-botttom').css('height', $nav.outerHeight());
-            }
-
-            var clickedTimer = null;
-
-            $doc.on('click', '#nav a', function () {
-                var $this = $(this);
-                var href = $this.attr('href');
-                var $target = $(href);
-                var $sections = $('.indexSection');
-
-                $sections.removeClass('indexSection--clicked');
-
-                clearTimeout(clickedTimer);
-
-                clickedTimer = setTimeout(function () {
-                    $target.addClass('indexSection--clicked');
-                }, 100);
-            });
-
-            $win.on('scroll', function () {
-                var scrollLeft = $win.scrollLeft();
-                $nav.css('margin-left', -scrollLeft);
-            })
-                .on('resize', function () {
-                    paddingBottom();
-                })
-                .on('load', function () {
-                    paddingBottom();
-                });
-        </script>
+        <script type="text/javascript" src="./dist/assets/lib/jquery/jquery-3.6.0.min.js"></script>
         <!-- //script -->
+
+        <!-- guide script -->
+        <script type="text/javascript" src="./guide/assets/js/guide-script.js"></script>
+        <script>
+            var guideIndex = {
+                title: 'SKT 펫케어 EVR',
+                pathRoot: './dist',
+                head: [
+                    {
+                        name: 'id',
+                        text: 'ID',
+                        width: '160px',
+                    },
+                    {
+                        name: 'type',
+                        text: 'Type',
+                        width: '100px',
+                    },
+                    {
+                        name: 'depth2',
+                        text: 'Depth 2',
+                        width: '160px',
+                    },
+                    {
+                        name: 'depth3',
+                        text: 'Depth 3',
+                        width: '160px',
+                    },
+                    {
+                        name: 'depth4',
+                        text: 'Depth 4',
+                        width: '160px',
+                    },
+                    {
+                        name: 'depth5',
+                        text: 'Depth 5',
+                        width: '160px',
+                    },
+                    {
+                        name: 'depth6',
+                        text: 'Depth 6',
+                        width: '160px',
+                    },
+                    {
+                        name: 'path',
+                        text: 'Path',
+                    },
+                    {
+                        name: 'status',
+                        text: 'Status',
+                        width: '100px',
+                    },
+                    {
+                        name: 'create',
+                        text: 'Create',
+                        width: '110px',
+                    },
+                    {
+                        name: 'update',
+                        text: 'Update',
+                        width: '110px',
+                    },
+                    {
+                        name: 'log',
+                        text: 'Log',
+                        width: '300px',
+                    },
+                ],
+                data: [
+                    /*
+                    {
+                        depth1: '',
+                        data: [
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '',
+                                status: 'end', // ing, end, moding, delete
+                                create: '2023.10.20',
+                                update: '',
+                                log: [
+                                    //{ date: '', text: '', },
+                                ],
+                            },
+                        ],
+                    },
+                    */
+                    {
+                        depth1: '공통',
+                        data: [
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '레이아웃',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_layout.html',
+                                status: 'end',
+                                create: '2022.08.16',
+                                log: [
+                                    { date: '2022.08.29', text: '레이아웃 작업 완료' },
+                                    { date: '2022.09.13', text: 'luxon 라이브러리 추가' },
+                                    { date: '2022.09.26', text: 'swiper, amcharts 라이브러리 추가' },
+                                    { date: '2022.10.28', text: 'GNB 메뉴 추가 및 헤더 하단부 구성 변경' },
+                                    { date: '2022.12.02', text: '통합 검색 드롭 다운 하단 등록하기 버튼 구조 수정\n채팅 정상/에러 케이스 추가' },
+                                    { date: '2022.12.09', text: '통합 검색 드롭 다운 리스트 텍스트에 링크 기능 제거' },
+                                ],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '얼럿 레이어 팝업',
+                                depth3: '버튼 한개',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_alert-1.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '얼럿 레이어 팝업',
+                                depth3: '버튼 두개',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_alert-2.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [{ date: '2022.10.28', text: '버튼명 수정 (취소 > 닫기)' }],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '얼럿 레이어 팝업',
+                                depth3: '타이틀만 있는 경우',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_alert-3.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [{ date: '2022.10.28', text: '버튼명 수정 (취소 > 닫기)' }],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '파일 뷰',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_file-view.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '로딩화면',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/_loading.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [],
+                            },
+                            {
+                                id: '',
+                                type: '',
+                                depth2: '에러화면',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/ERR001.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '로그인',
+                        data: [
+                            {
+                                id: 'LOG001\nLOG002',
+                                type: '',
+                                depth2: '',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG001.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.12.23', text: '병원장 → 관리자 문구 수정' }],
+                            },
+                            {
+                                id: 'LOG003',
+                                type: '',
+                                depth2: '비밀번호 재설정',
+                                depth3: '이메일 입력',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG003.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [],
+                            },
+                            {
+                                id: 'LOG004',
+                                type: '',
+                                depth2: '비밀번호 재설정',
+                                depth3: '비밀번호 입력',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG004.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.09.05', text: '태그 오류 수정' }],
+                            },
+                            {
+                                id: 'LOG005',
+                                type: '',
+                                depth2: '아이디 찾기',
+                                depth3: '정보 입력',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG005.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' }],
+                            },
+                            {
+                                id: 'LOG006',
+                                type: '',
+                                depth2: '아이디 찾기',
+                                depth3: '결과',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG006.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [],
+                            },
+                            {
+                                id: 'LOG007',
+                                type: '팝업',
+                                depth2: '마스터 계정 인증키 입력',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG007.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.10.11', text: '하단 버튼명 수정' }],
+                            },
+                            {
+                                id: 'LOG008',
+                                type: '팝업',
+                                depth2: '구독 만료',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG008.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.10.11', text: '하단 버튼명 수정' }],
+                            },
+                            {
+                                id: 'LOG009',
+                                type: '팝업',
+                                depth2: '수의사 로그인 시',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LOG009.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '회원가입',
+                        data: [
+                            {
+                                id: 'JOIN001',
+                                type: '',
+                                depth2: '이메일 입력',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN001.html',
+                                status: 'end',
+                                create: '2022.08.22',
+                                log: [],
+                            },
+                            {
+                                id: 'JOIN002',
+                                type: '',
+                                depth2: '이메일 인증',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN002.html',
+                                status: 'end',
+                                create: '2022.08.22',
+                                log: [{ date: '2022.10.11', text: '하단 버튼명 수정' }],
+                            },
+                            {
+                                id: 'JOIN003',
+                                type: '',
+                                depth2: '약관동의',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN003.html',
+                                status: 'end',
+                                create: '2022.08.22',
+                                log: [],
+                            },
+                            {
+                                id: 'JOIN004',
+                                type: '',
+                                depth2: '가입정보 입력',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN004.html',
+                                status: 'end',
+                                create: '2022.08.16',
+                                log: [
+                                    { date: '2022.08.22', text: '병원 대표사진 인풋 title 값 변경\n일부 인풋 속성 값 수정' },
+                                    { date: '2022.10.11', text: '텍스트 및 하단 버튼명 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'JOIN005',
+                                type: '',
+                                depth2: '가입정보 입력',
+                                depth3: 'X Caliber 연동 이후',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN005.html',
+                                status: 'end',
+                                create: '2022.08.22',
+                                log: [
+                                    { date: '2022.10.11', text: '텍스트 및 하단 버튼명 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'JOIN006',
+                                type: '',
+                                depth2: '가입완료',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/JOIN006.html',
+                                status: 'end',
+                                create: '2022.08.22',
+                                log: [],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '내 정보',
+                        data: [
+                            {
+                                id: 'MIF001',
+                                type: '팝업',
+                                depth2: '',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/MIF001.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [
+                                    { date: '2022.10.24', text: '간격 클래스 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '진료',
+                        data: [
+                            {
+                                id: 'CLI001',
+                                type: '',
+                                depth2: '접수된 환자가 없는 경우',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CLI001.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [{ date: '2022.12.09', text: '단순 안내 문구로 변경' }],
+                            },
+                            {
+                                id: 'CHA001',
+                                type: '',
+                                depth2: '차트',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001.html',
+                                status: 'end',
+                                create: '2022.08.29',
+                                log: [
+                                    { date: '2022.09.05', text: '일부 html 구조 및 클래스명 수정' },
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.09.30', text: '최신 설계서 반영' },
+                                    { date: '2022.10.11', text: 'Plan 파트 Comment 순서 변경 및 텍스트 수정' },
+                                    { date: '2022.10.14', text: '진료이력 영역 수정' },
+                                    { date: '2022.10.28', text: 'chart 상단 완료버튼 삭제, 상단 환자 정보 우측 진료완료 버튼 추가' },
+                                    { date: '2022.11.03', text: 'Objective > 임상병리검사 예시 추가' },
+                                    { date: '2022.12.02', text: '문서 발급 버튼 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '진료 완료 버튼 삭제\nPlan 테이블 항목 구성 변경\n임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_NEW01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '새 차트',
+                                depth4: '외래진료',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_NEW01.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [
+                                    { date: '2022.11.03', text: '타이틀 띄어쓰기 수정' },
+                                    { date: '2022.12.02', text: '보호자 정보, 휴대전화번호, 환자 정보 항목 삭제' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_NEW02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '새 차트',
+                                depth4: '입원',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_NEW02.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [
+                                    { date: '2022.10.28', text: ' 방문목적 항목 안내문구 추가' },
+                                    { date: '2022.11.03', text: ' 입원 이력 선택 불가케이스 추가, 팝업 타이틀 수정' },
+                                    { date: '2022.12.02', text: '보호자 정보, 휴대전화번호, 환자 정보 항목 삭제' },
+                                    { date: '2022.12.23', text: '입원 이력 선택 항목 일부 정보 폰트 컬러 수정' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_POP03',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '진료이력',
+                                depth4: '차트 복사',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_POP03.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [],
+                            },
+                            {
+                                id: 'CHA001_POP04',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '진료이력',
+                                depth4: 'Sign 변경',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_POP04.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [],
+                            },
+                            {
+                                id: 'CHA001_POP05',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '진료이력',
+                                depth4: '신규 등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_POP05.html',
+                                status: 'end',
+                                create: '2022.11.14',
+                                log: [],
+                            },
+                            {
+                                id: 'CHA001_OBJ01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '차트',
+                                depth4: 'Objective 이력조회',
+                                depth5: 'Vital\n첨부파일\n진단\n병리\n영상\n검사의뢰',
+                                depth6: '',
+                                path: '/CHA001_OBJ01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.24', text: '진단 탭 테이블 내 정렬 수정' },
+                                    { date: '2022.10.28', text: '테이블 항목명 수정 (Sign > 담당자명), \n 영상탭 검사 결과 URL 항목 추가' },
+                                    { date: '2022.11.03', text: 'date picker 텍스트 수정, \n 테이블 항목명 수정 (담당자명 > 담당자)' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'DOC001',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '차트',
+                                depth4: '문서발급',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOC001.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [],
+                            },
+                            {
+                                id: 'CHA001_CPR01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '차트',
+                                depth4: '인쇄 항목 설정',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_CPR01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.24', text: '상단 환자정보 구조 및 간격 클래스 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_CPR02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '차트',
+                                depth4: '인쇄 항목 설정',
+                                depth5: '인쇄용 화면',
+                                depth6: '',
+                                path: '/CHA001_CPR02.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.11', text: 'Plan 파트 콘텐츠 순서 변경' },
+                                    { date: '2022.10.24', text: '테이블 클래스 값 변경, 텍스트 컬러 및 간격 클래스 수정' },
+                                    { date: '2022.11.03', text: '임상병리검사 추가' },
+                                    { date: '2022.11.14', text: '텍스트 수정 및 여백 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_TMP01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '차트',
+                                depth4: '템플릿 설정',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_TMP01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [],
+                            },
+                            {
+                                id: 'CHA001_POP02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '필터 선택',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_POP02.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_POP01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '검사 추가',
+                                depth5: '',
+                                depth6: '',
+                                path: '/CHA001_POP01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [{ date: '2022.12.23', text: '임상병리 → 병리 문구 수정' }],
+                            },
+                            {
+                                id: 'TES001_LAB01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '진단검사',
+                                depth5: '오더',
+                                depth6: '항목 선택 이전',
+                                path: '/TES001_LAB01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 및 하단 버튼명 변경' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_LAB02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '진단검사',
+                                depth5: '오더',
+                                depth6: '항목 선택 이후',
+                                path: '/TES001_LAB02.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 및 하단 버튼명 변경' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_LAB03',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '진단검사',
+                                depth5: '결과',
+                                depth6: '',
+                                path: '/TES001_LAB03.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_LAB05',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '진단검사',
+                                depth5: '결과',
+                                depth6: '검사 완료',
+                                path: '/TES001_LAB05.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_LAB04',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '진단검사',
+                                depth5: '오더 조회',
+                                depth6: '',
+                                path: '/TES001_LAB04.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_KIT01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '병리',
+                                depth5: '오더',
+                                depth6: '',
+                                path: '/TES001_KIT01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.14', text: '상단 환자정보 구조  및 하단 버튼명 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_KIT02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '병리',
+                                depth5: '결과',
+                                depth6: '',
+                                path: '/TES001_KIT02.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_KIT04',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '병리',
+                                depth5: '결과',
+                                depth6: '검사완료',
+                                path: '/TES001_KIT04.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_KIT03',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '병리',
+                                depth5: '오더 조회',
+                                depth6: '',
+                                path: '/TES001_KIT03.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_PACS01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '영상검사',
+                                depth5: '오더',
+                                depth6: '',
+                                path: '/TES001_PACS01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 및 하단 버튼명 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_PACS02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '영상검사',
+                                depth5: '결과',
+                                depth6: '',
+                                path: '/TES001_PACS02.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_PACS04',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '영상검사',
+                                depth5: '결과',
+                                depth6: '검사완료',
+                                path: '/TES001_PACS04.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'TES001_PACS03',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '검사',
+                                depth4: '영상검사',
+                                depth5: '오더 조회',
+                                depth6: '',
+                                path: '/TES001_PACS03.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.11', text: '검사명/담당자명 구조 수정' },
+                                    { date: '2022.10.14', text: '상단 환자정보 구조 수정 및 텍스트 컬러 클래스 제거' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_VCC01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '접종이력',
+                                depth4: '접종 이력 추가',
+                                depth5: '접종 이력이 없는 경우',
+                                depth6: '',
+                                path: '/CHA001_VCC01.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.24', text: '상단 환자정보 구조 수정, \n form태그 추가로 인한 구조 수정 및 기존 form태그 삭제, \n 저장 버튼 추가' },
+                                    { date: '2022.11.03', text: '차수항목 필수입력으로 수정' },
+                                    { date: '2022.11.14', text: 'Sign 항목 추가' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                            {
+                                id: 'CHA001_VCC02',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '접종이력',
+                                depth4: '접종 이력 추가',
+                                depth5: '접종 이력이 있는 경우',
+                                depth6: '',
+                                path: '/CHA001_VCC02.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.10.24', text: '상단 환자정보 구조 수정, \n form태그 추가로 인한 구조 수정 및 기존 form태그 삭제, \n 저장 버튼 추가' },
+                                    { date: '2022.11.03', text: '차수항목 필수입력으로 수정, \n 저장버튼 및 form태그 삭제' },
+                                    { date: '2022.11.14', text: 'Sign 항목 추가, \n 테이블 행 삭제 기능 추가 및 width값 수정' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '검사',
+                        data: [
+                            {
+                                id: 'TES001',
+                                type: '',
+                                depth2: '',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/TES001--type1.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정 및 상단 검색필터 항목 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'TES001',
+                                type: '',
+                                depth2: '내역 없음',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/TES001--type2.html',
+                                status: 'end',
+                                create: '2022.09.26',
+                                log: [
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정 및 상단 검색필터 항목 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '수납',
+                        data: [
+                            {
+                                id: 'REC001',
+                                type: '',
+                                depth2: '수납 대기',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC001.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: '상단메뉴 input 삭제 및 조회기간 구조 수정' },
+                                    { date: '2022.10.14', text: '불필요 클래스 제거 및 추가 행의 "환자 ID" 인풋 요소로 변경' },
+                                    { date: '2022.10.24', text: '간격 클래스 수정 및 미수금 테이블 체크박스 디폴트값 수정' },
+                                    { date: '2022.11.03', text: '상단 날짜필터 삭제' },
+                                    { date: '2022.11.14', text: '환자ID, 환자명 항목 병합' },
+                                    { date: '2022.12.02', text: '문서발급 버튼 디자인 변경' },
+                                    { date: '2022.12.20', text: '상단 테이블 일부 항목 말줄임 처리' },
+                                ],
+                            },
+                            {
+                                id: 'REC001',
+                                type: '',
+                                depth2: '수납 대기',
+                                depth3: '보호자 선택 전',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC001--empty.html',
+                                status: 'end',
+                                create: '2022.12.09',
+                                log: [],
+                            },
+                            {
+                                id: 'REC001_GRD01',
+                                type: '팝업',
+                                depth2: '',
+                                depth3: '보호자 조회 선택',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC001_GRD01.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.09.13', text: '불필요 태그 제거' },
+                                    { date: '2022.10.24', text: '테이블 항목 텍스트 정렬 클래스 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'REC001_POP01',
+                                type: '팝업',
+                                depth2: '',
+                                depth3: '환자 선택',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC001_POP01.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [{ date: '2022.12.09', text: '품종 분리 노출로 변경' }],
+                            },
+                            {
+                                id: 'DOC002',
+                                type: '팝업',
+                                depth2: '',
+                                depth3: '문서 발급',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOC002.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [],
+                            },
+                            {
+                                id: 'REC001_PAY01',
+                                type: '팝업',
+                                depth2: '',
+                                depth3: '결제하기',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC001_PAY01.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: '항목 및 버튼명 수정' },
+                                    { date: '2022.10.24', text: 'form 태그 추가' },
+                                ],
+                            },
+                            {
+                                id: 'REC002',
+                                type: '',
+                                depth2: '수납 완료',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC002.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.10.11', text: '상단메뉴 input 삭제 및 조회기간 구조 수정, \n 테이블 항목 추가' },
+                                    { date: '2022.10.24', text: '간격 클래스 수정 및 테이블내 정렬 클래스 삭제' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.11.14', text: '환자ID, 환자명 항목 병합 및 결제정보 수정 버튼 삭제' },
+                                    { date: '2022.12.02', text: '문서발급 버튼 디자인 변경' },
+                                ],
+                            },
+                            {
+                                id: 'REC003',
+                                type: '',
+                                depth2: '수납 완료',
+                                depth3: '수납 내역이 없는 경우',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC003.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.10.11', text: '상단메뉴 input 삭제 및 조회기간 구조 수정' },
+                                    { date: '2022.10.24', text: '간격 클래스 수정' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.12.02', text: '문서발급 버튼 디자인 변경' },
+                                ],
+                            },
+                            {
+                                id: 'REC004',
+                                type: '',
+                                depth2: '수납 완료',
+                                depth3: '리스트에서 선택 안 한 경우',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/REC004.html',
+                                status: 'end',
+                                create: '2022.09.05',
+                                log: [
+                                    { date: '2022.10.11', text: '상단메뉴 input 삭제 및 조회기간 구조 수정' },
+                                    { date: '2022.10.24', text: '간격 클래스 수정 및 테이블내 정렬 클래스 삭제, 수정' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.12.02', text: '문서발급 버튼 디자인 변경' },
+                                ],
+                            },
+                            {
+                                id: 'RCT001',
+                                type: '',
+                                depth2: '',
+                                depth3: '영수증 발급',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/RCT001.html',
+                                status: 'end',
+                                create: '2022.11.03',
+                                log: [{ date: '2022.12.02', text: '하단 청구금액 항목 추가' }],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '일정',
+                        data: [
+                            {
+                                id: 'SCH001',
+                                type: '',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH001.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.12.02', text: '예약 환자 목록 tabindex, role 속성 추가' },
+                                    { date: '2022.12.09', text: '환자 리스트에서 보호자, 환자 아이디 삭제' },
+                                ],
+                            },
+                            {
+                                id: 'SCH001_POP01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '수의사 필터',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH001_POP01.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [],
+                            },
+                            {
+                                id: 'SCH001_RSVL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '예약정보',
+                                depth5: '등록된 환자/보호자',
+                                depth6: '',
+                                path: '/SCH001_RSVL01--type1.html',
+                                status: 'end',
+                                create: '2022.12.09',
+                                log: [{ date: '2022.12.09', text: '접수 정보, 예약 정보 팝업 통일화' }],
+                            },
+                            {
+                                id: 'SCH001_RSVL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '예약정보',
+                                depth5: '등록되지 않은 환자/보호자',
+                                depth6: '',
+                                path: '/SCH001_RSVL01--type2.html',
+                                status: 'end',
+                                create: '2022.12.09',
+                                log: [{ date: '2022.12.09', text: '접수 정보, 예약 정보 팝업 통일화' }],
+                            },
+                            {
+                                id: 'SCH001_RSV01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '예약 등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH001_RSV01.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: '하단 버튼명 수정' },
+                                    { date: '2022.10.24', text: '휴대전화번호 input placeholder값 수정' },
+                                    { date: '2022.12.02', text: '환자정보 항목 수정 및 추가' },
+                                    { date: '2022.12.09', text: '셀렉트 옵션별 disabled 기능 구현\n전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'SCH001_RSV02',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '예약',
+                                depth4: '예약 수정',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH001_RSV02.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: 'input 상태 및 하단 버튼명 수정' },
+                                    { date: '2022.10.24', text: '휴대전화번호 input placeholder값 수정' },
+                                    { date: '2022.12.02', text: '환자정보 항목 수정' },
+                                    { date: '2022.12.09', text: '셀렉트 옵션별 disabled 기능 구현\n전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002',
+                                type: '',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH002.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.10.24', text: '시간별 접수 진료중/진료대기 외 상태 삭제' },
+                                    { date: '2022.12.02', text: '환자등록버튼 수정, 상단 안내문구 추가\n접수 환자 목록 tabindex, role 속성 추가' },
+                                    { date: '2022.12.09', text: '환자 리스트에서 보호자, 환자 아이디 삭제' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002_CKIL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 정보',
+                                depth5: '지정 수의사가 선택 시',
+                                depth6: '',
+                                path: '/SCH002_CKIL01--type1.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: '하단 버튼 너비값 수정' },
+                                    { date: '2022.12.09', text: '접수 정보, 예약 정보 팝업 통일화로 제공 컨텐츠 구조 변경' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002_CKIL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 정보',
+                                depth5: '그 외 직원이 선택 시',
+                                depth6: '',
+                                path: '/SCH002_CKIL01--type2.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: '하단 버튼 너비값 수정' },
+                                    { date: '2022.12.09', text: '접수 정보, 예약 정보 팝업 통일화로 제공 컨텐츠 구조 변경' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002_CKIL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 정보',
+                                depth5: '지정 수의사가 해당 환자에 대해 입장 요청을 실행한 경우',
+                                depth6: '',
+                                path: '/SCH002_CKIL01--type3.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: '진료우선대기 버튼 삭제 하단 버튼 너비값 수정' },
+                                    { date: '2022.12.09', text: '접수 정보, 예약 정보 팝업 통일화로 제공 컨텐츠 구조 변경' },
+                                    { date: '2022.12.23', text: '진료 완료 버튼 추가' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002_CKIL01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 정보',
+                                depth5: '진료 완료인 환자를 귀가 시키는 경우',
+                                depth6: '',
+                                path: '/SCH002_CKIL01--type4.html',
+                                status: 'end',
+                                create: '2022.12.23',
+                                log: [],
+                            },
+                            {
+                                id: 'SCH002_CKI01',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH002_CKI01.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: '텍스트 및 하단 버튼명 수정' },
+                                    { date: '2022.10.24', text: '차트 종류 항목 위치 이동' },
+                                    { date: '2022.12.02', text: '환자정보 구조 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'SCH002_CKI02',
+                                type: '팝업',
+                                depth2: '일별 현황',
+                                depth3: '접수',
+                                depth4: '접수 수정',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH002_CKI02.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완' },
+                                    { date: '2022.10.11', text: 'input 상태 및 하단 버튼명 수정' },
+                                    { date: '2022.10.24', text: '차트 종류 항목 위치 이동' },
+                                    { date: '2022.12.02', text: '환자정보 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'SCH003',
+                                type: '',
+                                depth2: '전체 현황',
+                                depth3: '예약',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH003.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완\n에디터 영역 일부 클래스 값 및 하단 버튼 구조 수정' },
+                                    { date: '2022.10.11', text: '테이블 내 텍스트 정렬 및 input 상태 수정' },
+                                    { date: '2022.10.24', text: '접수, 예약 영역 제거\n휴대전화번호 input placeholder값 수정,\ndropdown placeholder 구조 수정' },
+                                    { date: '2022.10.28', text: '서치박스 버튼명 수정' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '환자 정보 항목에 성별, 나이 삭제' },
+                                ],
+                            },
+                            {
+                                id: 'SCH004',
+                                type: '',
+                                depth2: '전체 현황',
+                                depth3: '접수',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH004.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '버튼 태그 문법 보완\n에디터 영역 일부 클래스 값 및 하단 버튼 구조 수정' },
+                                    { date: '2022.10.11', text: '테이블 내 텍스트 정렬 및 input 상태 수정' },
+                                    { date: '2022.10.24', text: '접수, 예약 영역 제거\n차트 종류 항목 순서 이동, \n dropdown placeholder 구조 수정' },
+                                    { date: '2022.10.28', text: '서치박스 버튼명 수정' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 및 테이블 상태 항목 수정' },
+                                    { date: '2022.11.14', text: '테이블내 상태항목 진료완료 케이스 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '테이블 상태 항목에 귀가 케이스 추가\n환자 정보 항목에 성별, 나이 삭제' },
+                                ],
+                            },
+                            {
+                                id: 'SCH005',
+                                type: '',
+                                depth2: '내부 일정',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/SCH005.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.09.19', text: '에디터 영역 일부 클래스 값 및 하단 버튼 구조 수정' },
+                                    { date: '2022.10.24', text: '접수, 예약 영역 제거' },
+                                    { date: '2022.10.28', text: '서치박스 버튼명 수정' },
+                                    {
+                                        date: '2022.11.03',
+                                        text: '반복설정 항목에 스위치 버튼 추가\ndatepicker텍스트 수정,\n테이블 상태 항목 추가,\n내부일정 상태, 등록일자 항목 추가\n항목명 수정 (일자 > 일정)',
+                                    },
+                                    { date: '2022.11.16', text: '테이블 상단 버튼 추가' },
+                                ],
+                            },
+                            {
+                                id: 'AGD001',
+                                type: '팝업',
+                                depth2: '내부 일정',
+                                depth3: '등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/AGD001.html',
+                                status: 'end',
+                                create: '2022.09.13',
+                                log: [
+                                    { date: '2022.10.11', text: '하단 버튼명 수정' },
+                                    { date: '2022.11.03', text: '반복설정 항목에 스위치 버튼 추가\n항목명 수정 (일자 > 일정)' },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '관리',
+                        data: [
+                            {
+                                id: 'MNG001',
+                                type: '',
+                                depth2: '직원 관리',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/MNG001.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: '서치박스 input 너비값 수정, \n input 상태값 수정, \n 테이블 내 상태 항목 클래스 수정' },
+                                    { date: '2022.10.28', text: '서치박스 버튼명 수정' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                    { date: '2022.12.02', text: '서치박스 등록일자 항목 삭제' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '병원장 역할 추가' },
+                                ],
+                            },
+                            {
+                                id: 'MNG002',
+                                type: '팝업',
+                                depth2: '직원 관리',
+                                depth3: '직원 등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/MNG002.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.24', text: '간격 클래스 추가' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '병원장 역할 추가' },
+                                ],
+                            },
+                            {
+                                id: 'PAT001',
+                                type: '',
+                                depth2: '고객 관리',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/PAT001.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: 'input 상태값 수정, 품종 항목 구조 수정' },
+                                    { date: '2022.10.28', text: '서치박스 버튼명 수정' },
+                                    { date: '2022.12.02', text: '품종 항목 자동 완성 드롭다운 말줄임 처리' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.20', text: '동물 등록 번호 인풋 15자리 입력 제한 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'PAR001',
+                                type: '팝업',
+                                depth2: '고객 관리',
+                                depth3: '환자 등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/PAR001.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.24', text: '하단 버튼명 수정' },
+                                    { date: '2022.12.02', text: '동물 등록 방식 항목 tab 기능 및 가이드 문구 추가\n품종 항목 자동 완성 드롭다운 말줄임 처리' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.20', text: '동물 등록 번호 인풋 15자리 입력 제한 기능 추가' },
+                                ],
+                            },
+                            {
+                                id: 'DPS001',
+                                type: '팝업',
+                                depth2: '고객 관리',
+                                depth3: '예치금 관리',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DPS001.html',
+                                status: 'end',
+                                create: '2022.09.19',
+                                log: [
+                                    { date: '2022.10.11', text: '간격 수정 및 구분선 점선으로 변경' },
+                                    { date: '2022.10.24', text: 'form태그 추가로 인한 구조 수정, 저장버튼 추가, 테스트 script 추가, \n 환자정보 구조 수정' },
+                                    { date: '2022.11.03', text: 'form태그 삭제, 하단 저장 버튼 삭제 \n 테스트 script 삭제' },
+                                    { date: '2022.12.23', text: '관리자 → 담당자 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'HOS001',
+                                type: '',
+                                depth2: '입원실',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HOS001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.10.24', text: 'input 너비 클래스 추가' }],
+                            },
+                            {
+                                id: 'HOS001_POP01',
+                                type: '팝업',
+                                depth2: '입원실',
+                                depth3: '등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HOS001_POP01.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'OFF001',
+                                type: '',
+                                depth2: '진료실',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/OFF001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'OFF001_POP01',
+                                type: '팝업',
+                                depth2: '진료실',
+                                depth3: '등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/OFF001_POP01.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'HIN001',
+                                type: '',
+                                depth2: '병원정보',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HIN001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.24', text: '간격 클래스 추가 및 수정' },
+                                    { date: '2022.12.09', text: '전화번호 인풋 숫자만 입력 되게 기능 추가' },
+                                    { date: '2022.12.23', text: '이미지 항목 필수 표시 제거' },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '라이브러리',
+                        data: [
+                            {
+                                id: 'LBR001',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '처음 진입 시',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'LBR002',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '데이터 불러오는 중',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR002.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'LBR003',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '행위/수가 코드',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR003.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.11', text: '부가세 항목 추가' },
+                                    {
+                                        date: '2022.12.02',
+                                        text: '항목명 (부가세 > 부가세YN) 및 input value값 수정, 수정가능 영역 구조 수정, \n 상단 다운로드 진행중 문구 추가\n일부 항목 길어지면 말줄임 처리',
+                                    },
+                                ],
+                            },
+                            {
+                                id: 'LBR_POP01',
+                                type: '팝업',
+                                depth2: '의료정보',
+                                depth3: '행위/수가 코드',
+                                depth4: '등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR_POP01.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.11', text: '부가세 항목 추가' },
+                                    { date: '2022.12.02', text: '코드항목 가이드 주석 추가 및 value값 수정, 부가세항목 셀렉트박스로 수정' },
+                                ],
+                            },
+                            {
+                                id: 'LBR004',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '백신/예방약 제품',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR004.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.02', text: '상단 다운로드 진행중 문구 추가, \n 테이블 일부 수정 불가영역으로 수정\n일부 항목 길어지면 말줄임 처리' }],
+                            },
+                            {
+                                id: 'LBR_POP02',
+                                type: '팝업',
+                                depth2: '의료정보',
+                                depth3: '백신/예방약 제품',
+                                depth4: '등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR_POP02.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.02', text: '코드항목 가이드 주석 추가 및 value값 수정' }],
+                            },
+                            {
+                                id: 'LBR005',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '진단검사 목록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR005.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.02', text: '상단 다운로드 진행중 문구 추가, \n 테이블 축종 항목 수정 불가영역으로 수정\n일부 항목 길어지면 말줄임 처리' }],
+                            },
+                            {
+                                id: 'LBR006',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '약속검사 그룹',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR006.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.11', text: '테이블 검사코드 항목 삭제' },
+                                    { date: '2022.11.14', text: '검색영역 검사코드 항목 삭제' },
+                                    { date: '2022.12.02', text: '상단 다운로드 진행중 문구 추가' },
+                                ],
+                            },
+                            {
+                                id: 'LBR006_SET01',
+                                type: '팝업',
+                                depth2: '의료정보',
+                                depth3: '약속검사 그룹',
+                                depth4: '항목 설정',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR006_SET01.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.23', text: '검사타입 추가' }],
+                            },
+                            {
+                                id: 'LBR_POP03',
+                                type: '팝업',
+                                depth2: '의료정보',
+                                depth3: '약속검사 그룹',
+                                depth4: '등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR_POP03.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.11.14', text: '검사코드 항목 삭제' },
+                                    { date: '2022.12.02', text: '코드항목 가이드 주석 추가 및 value값 수정' },
+                                ],
+                            },
+                            {
+                                id: 'LBR007',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '성분 코드',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR007.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [
+                                    { date: '2022.10.24', text: '테이블내 분류 항목 정렬 클래스 삭제' },
+                                    { date: '2022.12.02', text: '상단 다운로드 진행중 문구 추가\n일부 항목 길어지면 말줄임 처리' },
+                                ],
+                            },
+                            {
+                                id: 'LBR008',
+                                type: '',
+                                depth2: '의료정보',
+                                depth3: '의약품 코드',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR008.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.02', text: '상단 다운로드 진행중 문구 추가\n일부 항목 길어지면 말줄임 처리' }],
+                            },
+                            {
+                                id: 'LBR_POP04',
+                                type: '팝업',
+                                depth2: '의료정보',
+                                depth3: '의약품 코드',
+                                depth4: '등록',
+                                depth5: '',
+                                depth6: '',
+                                path: '/LBR_POP04.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.12.02', text: '코드항목 가이드 주석 추가 및 value값 수정' }],
+                            },
+                            {
+                                id: 'TEMP001',
+                                type: '',
+                                depth2: '템플릿',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/TEMP001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.10.24', text: '상태 클래스 및 우측 타이틀 수정' }],
+                            },
+                            {
+                                id: 'TEMP002',
+                                type: '팝업',
+                                depth2: '템플릿',
+                                depth3: '등록',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/TEMP002.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [{ date: '2022.10.24', text: '등록일자 항목 삭제' }],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '입원',
+                        data: [
+                            {
+                                id: 'HPT001',
+                                type: '',
+                                depth2: '차트',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [
+                                    { date: '2022.11.03', text: 'Objective > 임상병리검사 예시 추가' },
+                                    { date: '2022.12.02', text: '문서발급 버튼 디자인 변경' },
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: 'Plan 테이블 항목 구성 변경\n임상병리 → 병리 문구 수정' },
+                                ],
+                            },
+                            {
+                                id: 'HPT001_NEW01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원이력',
+                                depth4: '새 차트',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_NEW01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [{ date: '2022.12.02', text: '보호자정보, 휴대전화번호, 환자 정보 항목 삭제' }],
+                            },
+                            {
+                                id: 'HPT001_OVR01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원이력',
+                                depth4: '입원/퇴원 조회',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_OVR01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [
+                                    { date: '2022.10.28', text: '테이블 내 텍스트 정렬 클래스 추가' },
+                                    { date: '2022.11.03', text: 'datepicker 텍스트 수정' },
+                                ],
+                            },
+                            {
+                                id: 'HPT001_CAR01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원이력',
+                                depth4: '입원 환자 케어',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_CAR01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [{ date: '2022.12.09', text: '품종 분리 노출로 변경' }],
+                            },
+                            {
+                                id: 'HPT001_PET01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원실',
+                                depth4: '환자 정보',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_PET01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [
+                                    { date: '2022.12.09', text: '품종 분리 노출로 변경' },
+                                    { date: '2022.12.23', text: '예약/접수 정보 팝업과 통일화' },
+                                ],
+                            },
+                            {
+                                id: 'HPT001_ADM01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원실',
+                                depth4: '입원 수속',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_ADM01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [{ date: '2022.11.03', text: '항목 필수값 표시 추가' }],
+                            },
+                            {
+                                id: 'HPT001_DIS01',
+                                type: '팝업',
+                                depth2: '차트',
+                                depth3: '입원실',
+                                depth4: '퇴원 수속',
+                                depth5: '',
+                                depth6: '',
+                                path: '/HPT001_DIS01.html',
+                                status: 'end',
+                                create: '2022.10.14',
+                                log: [{ date: '2022.10.28', text: '테이블 내 텍스트 정렬 클래스 추가' }],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '이메일폼',
+                        data: [
+                            {
+                                id: 'EML001',
+                                type: '',
+                                depth2: '이메일 인증 폼',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/EML001.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'EML002',
+                                type: '',
+                                depth2: '비밀번호 재설정 요청 폼',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/EML002.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                            {
+                                id: 'EML003',
+                                type: '',
+                                depth2: '임시 비밀번호 발급 폼',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/EML003.html',
+                                status: 'end',
+                                create: '2022.09.30',
+                                log: [],
+                            },
+                        ],
+                    },
+                    {
+                        depth1: '문서발급 양식',
+                        data: [
+                            {
+                                id: 'DOCU001',
+                                type: '',
+                                depth2: '진단서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU001.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU002',
+                                type: '',
+                                depth2: '폐사 진단서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU002.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '테이블 항목 높이값 수정' }],
+                            },
+                            {
+                                id: 'DOCU003',
+                                type: '',
+                                depth2: '출산 증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU003.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '테이블 항목 높이값 수정' }],
+                            },
+                            {
+                                id: 'DOCU004',
+                                type: '',
+                                depth2: '사산 증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU004.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '테이블 항목 높이값 수정' }],
+                            },
+                            {
+                                id: 'DOCU005',
+                                type: '',
+                                depth2: '검안서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU005.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [
+                                    { date: '2022.11.03', text: '테이블 항목 높이값 수정' },
+                                    { date: '2022.12.09', text: '"주요 소견" 높이값 수정' },
+                                ],
+                            },
+                            {
+                                id: 'DOCU006',
+                                type: '',
+                                depth2: '예방접종 증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU006.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '테이블 항목 높이값 수정' }],
+                            },
+                            {
+                                id: 'DOCU007',
+                                type: '',
+                                depth2: '처방전',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU007.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU008',
+                                type: '',
+                                depth2: '수술 등 중대진료 동의서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU008.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU009',
+                                type: '',
+                                depth2: '건강진단서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU009.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '최하단 서명란 간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU010',
+                                type: '',
+                                depth2: '검사증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU010.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU011',
+                                type: '',
+                                depth2: '중성화 수술증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU011.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '간격 클래스 수정' }],
+                            },
+                            {
+                                id: 'DOCU012',
+                                type: '',
+                                depth2: '예방접종 및 건강증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU012.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU013',
+                                type: '',
+                                depth2: '광견병 검사 증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU013.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '간격 클래스 및 width값 수정' }],
+                            },
+                            {
+                                id: 'DOCU014',
+                                type: '',
+                                depth2: '광견병 접종 증명서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU014.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '최하단 서명란 간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU015',
+                                type: '',
+                                depth2: '개인정보 수집 활용 동의서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU015.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU016',
+                                type: '',
+                                depth2: '정보전달 수신 동의서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU016.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '최하단 서명란 및 기타 간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU017',
+                                type: '',
+                                depth2: '입원의뢰 및 서약서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU017.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU018',
+                                type: '',
+                                depth2: '입퇴원 확인서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU018.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU019',
+                                type: '',
+                                depth2: '보호자 요청 퇴원 동의서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU019.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [],
+                            },
+                            {
+                                id: 'DOCU020',
+                                type: '',
+                                depth2: '안락사의뢰 및 서약서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU020.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU021',
+                                type: '',
+                                depth2: '호텔의뢰 및 동의서',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU021.html',
+                                status: 'end',
+                                create: '2022.10.24',
+                                log: [{ date: '2022.11.03', text: '텍스트 수정' }],
+                            },
+                            {
+                                id: 'DOCU022',
+                                type: '',
+                                depth2: '입원차트 템플릿',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU022.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [{ date: '2022.11.03', text: '테이블내 텍스트 컬러 수정' }],
+                            },
+                            {
+                                id: 'DOCU023',
+                                type: '',
+                                depth2: '마취차트 템플릿1',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU023.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [{ date: '2022.11.03', text: '간격 수정' }],
+                            },
+                            {
+                                id: 'DOCU024',
+                                type: '',
+                                depth2: '마취차트 템플릿2',
+                                depth3: '',
+                                depth4: '',
+                                depth5: '',
+                                depth6: '',
+                                path: '/DOCU024.html',
+                                status: 'end',
+                                create: '2022.10.28',
+                                log: [{ date: '2022.11.03', text: '간격 및 테이블 colgroup 수정' }],
+                            },
+                        ],
+                    },
+                ],
+            };
+        </script>
+        <!-- //guide script -->
     </body>
 </html>

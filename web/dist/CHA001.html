@@ -1,0 +1,3280 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- header -->
+				<header class="header">
+					<div class="header__head">
+						<h1 class="header__logo">
+							<a href="" class="header__logo-link">
+								<!-- Case : 이미지 등록 안했을 때
+								<div class="header__logo-image"></div>
+								-->
+								<div class="header__logo-image"><img src="./assets/images/_dummy/img-logo-hospital.png" alt="" onerror="this.parentNode.className += ' is-error';" /></div>
+								<div class="header__logo-text">X Caliber EVR</div>
+							</a>
+						</h1>
+					</div>
+					<div class="header__body">
+						<div class="header__body-scroller ui-scroller">
+							<div class="header__body-inner">
+								<nav class="gnb">
+									<h2 class="for-a11y">Global navigation bar</h2>
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--001"></span>
+												<span class="gnb__text">원무</span>
+											</a>
+										</li>
+										<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+										<li class="gnb__item is-active">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--002"></span>
+												<span class="gnb__text">진료</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--003"></span>
+												<span class="gnb__text">검사</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--004"></span>
+												<span class="gnb__text">입원</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--005"></span>
+												<span class="gnb__text">일정</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--006"></span>
+												<span class="gnb__text">통계</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--007"></span>
+												<span class="gnb__text">관리</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--008"></span>
+												<span class="gnb__text">라이브러리</span>
+											</a>
+										</li>
+									</ul>
+									<!-- 2022.10.28 : add : 메뉴 추가 -->
+									<ul class="gnb__list">
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--009"></span>
+												<span class="gnb__text">메뉴얼</span>
+											</a>
+										</li>
+										<li class="gnb__item">
+											<a href="" class="gnb__link">
+												<span class="gnb__icon gnb__icon--010"></span>
+												<span class="gnb__text">오픈소스 라이선스</span>
+											</a>
+										</li>
+									</ul>
+									<!-- //2022.10.28 : add : 메뉴 추가 -->
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- 2022.10.28 : mod : 하단 영역 구성 변경 -->
+					<div class="header__foot">
+						<div class="header__my">
+							<a href="" class="header__my-link">
+								<div class="header__my-icon">
+									<div class="header__my-icon-text">민수</div>
+								</div>
+								<div class="header__my-contents">
+									<div class="header__my-name">김민수</div>
+									<div class="header__my-room">진료실 1</div>
+								</div>
+							</a>
+							<a href="" class="header__my-logout">
+								<span class="for-a11y">로그아웃</span>
+							</a>
+						</div>
+					</div>
+					<!-- //2022.10.28 : mod : 하단 영역 구성 변경 -->
+				</header>
+				<!-- //header -->
+
+				<!-- 접수/예약 -->
+				<div class="side-widget">
+					<!-- DD : data-sizes 속성으로 처음 세팅 할 사이즈 지정. (백분율 수치) | 기본 값 50, 50 으로 해주세요. -->
+					<div class="ui-split" id="receptionDesk" data-sizes="65, 35">
+						<div class="ui-split__cell">
+							<!-- 접수 -->
+							<section class="widget">
+								<div class="widget__head">
+									<div class="widget-head">
+										<div class="widget-head__left">
+											<h2 class="widget-head__title">접수</h2>
+										</div>
+										<div class="widget-head__right">
+											<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-widget-sorting">
+												<div class="ui-dropdown__head">
+													<div class="ui-dropdown__text js-ui-dropdown__watch">김민수</div>
+													<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+														<span class="for-a11y">
+															menu
+															<span class="open-text">open</span>
+															<span class="close-text">close</span>
+														</span>
+													</button>
+												</div>
+												<div class="ui-dropdown__layer js-ui-dropdown__layer">
+													<div class="ui-dropdown__contents">
+														<ul class="ui-dropdown__list">
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="김민수">김민수</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="홍길동">홍길동</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="미카엘 르마노프">미카엘 르마노프</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="widget__body">
+									<div class="widget__body-scroller ui-scroller">
+										<div class="widget__body-inner">
+											<!-- Case : 목록 없을 때 -->
+											<div class="ui-empty">
+												<div class="ui-empty__object ui-empty__object--reception"></div>
+												<p class="ui-empty__text">접수 이력이 없습니다</p>
+											</div>
+											<!-- //Case : 목록 없을 때 -->
+
+											<!-- list -->
+											<div class="patients">
+												<ul class="patients__list">
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">호루스</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<span class="info-tags__item">초진</span>
+																	<span class="info-tags__item">비대성심근병증</span>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--ongoing-fill">진료중</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">바히티</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">감기</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">베누</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">기타 : 식욕부진</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">케프리</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">케프리</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">몽타루트</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<div class="info-tags__item">초진</div>
+																	<div class="info-tags__item">중성화 수술</div>
+																</div>
+															</div>
+															<div class="flex-box patients__foot row-item-group-small">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<div class="patients__text">김민수 (진료실 1)</div>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="status status--waiting">진료 대기</span>
+																</div>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- //list -->
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- //접수 -->
+						</div>
+						<div class="ui-split__cell">
+							<!-- 예약 -->
+							<section class="widget">
+								<div class="widget__head">
+									<div class="widget-head">
+										<div class="widget-head__left">
+											<h2 class="widget-head__title">예약</h2>
+										</div>
+										<div class="widget-head__right">
+											<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-widget-sorting">
+												<div class="ui-dropdown__head">
+													<div class="ui-dropdown__text js-ui-dropdown__watch">김민수</div>
+													<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+														<span class="for-a11y">
+															menu
+															<span class="open-text">open</span>
+															<span class="close-text">close</span>
+														</span>
+													</button>
+												</div>
+												<div class="ui-dropdown__layer js-ui-dropdown__layer">
+													<div class="ui-dropdown__contents">
+														<ul class="ui-dropdown__list">
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="김민수">김민수</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="홍길동">홍길동</button>
+															</li>
+															<li class="ui-dropdown__item">
+																<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="미카엘 르마노프">미카엘 르마노프</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="widget__body">
+									<div class="widget__body-scroller ui-scroller">
+										<div class="widget__body-inner">
+											<!-- Case : 목록 없을 때 -->
+											<div class="ui-empty">
+												<div class="ui-empty__object ui-empty__object--appointment"></div>
+												<p class="ui-empty__text">예약 이력이 없습니다</p>
+											</div>
+											<!-- //Case : 목록 없을 때 -->
+
+											<!-- list -->
+											<div class="patients">
+												<ul class="patients__list">
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">호루스</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">바히티</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">베누</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">케프리</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+													<li class="patients__item">
+														<a href="" class="patients__block">
+															<div class="patients__name">
+																<span class="patients__name-text">몽타루트</span>
+																<span class="patients__name-sub">(홍길동)</span>
+															</div>
+															<div class="flex-box patients__foot">
+																<div class="flex-box__cell flex-box__cell--flexible">
+																	<span class="patients__text">김민수 (진료실 1)</span>
+																</div>
+																<div class="flex-box__cell">
+																	<span class="patients__time">14:30</span>
+																</div>
+															</div>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- //list -->
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- //예약 -->
+						</div>
+					</div>
+					<div class="side-widget__foot">
+						<div class="ui-buttons ui-buttons--regular ui-buttons--no-margin">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<a href="" class="ui-basic-button ui-basic-button--regular">
+										<span class="ui-basic-button__text">신규 등록</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //접수/예약 -->
+
+				<!-- 채팅 -->
+				<div class="chat">
+					<section class="widget widget--chat">
+						<div class="widget__head">
+							<div class="widget-head">
+								<div class="widget-head__left">
+									<h2 class="widget-head__title">채팅</h2>
+								</div>
+								<!-- 2022.12.02 : add : 정상/에러 케이스 추가 -->
+								<div class="widget-head__right">
+									<!-- Case : 정상 -->
+									<div class="ui-light is-online"></div>
+									<!-- //Case : 정상 -->
+									<!-- Case : 에러 -->
+									<div class="ui-light is-error"></div>
+									<!-- //Case : 에러 -->
+								</div>
+								<!-- //2022.12.02 : add : 정상/에러 케이스 추가 -->
+							</div>
+						</div>
+						<div class="widget__body">
+							<!-- DD : uiJSScrollTo($('#chatScroller'), [0, 'last']); 함수 호출로 새 메세지 수신/발신 시 스크롤 값 조절 -->
+							<div class="widget__body-scroller ui-scroller" data-init-y="last" id="chatScroller">
+								<div class="widget__body-inner">
+									<div class="chat-view">
+										<ul class="chat-view__list">
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) 진료 종료 후 주사실에서 영양제 투여하고 X-Ray (Thorax, Abdomen)을 촬영해야 합니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item">
+												<div class="chat-view__bubble">
+													<h3 class="chat-view__name">김민지 원무과장</h3>
+													<p class="chat-view__message">핑핑이(이지현 보호자) 수술 예약 취소했습니다. 박원장님 일정 확인 후 다시 예약 예정입니다.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+											<li class="chat-view__item chat-view__item--my">
+												<div class="chat-view__bubble">
+													<h3 class="for-a11y">나</h3>
+													<p class="chat-view__message">티모(홍길동 보호자) CT (Thorax, A bdomen) 촬영 진행해 주세요.</p>
+												</div>
+												<p class="chat-view__date">2022.07.04&nbsp;&nbsp;10:35</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2022.12.02 : add : 에러 케이스 추가 -->
+						<!-- Case : 에러 -->
+						<div class="widget__error">
+							<p class="widget__error-text">
+								연결이 해제되었습니다.<br />
+								페이지를 새로고침하거나 다시 로그인 해주세요.
+							</p>
+						</div>
+						<!-- //Case : 에러 -->
+						<!-- //2022.12.02 : add : 에러 케이스 추가 -->
+						<div class="widget__foot">
+							<div class="chat-form">
+								<div class="chat-form__area">
+									<textarea class="chat-form__input js-auto-height-textarea" title="메세지"></textarea>
+								</div>
+								<button type="button" class="ui-button chat-form__submit">
+									<span class="for-a11y">전송</span>
+								</button>
+							</div>
+						</div>
+					</section>
+				</div>
+				<!-- //채팅 -->
+
+				<!-- 검색 -->
+				<div class="search-bar">
+					<div class="search-bar__form">
+						<div class="ui-input-block">
+							<input type="text" class="ui-input" title="환자 검색" placeholder="환자, 보호자를 검색해 주세요." />
+						</div>
+					</div>
+					<div class="search-bar__layer">
+						<div class="search-bar__layer-body ui-scroller">
+							<!-- list -->
+							<div class="search-result">
+								<ul class="search-result__list">
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="search-result__item" tabindex="0">
+										<div class="search-result__block">
+											<!-- 2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<div class="search-result__contents">
+												<div class="search-result__info">
+													<span class="search-result__info-code">P20220301001</span>
+													<span class="search-result__info-name"><mark>티</mark>모</span>
+													<span class="search-result__info-species">Cat (Abyssinian)</span>
+													<span class="search-result__info-item">중성화 수컷</span>
+													<span class="search-result__info-item">2년 6개월</span>
+												</div>
+												<div class="search-result__etc">
+													<span class="search-result__etc-item">G20220301001</span>
+													<span class="search-result__etc-item">홍길동</span>
+													<span class="search-result__etc-item">(010-0000-0000)</span>
+												</div>
+											</div>
+											<!-- //2022.12.09 : mod : .search-result__contents a 태그에서 div 태그로 변경 -->
+											<ul class="search-result__menu">
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">접수</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">예약</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">차트</span>
+													</a>
+												</li>
+												<li class="search-result__menu-item">
+													<a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--tertiary">
+														<span class="ui-basic-button__text">수납</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //list -->
+						</div>
+						<!-- 2022.12.02 : mod : 태그 구조 수정 -->
+						<a href="" class="search-bar__layer-foot">
+							<p class="search-bar__layer-foot-text">등록된 환자 또는 보호자가 없나요?<span class="search-bar__layer-foot-link">등록하기</span></p>
+						</a>
+						<!-- //2022.12.02 : mod : 태그 구조 수정 -->
+					</div>
+				</div>
+				<!-- //검색 -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents">
+						<!-- 차트 헤더 -->
+						<div class="chart-head">
+							<div class="chart-head__left">
+								<!-- Case : 동물 하나일 때
+								<div class="chart-head__title-area">
+									<h2 class="chart-title">P20220301001&nbsp;&nbsp;반려동물이름</h2>
+								</div>
+								-->
+
+								<!-- Case : 동물 2마리 이상일 때 -->
+								<div class="chart-head__title-area">
+									<div class="ui-dropdown ui-dropdown--chart-title js-ui-dropdown">
+										<div class="ui-dropdown__head">
+											<h2 class="chart-title">P20220301001&nbsp;&nbsp;반려동물이름</h2>
+											<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+												<span class="for-a11y">
+													다른 동물 메뉴
+													<span class="open-text">open</span>
+													<span class="close-text">close</span>
+												</span>
+											</button>
+										</div>
+										<div class="ui-dropdown__layer js-ui-dropdown__layer">
+											<div class="ui-dropdown__contents">
+												<ul class="ui-dropdown__list">
+													<li class="ui-dropdown__item">
+														<a href="" class="ui-dropdown__link">P20220301001&nbsp;&nbsp;티모</a>
+													</li>
+													<li class="ui-dropdown__item">
+														<a href="" class="ui-dropdown__link">P20220301001&nbsp;&nbsp;모찌</a>
+													</li>
+													<li class="ui-dropdown__item">
+														<a href="" class="ui-dropdown__link">P20220301001&nbsp;&nbsp;보리</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //Case : 동물 2마리 이상일 때 -->
+
+								<div class="pet-tags">
+									<ul class="pet-tags__list">
+										<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+										<li class="pet-tags__item">
+											<div class="pet-tags__block">Cat</div>
+										</li>
+										<li class="pet-tags__item">
+											<div class="pet-tags__block">Abyssinian</div>
+										</li>
+										<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+										<li class="pet-tags__item">
+											<div class="pet-tags__block">중성화 수컷</div>
+										</li>
+										<li class="pet-tags__item">
+											<div class="pet-tags__block">2년 6개월</div>
+										</li>
+										<li class="pet-tags__item">
+											<div class="pet-tags__block">3.4kg</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="chart-head__right">
+								<div class="chart-head__cell">
+									<p class="basic-text color-blue-black">보호자&nbsp;&nbsp;G20220301001</p>
+								</div>
+								<div class="chart-head__cell">
+									<p class="basic-text color-blue-black">홍길동&nbsp;&nbsp;010-4879-9873</p>
+								</div>
+								<!-- 2022.12.23 : del : 버튼 삭제
+								<div class="chart-head__cell chart-head__cell--medium">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+										<span class="ui-basic-button__text">진료완료</span>
+									</button>
+								</div>
+								-->
+
+								<!-- 2022.09.30 : del : 기능 삭제
+								<div class="chart-head__cell">
+									<div class="flex-box">
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<div class="ui-select-block ui-select-block--secondary ui-select-block--small input-width-status">
+												<select class="ui-select" title="진료실 선택">
+													<option value="" selected>진료실 1</option>
+													<option value="">진료실 2</option>
+													<option value="">진료실 3</option>
+													<option value="">진료실 4</option>
+													<option value="">진료실 5</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<div class="ui-select-block ui-select-block--secondary ui-select-block--small input-width-status">
+												<select class="ui-select" title="상태 선택">
+													<option value="">진료 대기</option>
+													<option value="" selected>진료중</option>
+												</select>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--small-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+												<span class="ui-basic-button__text">변경</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								-->
+							</div>
+						</div>
+						<!-- //차트 헤더 -->
+
+						<div class="layout-grid">
+							<div class="layout-grid__cell widget-width-regular">
+								<!-- 진료이력 -->
+								<section class="widget widget--contents">
+									<div class="widget__head">
+										<div class="widget-head">
+											<div class="widget-head__left">
+												<h3 class="widget-head__title">진료이력</h3>
+											</div>
+											<div class="widget-head__right">
+												<button type="button" class="ui-button add-button">
+													<span class="for-a11y">추가</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="widget__body">
+										<div class="widget__body-scroller ui-scroller">
+											<div class="widget__body-inner">
+												<!-- list -->
+												<div class="log-accordion js-ui-accordion">
+													<ul class="log-accordion__list">
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<!-- 2022.10.14 : add : 입원 케이스 추가 -->
+														<!-- Case : 입원 -->
+														<li class="log-accordion__item log-accordion__item--inpatient js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수</span>
+																		</div>
+																	</div>
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">입원</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">중성화 수술</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">입원 4일차</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">중성화수술</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<!-- //Case : 입원 -->
+														<!-- //2022.10.14 : add : 입원 케이스 추가 -->
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="log-accordion__item js-ui-accordion__item">
+															<div class="log-accordion__block">
+																<div class="log-accordion__head">
+																	<div class="info-tags row-item-small">
+																		<div class="info-tags__inner">
+																			<span class="info-tags__item color-gray">2022.07.04</span>
+																			<span class="info-tags__item color-gray">김민수 (진료실 1)</span>
+																		</div>
+																	</div>
+																	<!-- 2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<div class="info-tags">
+																		<div class="info-tags__inner">
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">초진</div>
+																			</div>
+																			<div class="info-tags__item">
+																				<div class="log-accordion__title">비대성심근병증</div>
+																			</div>
+																			<div class="info-tags__item info-tags__item--no-line">
+																				<button type="button" class="ui-button icon-button icon-button--copy">
+																					<span class="for-a11y">복사하기</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.10.14 : mod : 내용 길어지면 줄바꿈 되는 구조로 수정 -->
+																	<button type="button" class="ui-button log-accordion__opener js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			내용
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+																<div class="log-accordion__layer js-ui-accordion__layer">
+																	<div class="log-accordion__contents">
+																		<ul class="ui-list">
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">비대성심근병증(HCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">Dermatophytosis</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">URTD</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">제한성심근병증(RCM)</div>
+																			</li>
+																			<li class="ui-list__item">
+																				<div class="ui-list__text">고양이 림포마(Lymphoma)</div>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<!-- //list -->
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- //진료이력 -->
+							</div>
+							<div class="layout-grid__cell layout-grid__cell--flexible">
+								<!-- 2022.09.05 : mod : chart-view -> panel 클래스 명 변경 및 panel--chart 클래스 값 추가
+									chart-view -> panel
+									chart-view__head -> panel__head
+									chart-view-head -> panel-head
+									chart-view-head__left -> panel-head__left
+									chart-view-head__title -> panel-head__title
+									chart-view-head__hr -> panel-head__hr
+									chart-view-head__sub -> panel-head__sub
+									chart-view-head__right -> panel-head__right
+									chart-view__body -> panel__body
+									chart-view__body-scroller -> panel__body-scroller
+									chart-view__body-inner -> panel__body-inner
+								-->
+								<div class="panel panel--chart">
+									<div class="panel__head">
+										<div class="panel-head">
+											<div class="panel-head__left">
+												<button type="button" class="ui-button chart-button chart-button--all-opener is-opened">
+													<!-- 2022.09.30 : mod : 클래스 값 수정 -->
+													<span class="for-a11y">
+														내용 모두
+														<span class="open-text">보기</span>
+														<span class="close-text">접기</span>
+													</span>
+													<!-- //2022.09.30 : mod : 클래스 값 수정 -->
+												</button>
+												<h3 class="panel-head__title">2022.07.04&nbsp;&nbsp;13:00</h3>
+												<div class="panel-head__hr"></div>
+												<!-- 2022.10.11 : mod : 텍스트 수정  -->
+												<p class="panel-head__sub">김민수</p>
+											</div>
+											<div class="panel-head__right">
+												<button type="button" class="ui-button chart-button chart-button--print">
+													<span class="for-a11y">프린트하기</span>
+												</button>
+												<button type="button" class="ui-button chart-button chart-button--sign-change">
+													<span class="for-a11y">Sign 변경</span>
+												</button>
+												<button type="button" class="ui-button chart-button chart-button--paste">
+													<span class="for-a11y">붙여넣기</span>
+												</button>
+												<button type="button" class="ui-button chart-button chart-button--save">
+													<span class="for-a11y">저장하기</span>
+												</button>
+												<!-- 2022.10.28 : del : 진료 완료 버튼 삭제 
+												<div class="panel-head__hr panel-head__hr--secondary"></div>
+												<button type="button" class="ui-button chart-button chart-button--complete">
+													<span class="for-a11y">진료 완료</span>
+												</button>
+												< !--Case : 진료 완료 후 disabled 속성 추가-- >
+												<button type="button" class="ui-button chart-button chart-button--complete" disabled>
+													<span class="for-a11y">진료 완료</span>
+												</button>
+												< !--//Case : 진료 완료 후 disabled 속성 추가-- >
+												-->
+											</div>
+										</div>
+									</div>
+									<div class="panel__body">
+										<div class="panel__body-scroller ui-scroller">
+											<div class="panel__body-inner">
+												<div class="chart-section-group js-ui-accordion" data-focus-open="false">
+													<!-- Subjective -->
+													<section class="chart-section js-ui-accordion__item" data-initial-open="true">
+														<div class="chart-section__inner js-ui-accordion__layer">
+															<div class="chart-section__head">
+																<div class="chart-section-head">
+																	<div class="chart-section-head__left">
+																		<h4 class="chart-section-head__title">Subjective</h4>
+																	</div>
+																	<div class="chart-section-head__right">
+																		<a href="" class="chart-section-head__link">템플릿</a>
+																	</div>
+																</div>
+															</div>
+															<div class="chart-section__body">
+																<div class="chart-section__body-inner">
+																	<div class="contnets-input">
+																		<textarea class="contnets-input__area js-auto-height-textarea" title="Subjective Comment" placeholder="내용을 입력하세요."></textarea>
+																	</div>
+																</div>
+															</div>
+															<div class="chart-section__foot">
+																<!-- 2022.09.05 : mod : html 구조 변경 -->
+																<div class="ui-buttons ui-buttons--mini ui-buttons--no-margin ui-buttons--left">
+																	<ul class="ui-buttons__list">
+																		<li class="ui-buttons__item">
+																			<button type="button" class="ui-button ui-basic-button ui-basic-button--mini ui-basic-button--quinary">
+																				<span class="ui-basic-button__text">초진</span>
+																			</button>
+																		</li>
+																		<li class="ui-buttons__item">
+																			<button type="button" class="ui-button ui-basic-button ui-basic-button--mini ui-basic-button--quinary">
+																				<span class="ui-basic-button__text">재진</span>
+																			</button>
+																		</li>
+																		<li class="ui-buttons__item">
+																			<button type="button" class="ui-button ui-basic-button ui-basic-button--mini ui-basic-button--quinary">
+																				<span class="ui-basic-button__text">건강검진</span>
+																			</button>
+																		</li>
+																	</ul>
+																</div>
+																<!-- //2022.09.05 : mod : html 구조 변경 -->
+															</div>
+														</div>
+													</section>
+													<!-- //Subjective -->
+
+													<!-- Objective -->
+													<section class="chart-section js-ui-accordion__item" data-initial-open="true">
+														<div class="chart-section__inner js-ui-accordion__layer">
+															<div class="chart-section__head">
+																<div class="chart-section-head">
+																	<div class="chart-section-head__left">
+																		<h4 class="chart-section-head__title">Objective</h4>
+																	</div>
+																	<div class="chart-section-head__right">
+																		<a href="" class="chart-section-head__link">이력 조회</a>
+																	</div>
+																</div>
+															</div>
+															<div class="chart-section__body">
+																<div class="chart-section__body-inner">
+																	<!-- 2022.09.30 : mod : 구성 변경 -->
+																	<div class="section">
+																		<div class="ui-table">
+																			<table>
+																				<colgroup>
+																					<col style="width: 95px" />
+																					<col />
+																					<col />
+																					<col />
+																					<col />
+																					<col />
+																					<col />
+																					<col style="width: 46px" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>측정시간</th>
+																						<th>체중</th>
+																						<th>체온</th>
+																						<th>심박수</th>
+																						<th>호흡수</th>
+																						<th>혈압(수축)</th>
+																						<th>혈압(이완)</th>
+																						<th></th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-center js-timepicker" title="측정시간" value="12:03" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="체중" value="3.7" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="체온" value="31.3" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="심박수" value="95" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="호흡수" value="34" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="혈압(수축)" value="125" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="혈압(이완)" value="90" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-center js-timepicker" title="측정시간" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="체중" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="체온" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="심박수" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="호흡수" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="혈압(수축)" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="혈압(이완)" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<div class="table-controller">
+																			<div class="table-controller__button-cell">
+																				<button type="button" class="ui-button row-add-button">
+																					<span class="for-a11y">행 추가</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<h5 class="section-head__title">첨부파일</h5>
+																		</div>
+
+																		<section class="section section--indent">
+																			<div class="section-head">
+																				<h6 class="section-head__title">Comment</h6>
+																			</div>
+																			<div class="contnets-input">
+																				<textarea class="contnets-input__area js-auto-height-textarea" title="Objective Comment" placeholder="내용을 입력하세요."></textarea>
+																			</div>
+																		</section>
+
+																		<div class="gallery-file row-group">
+																			<ul class="gallery-file__list">
+																				<li class="gallery-file__item">
+																					<div class="gallery-input">
+																						<input type="file" class="gallery-input__input" title="파일 첨부" />
+																					</div>
+																				</li>
+																				<li class="gallery-file__item">
+																					<div class="gallery-file__block">
+																						<div class="gallery-file__image">
+																							<img src="./assets/images/_dummy/image-1.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+																						</div>
+																						<div class="gallery-file__name">File_Name_here.jpg</div>
+																						<button type="button" class="ui-button gallery-file__link">
+																							<span class="for-a11y">미리보기</span>
+																						</button>
+																						<button type="button" class="ui-button gallery-file__delete">
+																							<span class="for-a11y">삭제</span>
+																						</button>
+																					</div>
+																				</li>
+																				<li class="gallery-file__item">
+																					<div class="gallery-file__block">
+																						<div class="gallery-file__image">
+																							<img src="./assets/images/_dummy/image-2.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+																						</div>
+																						<div class="gallery-file__name">File_Name_here.jpg</div>
+																						<button type="button" class="ui-button gallery-file__link">
+																							<span class="for-a11y">미리보기</span>
+																						</button>
+																						<button type="button" class="ui-button gallery-file__delete">
+																							<span class="for-a11y">삭제</span>
+																						</button>
+																					</div>
+																				</li>
+																				<li class="gallery-file__item">
+																					<div class="gallery-file__block">
+																						<div class="gallery-file__icon gallery-file__icon--pdf">
+																							<span class="for-a11y">PDF File</span>
+																						</div>
+																						<div class="gallery-file__name">File_Name_here.pdf</div>
+																						<button type="button" class="ui-button gallery-file__link">
+																							<span class="for-a11y">미리보기</span>
+																						</button>
+																						<button type="button" class="ui-button gallery-file__delete">
+																							<span class="for-a11y">삭제</span>
+																						</button>
+																					</div>
+																				</li>
+																				<li class="gallery-file__item">
+																					<div class="gallery-file__block">
+																						<div class="gallery-file__icon gallery-file__icon--video">
+																							<span class="for-a11y">Video File</span>
+																						</div>
+																						<div class="gallery-file__name">File_Name_here.mp4</div>
+																						<button type="button" class="ui-button gallery-file__link">
+																							<span class="for-a11y">미리보기</span>
+																						</button>
+																						<button type="button" class="ui-button gallery-file__delete">
+																							<span class="for-a11y">삭제</span>
+																						</button>
+																					</div>
+																				</li>
+																				<li class="gallery-file__item">
+																					<div class="gallery-file__block">
+																						<div class="gallery-file__icon gallery-file__icon--etc">
+																							<span class="for-a11y">ETC File</span>
+																						</div>
+																						<div class="gallery-file__name">File_Name_here.txt</div>
+																						<button type="button" class="ui-button gallery-file__link">
+																							<span class="for-a11y">미리보기</span>
+																						</button>
+																						<button type="button" class="ui-button gallery-file__delete">
+																							<span class="for-a11y">삭제</span>
+																						</button>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</section>
+
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<h5 class="section-head__title">진단검사</h5>
+																		</div>
+																		<div class="order order--box">
+																			<ul class="order__list">
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">간 기능 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">갑상선 기능 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">근질환 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</section>
+
+																	<!-- 2022.11.03 : add : 임상병리검사 추가 -->
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+																			<h5 class="section-head__title">병리검사</h5>
+																		</div>
+																		<div class="order order--box">
+																			<ul class="order__list">
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">심장사상충, 코로나 항원 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">코로나 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																				<li class="order__item">
+																					<div class="order__block">
+																						<div class="flex-box order__row">
+																							<div class="flex-box__cell flex-box__cell--flexible">
+																								<div class="order__title">코로나 검사</div>
+																								<div class="info-tags">
+																									<div class="info-tags__inner">
+																										<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																										<span class="info-tags__item color-gray">김민수</span>
+																									</div>
+																								</div>
+																							</div>
+																							<div class="flex-box__cell">
+																								<span class="status status--success">검사 완료</span>
+																							</div>
+																						</div>
+																					</div>
+																				</li>
+																			</ul>
+																		</div>
+																	</section>
+																	<!-- //2022.11.03 : add : 임상병리검사 추가 -->
+
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<h5 class="section-head__title">영상검사</h5>
+																		</div>
+																		<section class="order order--box row-item-group-small">
+																			<div class="order__block">
+																				<div class="flex-box order__row">
+																					<div class="flex-box__cell flex-box__cell--flexible">
+																						<h6 class="order__title">기관지 X-ray 촬영</h6>
+																						<div class="info-tags">
+																							<div class="info-tags__inner">
+																								<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																								<span class="info-tags__item color-gray">김민수</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="flex-box__cell">
+																						<span class="status status--success">판독 완료</span>
+																					</div>
+																				</div>
+
+																				<div class="hr hr--tertiary"></div>
+
+																				<div class="order__detail">
+																					<div class="ui-table ui-table--light">
+																						<table>
+																							<colgroup>
+																								<col style="width: 180px" />
+																								<col />
+																							</colgroup>
+																							<thead>
+																								<tr>
+																									<th>장비</th>
+																									<th>대분류</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>DX</td>
+																									<td>Abdomen</td>
+																								</tr>
+																								<tr>
+																									<td>DX</td>
+																									<td>Thorax</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</div>
+
+																					<section class="section row-contents-group-small">
+																						<div class="section-head">
+																							<h6 class="section-head__title">Comment</h6>
+																						</div>
+																						<div class="small-text">소견 : 유상피 세포와 염증성 세포 관찰됨, 지속적인 경과를 지켜보고 후속 처치 필요.</div>
+																					</section>
+
+																					<div class="gallery-file gallery-file--view">
+																						<ul class="gallery-file__list">
+																							<li class="gallery-file__item">
+																								<div class="gallery-file__block">
+																									<div class="gallery-file__image">
+																										<img src="./assets/images/_dummy/image-1.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+																									</div>
+																									<div class="gallery-file__name">File_Name_here.jpg</div>
+																									<button type="button" class="ui-button gallery-file__link">
+																										<span class="for-a11y">파일보기</span>
+																									</button>
+																								</div>
+																							</li>
+																							<li class="gallery-file__item">
+																								<div class="gallery-file__block">
+																									<div class="gallery-file__image">
+																										<img src="./assets/images/_dummy/image-2.jpg" alt="Image File" onerror="this.parentNode.className += ' is-error';" />
+																									</div>
+																									<div class="gallery-file__name">File_Name_here.jpg</div>
+																									<button type="button" class="ui-button gallery-file__link">
+																										<span class="for-a11y">파일보기</span>
+																									</button>
+																								</div>
+																							</li>
+																							<li class="gallery-file__item">
+																								<div class="gallery-file__block">
+																									<div class="gallery-file__icon gallery-file__icon--pdf">
+																										<span class="for-a11y">PDF File</span>
+																									</div>
+																									<div class="gallery-file__name">File_Name_here.pdf</div>
+																									<button type="button" class="ui-button gallery-file__link">
+																										<span class="for-a11y">파일보기</span>
+																									</button>
+																								</div>
+																							</li>
+																							<li class="gallery-file__item">
+																								<div class="gallery-file__block">
+																									<div class="gallery-file__icon gallery-file__icon--video">
+																										<span class="for-a11y">Video File</span>
+																									</div>
+																									<div class="gallery-file__name">File_Name_here.mp4</div>
+																									<button type="button" class="ui-button gallery-file__link">
+																										<span class="for-a11y">파일보기</span>
+																									</button>
+																								</div>
+																							</li>
+																							<li class="gallery-file__item">
+																								<div class="gallery-file__block">
+																									<div class="gallery-file__icon gallery-file__icon--etc">
+																										<span class="for-a11y">ETC File</span>
+																									</div>
+																									<div class="gallery-file__name">File_Name_here.txt</div>
+																									<button type="button" class="ui-button gallery-file__link">
+																										<span class="for-a11y">파일보기</span>
+																									</button>
+																								</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</div>
+																			</div>
+																		</section>
+																		<section class="order order--box row-item-group-small">
+																			<div class="order__block">
+																				<div class="flex-box order__row">
+																					<div class="flex-box__cell flex-box__cell--flexible">
+																						<h6 class="order__title">기관지 X-ray 촬영</h6>
+																						<div class="info-tags">
+																							<div class="info-tags__inner">
+																								<span class="info-tags__item color-gray">2022.07.04 18:39:45</span>
+																								<span class="info-tags__item color-gray">김민수</span>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="flex-box__cell">
+																						<span class="status status--success">판독 완료</span>
+																					</div>
+																				</div>
+
+																				<div class="hr hr--tertiary"></div>
+
+																				<div class="order__detail">
+																					<div class="ui-table ui-table--light">
+																						<table>
+																							<colgroup>
+																								<col style="width: 180px" />
+																								<col />
+																							</colgroup>
+																							<thead>
+																								<tr>
+																									<th>장비</th>
+																									<th>대분류</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>DX</td>
+																									<td>Abdomen</td>
+																								</tr>
+																								<tr>
+																									<td>DX</td>
+																									<td>Thorax</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																		</section>
+																	</section>
+																	<!-- //2022.09.30 : mod : 구성 변경 -->
+																</div>
+															</div>
+														</div>
+													</section>
+													<!-- //Objective -->
+
+													<!-- Assessment -->
+													<section class="chart-section js-ui-accordion__item" data-initial-open="true">
+														<div class="chart-section__inner js-ui-accordion__layer">
+															<div class="chart-section__head">
+																<div class="chart-section-head">
+																	<div class="chart-section-head__left">
+																		<h4 class="chart-section-head__title">Assessment</h4>
+																	</div>
+																</div>
+															</div>
+															<div class="chart-section__body">
+																<div class="chart-section__body-inner">
+																	<!-- 2022.09.30 : mod : 구성 변경 -->
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<h5 class="section-head__title">Comment</h5>
+																		</div>
+																		<div class="contnets-input">
+																			<textarea class="contnets-input__area js-auto-height-textarea" title="Objective Comment" placeholder="내용을 입력하세요."></textarea>
+																		</div>
+																	</section>
+
+																	<div class="section">
+																		<div class="ui-table ui-table--regular">
+																			<table>
+																				<colgroup>
+																					<col />
+																					<col style="width: 170px" />
+																					<col style="width: 46px" />
+																				</colgroup>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell ui-input-block--cell-regular">
+																										<input
+																											type="text"
+																											class="ui-input js-auto-complete-target"
+																											title="진단명"
+																											placeholder="진단명을 입력하세요."
+																											autocomplete="off"
+																											value="Dermatophytosis"
+																										/>
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-select-block ui-select-block--cell ui-select-block--cell-regular">
+																									<select class="ui-select" title="진단 타입">
+																										<option value="">진단</option>
+																										<option value="" selected>잠정진단</option>
+																									</select>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell ui-input-block--cell-regular">
+																										<input type="text" class="ui-input js-auto-complete-target" title="진단명" autocomplete="off" placeholder="진단명을 입력하세요." />
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--a"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-select-block ui-select-block--cell ui-select-block--cell-regular">
+																									<select class="ui-select" title="진단 타입">
+																										<option value="">진단</option>
+																										<option value="">잠정진단</option>
+																									</select>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<div class="table-controller">
+																			<div class="table-controller__button-cell">
+																				<button type="button" class="ui-button row-add-button">
+																					<span class="for-a11y">행 추가</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- //2022.09.30 : mod : 구성 변경 -->
+																</div>
+															</div>
+														</div>
+													</section>
+													<!-- //Assessment -->
+
+													<!-- Plan -->
+													<section class="chart-section js-ui-accordion__item" data-initial-open="true">
+														<div class="chart-section__inner js-ui-accordion__layer">
+															<div class="chart-section__head">
+																<div class="chart-section-head">
+																	<div class="chart-section-head__left">
+																		<h4 class="chart-section-head__title">Plan</h4>
+																	</div>
+																	<div class="chart-section-head__right">
+																		<div class="ui-menu js-ui-dropdown">
+																			<div class="ui-menu__head">
+																				<div class="ui-menu__icon"></div>
+																				<button type="button" class="ui-button ui-menu__opener js-ui-dropdown__opener">
+																					<span class="for-a11y">
+																						Menu
+																						<span class="open-text">open</span>
+																						<span class="close-text">close</span>
+																					</span>
+																				</button>
+																			</div>
+																			<div class="ui-menu__layer js-ui-dropdown__layer">
+																				<div class="ui-menu__contents ui-scroller">
+																					<ul class="ui-menu__list">
+																						<li class="ui-menu__item">
+																							<button type="button" class="ui-button ui-menu__link ui-menu__link--save js-ui-dropdown__closer">처치/처방 저장하기</button>
+																						</li>
+																						<li class="ui-menu__item">
+																							<button type="button" class="ui-button ui-menu__link ui-menu__link--import js-ui-dropdown__closer">처치/처방 불러오기</button>
+																						</li>
+																					</ul>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="chart-section__body">
+																<div class="chart-section__body-inner">
+																	<!-- 2022.10.11 : mod : Comment 위치 변경 -->
+																	<section class="section section--indent">
+																		<div class="section-head">
+																			<h5 class="section-head__title">Comment</h5>
+																		</div>
+																		<div class="contnets-input">
+																			<textarea class="contnets-input__area js-auto-height-textarea" title="Plan Comment" placeholder="치료계획, 복약지도 등을 입력하세요."></textarea>
+																		</div>
+																	</section>
+																	<!-- //2022.10.11 : mod : Comment 위치 변경 -->
+
+																	<div class="row-group">
+																		<div class="ui-table">
+																			<table>
+																				<colgroup>
+																					<col />
+																					<!-- 2022.12.23 : mod : 너비 값 수정 -->
+																					<col style="width: 55px" />
+																					<col style="width: 85px" />
+																					<!-- //2022.12.23 : mod : 너비 값 수정 -->
+																					<!-- 2022.12.23 : del : 할인(%), 할인액 항목 삭제
+																					<col style="width: 65px" />
+																					<col style="width: 85px" />
+																					-->
+																					<col style="width: 80px" />
+																					<!-- 2022.12.23 : mod : 너비 값 수정 -->
+																					<col style="width: 90px" />
+																					<!-- //2022.12.23 : mod : 너비 값 수정 -->
+																					<col style="width: 46px" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>Tx</th>
+																						<th>수량</th>
+																						<!-- 2022.12.23 : mod : 문구 수정 (판매금액 → 금액) -->
+																						<th>금액</th>
+																						<!-- 2022.12.23 : del : 할인(%), 할인액 항목 삭제
+																						<th>할인(%)</th>
+																						<th>할인액</th>
+																						-->
+																						<th>부가세</th>
+																						<!-- 2022.12.23 : mod : 문구 수정 (금액 → 합계) -->
+																						<th>합계</th>
+																						<th></th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell">
+																										<input type="text" class="ui-input js-auto-complete-target" title="Tx" autocomplete="off" value="초진 진찰료" />
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="수량" value="1" />
+																								</div>
+																							</div>
+																						</td>
+																						<td class="align-right">4,000</td>
+																						<!-- 2022.12.23 : del : 할인(%), 할인액 항목 삭제
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="할인(%)" value="100" />
+																								</div>
+																							</div>
+																						</td>
+																						<td class="align-right">4,000</td>
+																						-->
+																						<td class="align-right">400</td>
+																						<td class="align-right">4,400</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell">
+																										<input type="text" class="ui-input js-auto-complete-target" title="Tx" autocomplete="off" />
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--t"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="수량" />
+																								</div>
+																							</div>
+																						</td>
+																						<td class="align-right"></td>
+																						<!-- 2022.12.23 : del : 할인(%), 할인액 항목 삭제
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="할인(%)" />
+																								</div>
+																							</div>
+																						</td>
+																						<td class="align-right"></td>
+																						-->
+																						<td class="align-right"></td>
+																						<td class="align-right"></td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																				</tbody>
+																				<tfoot>
+																					<tr>
+																						<!-- 2022.12.23 : mod : colspan 값 수정 -->
+																						<td colspan="3">합계</td>
+																						<!-- 2022.12.23 : del : 할인(%), 할인액 항목 삭제
+																						<td class="align-right">100,000</td>
+																						-->
+																						<td class="align-right">122,850</td>
+																						<td class="align-right">1,031,850</td>
+																						<td></td>
+																					</tr>
+																				</tfoot>
+																			</table>
+																		</div>
+																		<div class="table-controller">
+																			<div class="table-controller__button-cell">
+																				<button type="button" class="ui-button row-add-button">
+																					<span class="for-a11y">행 추가</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row-group">
+																		<div class="ui-table">
+																			<table>
+																				<colgroup>
+																					<col />
+																					<col style="width: 70px" />
+																					<col style="width: 50px" />
+																					<col style="width: 55px" />
+																					<col style="width: 55px" />
+																					<col style="width: 55px" />
+																					<col style="width: 65px" />
+																					<col style="width: 55px" />
+																					<col style="width: 46px" />
+																				</colgroup>
+																				<thead>
+																					<tr>
+																						<th>Rx</th>
+																						<th>단위</th>
+																						<th>용법</th>
+																						<th>용량</th>
+																						<th>횟수</th>
+																						<th>날수</th>
+																						<th>총용량</th>
+																						<th>수량</th>
+																						<th></th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell">
+																										<input type="text" class="ui-input js-auto-complete-target" title="Rx" autocomplete="off" value="Cephradine Inj." />
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<!-- 2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td class="align-center">mg/kg</td>
+																						<!-- //2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input" title="용법" value="SC" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="용량" value="100" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="횟수" value="100" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="날수" value="100" />
+																								</div>
+																							</div>
+																						</td>
+																						<!-- 2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td class="align-right">100</td>
+																						<!-- //2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="수량" value="100" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																					<tr>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="auto-complete">
+																									<div class="ui-input-block ui-input-block--cell">
+																										<input type="text" class="ui-input js-auto-complete-target" title="Rx" autocomplete="off" />
+																									</div>
+																									<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+																									<div class="auto-complete__layer">
+																										<div class="auto-complete__scroller ui-scroller">
+																											<ul class="auto-complete__list">
+																												<!-- 2022.09.19 : mod : type="button" 속성 추가 -->
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="AAAAAA">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">
+																															한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text)
+																														</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="BBBBBB">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="CCCCCC">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="DDDDDD">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="EEEEEE">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text Text Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="FFFFFF">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text Text)</span>
+																													</button>
+																												</li>
+																												<li class="auto-complete__item">
+																													<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="GGGGGG">
+																														<span class="auto-complete__icon auto-complete__icon--r"></span>
+																														<span class="auto-complete__text">한글 글자 출력 (<mark>DerT</mark>ext Text)</span>
+																													</button>
+																												</li>
+																												<!-- //2022.09.19 : mod : type="button" 속성 추가 -->
+																											</ul>
+																										</div>
+																									</div>
+																								</div>
+																							</div>
+																						</td>
+																						<!-- 2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td class="align-center"></td>
+																						<!-- //2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input" title="용법" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="용량" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="횟수" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="날수" />
+																								</div>
+																							</div>
+																						</td>
+																						<!-- 2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td class="align-right"></td>
+																						<!-- //2022.09.30 : mod : 일반 텍스트로 변경 (인풋 요소가 아님.) -->
+																						<td>
+																							<div class="ui-table__input-cell">
+																								<div class="ui-input-block ui-input-block--cell">
+																									<input type="text" class="ui-input align-right" title="수량" />
+																								</div>
+																							</div>
+																						</td>
+																						<td>
+																							<button type="button" class="ui-button row-remove-button">
+																								<span class="for-a11y">행 삭제</span>
+																							</button>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<div class="table-controller">
+																			<div class="table-controller__button-cell">
+																				<button type="button" class="ui-button row-add-button">
+																					<span class="for-a11y">행 추가</span>
+																				</button>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<!-- //Plan -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.09.05 : mod : chart-view -> panel 클래스 명 변경 및 panel--chart 클래스 값 추가 -->
+							</div>
+							<div class="layout-grid__cell widget-width-regular-small">
+								<!-- DD : data-sizes 속성으로 처음 세팅 할 사이즈 지정. (백분율 수치) | 기본 값 50, 50 으로 해주세요. -->
+								<div class="ui-split" id="medicalChartSide" data-sizes="65, 35">
+									<div class="ui-split__cell">
+										<!-- 검사 -->
+										<section class="widget widget--contents">
+											<div class="widget__head">
+												<div class="widget-head">
+													<div class="widget-head__left">
+														<h3 class="widget-head__title">검사</h3>
+													</div>
+													<div class="widget-head__right">
+														<button type="button" class="ui-button add-button">
+															<span class="for-a11y">추가</span>
+														</button>
+													</div>
+												</div>
+												<div class="filter-info row-contents-group">
+													<button type="button" class="ui-button filter-button">
+														<span class="for-a11y">필터 설정</span>
+													</button>
+													<div class="filter-tags">
+														<ul class="filter-tags__list">
+															<li class="filter-tags__item">
+																<div class="filter-tags__block">진단</div>
+															</li>
+															<li class="filter-tags__item">
+																<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+																<!-- DD : 선택 된 필터 항목에 is-active 클래스 값 추가 -->
+																<div class="filter-tags__block is-active">병리</div>
+															</li>
+															<li class="filter-tags__item">
+																<div class="filter-tags__block">영상</div>
+															</li>
+															<!-- 2022.09.30 : del : 항목 삭제
+															<li class="filter-tags__item">
+																<div class="filter-tags__block is-active">검사의뢰</div>
+															</li>
+															-->
+															<li class="filter-tags__item">
+																<div class="filter-tags__block is-active">2022.05.01 ~ 2022.06.30</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="widget__body">
+												<div class="widget__body-scroller ui-scroller">
+													<div class="widget__body-inner">
+														<!-- Case : 목록 없을 때 -->
+														<div class="ui-empty">
+															<div class="ui-empty__object ui-empty__object--examination"></div>
+															<p class="ui-empty__text">검사 이력이 없습니다</p>
+														</div>
+														<!-- //Case : 목록 없을 때 -->
+
+														<!-- group -->
+														<section class="log-section">
+															<div class="log-section-head">
+																<h4 class="log-section-head__title">2202.07.04</h4>
+															</div>
+															<!-- list -->
+															<div class="order">
+																<ul class="order__list">
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">X-Ray (Thorax, Abdomen)</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<span class="info-tags__item color-gray">영상</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--waiting">대기중</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">Heartworm Ag Test</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+																							<span class="info-tags__item color-gray">병리</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--waiting">대기중</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+															<!-- list -->
+														</section>
+														<!-- //group -->
+														<!-- group -->
+														<section class="log-section">
+															<div class="log-section-head">
+																<h4 class="log-section-head__title">2202.05.01</h4>
+															</div>
+															<!-- list -->
+															<div class="order">
+																<ul class="order__list">
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">X-Ray (Thorax, Abdomen)</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<span class="info-tags__item color-gray">영상</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--success">검사 완료</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">Heartworm Ag Test</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+																							<span class="info-tags__item color-gray">병리</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--success">검사 완료</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">X-Ray (Thorax, Abdomen)</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<span class="info-tags__item color-gray">영상</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--success">검사 완료</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																	<li class="order__item">
+																		<div class="order__block">
+																			<div class="flex-box order__row">
+																				<div class="flex-box__cell flex-box__cell--flexible">
+																					<div class="order__title">Heartworm Ag Test</div>
+																					<div class="info-tags">
+																						<div class="info-tags__inner">
+																							<span class="info-tags__item color-gray">2022.07.04</span>
+																							<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+																							<span class="info-tags__item color-gray">병리</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="flex-box__cell">
+																					<span class="status status--success">검사 완료</span>
+																				</div>
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+															<!-- list -->
+														</section>
+														<!-- //group -->
+													</div>
+												</div>
+											</div>
+										</section>
+										<!-- //검사 -->
+									</div>
+									<div class="ui-split__cell">
+										<!-- 접종이력 -->
+										<section class="widget widget--contents">
+											<div class="widget__head">
+												<div class="widget-head">
+													<div class="widget-head__left">
+														<h3 class="widget-head__title">접종이력</h3>
+													</div>
+													<div class="widget-head__right">
+														<button type="button" class="ui-button add-button">
+															<span class="for-a11y">추가</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="widget__body">
+												<div class="widget__body-scroller ui-scroller">
+													<div class="widget__body-inner">
+														<!-- Case : 목록 없을 때 -->
+														<div class="ui-empty">
+															<div class="ui-empty__object ui-empty__object--inoculation"></div>
+															<p class="ui-empty__text">접종 이력이 없습니다.</p>
+														</div>
+														<!-- //Case : 목록 없을 때 -->
+
+														<!-- list -->
+														<div class="order">
+															<ul class="order__list">
+																<li class="order__item">
+																	<div class="order__block">
+																		<div class="flex-box order__row">
+																			<div class="flex-box__cell flex-box__cell--flexible">
+																				<div class="order__title">DHPPL</div>
+																				<div class="order__text">마지막 접종일 : 2022.07.04</div>
+																				<div class="order__text">예정 접종일 : <span class="color-red">2022.06.10</span></div>
+																			</div>
+																			<div class="flex-box__cell">
+																				<span class="status status--normal">2차 접종</span>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="order__item">
+																	<div class="order__block">
+																		<div class="flex-box order__row">
+																			<div class="flex-box__cell flex-box__cell--flexible">
+																				<div class="order__title">컨넬코프</div>
+																				<div class="order__text">마지막 접종일 : -</div>
+																				<div class="order__text">예정 접종일 : -</div>
+																			</div>
+																			<div class="flex-box__cell">
+																				<span class="status status--danger-fill">미접종</span>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="order__item">
+																	<div class="order__block">
+																		<div class="flex-box order__row">
+																			<div class="flex-box__cell flex-box__cell--flexible">
+																				<div class="order__title">인플루엔자</div>
+																				<div class="order__text">마지막 접종일 : 2022.07.04</div>
+																				<div class="order__text">예정 접종일 : 2022.06.10</div>
+																			</div>
+																			<div class="flex-box__cell">
+																				<span class="status status--normal">1차 접종</span>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="order__item">
+																	<div class="order__block">
+																		<div class="flex-box order__row">
+																			<div class="flex-box__cell flex-box__cell--flexible">
+																				<div class="order__title">심장사상충</div>
+																				<div class="order__text">마지막 접종일 : 2022.07.04</div>
+																				<div class="order__text">예정 접종일 : 2022.06.10</div>
+																			</div>
+																			<div class="flex-box__cell">
+																				<span class="status status--normal">1차 접종</span>
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<!-- list -->
+													</div>
+												</div>
+											</div>
+										</section>
+										<!-- //접종이력 -->
+									</div>
+								</div>
+								<div class="layout-grid__foot">
+									<div class="ui-buttons ui-buttons--regular ui-buttons--no-margin">
+										<ul class="ui-buttons__list">
+											<!-- 2022.12.02 : mod : 버튼 구조 수정 -->
+											<li class="ui-buttons__item ui-buttons__item--flex-none">
+												<a href="" class="ui-basic-button ui-basic-button--regular ui-basic-button--quaternary">
+													<span class="ui-basic-button__text">문서발급</span>
+												</a>
+											</li>
+											<!-- //2022.12.02 : mod : 버튼 구조 수정 -->
+											<li class="ui-buttons__item">
+												<a href="" class="ui-basic-button ui-basic-button--regular">
+													<span class="ui-basic-button__text">예약</span>
+												</a>
+											</li>
+											<li class="ui-buttons__item">
+												<a href="" class="ui-basic-button ui-basic-button--regular ui-basic-button--secondary">
+													<span class="ui-basic-button__text">입원</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(document)
+				.on('dragStart', '#medicalChartSide', function (e, sizes) {
+					// 검사/접종이력 리사이즈 시작 발생
+					console.log(sizes);
+				})
+				.on('drag', '#medicalChartSide', function (e, sizes) {
+					// 검사/접종이력 리사이즈 진행중 발생
+					console.log(sizes);
+				})
+				.on('dragEnd', '#medicalChartSide', function (e, sizes) {
+					// 검사/접종이력 리사이즈 완료 발생
+					console.log(sizes);
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

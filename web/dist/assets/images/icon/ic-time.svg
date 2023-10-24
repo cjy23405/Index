@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <g transform="translate(-678 -465)">
+        <path data-name="사각형 30297" transform="translate(678 465)" style="fill:none" d="M0 0h18v18H0z"/>
+        <circle data-name="타원 2677" cx="7" cy="7" r="7" transform="translate(680 467)" style="fill:#a2a2a2"/>
+        <path data-name="합치기 80" d="m-13984.76 21566.867-2.512-1.445a.83.83 0 0 1-.123-.09.755.755 0 0 1-.277-.582v-4a.751.751 0 0 1 .753-.752.75.75 0 0 1 .747.752v3.576l2.159 1.246a.748.748 0 0 1 .276 1.023.747.747 0 0 1-.647.373.75.75 0 0 1-.376-.101z" transform="translate(14673.672 -21089.996)" style="fill:#fff"/>
+    </g>
+</svg>

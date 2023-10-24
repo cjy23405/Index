@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-hospitalization-procedure">입원 수속</a>
+
+		<!-- layer: 입원 수속 -->
+		<div class="layer-wrap" data-layer="layer-hospitalization-procedure">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer ui-layer--large-small">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">입원 수속</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<div class="ui-form ui-form--small ui-form--horizontal">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--align-top">
+												<dt class="ui-form__key ui-form__key--small">환자 검색</dt>
+												<dd class="ui-form__val">
+													<div class="auto-complete auto-complete--small">
+														<div class="ui-input-block ui-input-block--small ui-input-block--search">
+															<input type="text" class="ui-input" title="환자 검색" placeholder="환자 검색" autocomplete="off" />
+														</div>
+														<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+														<div class="auto-complete__layer">
+															<div class="auto-complete__scroller ui-scroller">
+																<ul class="auto-complete__list">
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="info-box info-box--dropdown">
+																				<span class="info-box__row">
+																					<span class="info-box__title">
+																						<span class="info-box__title-text">P20220301001</span>
+																						<span class="info-box__title-sub"><mark>모</mark>찌</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">Cat</span>
+																							<span class="info-tags__item color-gray">Abyssinian</span>
+																							<span class="info-tags__item color-gray">중성화 암컷</span>
+																							<span class="info-tags__item color-gray">2년 6개월</span>
+																						</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">G20220301002</span>
+																							<span class="info-tags__item color-gray">김민지</span>
+																							<span class="info-tags__item color-gray">010-0000-0000</span>
+																						</span>
+																					</span>
+																				</span>
+																			</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="info-box info-box--dropdown">
+																				<span class="info-box__row">
+																					<span class="info-box__title">
+																						<span class="info-box__title-text">P20220301001</span>
+																						<span class="info-box__title-sub"><mark>모</mark>찌</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">Cat</span>
+																							<span class="info-tags__item color-gray">Abyssinian</span>
+																							<span class="info-tags__item color-gray">중성화 암컷</span>
+																							<span class="info-tags__item color-gray">2년 6개월</span>
+																						</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">G20220301002</span>
+																							<span class="info-tags__item color-gray">김민지</span>
+																							<span class="info-tags__item color-gray">010-0000-0000</span>
+																						</span>
+																					</span>
+																				</span>
+																			</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="info-box info-box--dropdown">
+																				<span class="info-box__row">
+																					<span class="info-box__title">
+																						<span class="info-box__title-text">P20220301001</span>
+																						<span class="info-box__title-sub"><mark>모</mark>찌</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">Cat</span>
+																							<span class="info-tags__item color-gray">Abyssinian</span>
+																							<span class="info-tags__item color-gray">중성화 암컷</span>
+																							<span class="info-tags__item color-gray">2년 6개월</span>
+																						</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">G20220301002</span>
+																							<span class="info-tags__item color-gray">김민지</span>
+																							<span class="info-tags__item color-gray">010-0000-0000</span>
+																						</span>
+																					</span>
+																				</span>
+																			</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="info-box info-box--dropdown">
+																				<span class="info-box__row">
+																					<span class="info-box__title">
+																						<span class="info-box__title-text">P20220301001</span>
+																						<span class="info-box__title-sub"><mark>모</mark>찌</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">Cat</span>
+																							<span class="info-tags__item color-gray">Abyssinian</span>
+																							<span class="info-tags__item color-gray">중성화 암컷</span>
+																							<span class="info-tags__item color-gray">2년 6개월</span>
+																						</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">G20220301002</span>
+																							<span class="info-tags__item color-gray">김민지</span>
+																							<span class="info-tags__item color-gray">010-0000-0000</span>
+																						</span>
+																					</span>
+																				</span>
+																			</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="info-box info-box--dropdown">
+																				<span class="info-box__row">
+																					<span class="info-box__title">
+																						<span class="info-box__title-text">P20220301001</span>
+																						<span class="info-box__title-sub"><mark>모</mark>찌</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">Cat</span>
+																							<span class="info-tags__item color-gray">Abyssinian</span>
+																							<span class="info-tags__item color-gray">중성화 암컷</span>
+																							<span class="info-tags__item color-gray">2년 6개월</span>
+																						</span>
+																					</span>
+																				</span>
+																				<span class="info-box__row">
+																					<span class="info-tags">
+																						<span class="info-tags__inner">
+																							<span class="info-tags__item color-gray">G20220301002</span>
+																							<span class="info-tags__item color-gray">김민지</span>
+																							<span class="info-tags__item color-gray">010-0000-0000</span>
+																						</span>
+																					</span>
+																				</span>
+																			</span>
+																		</button>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item ui-form__item--align-top">
+												<!-- 2022.11.03 : mod : dt에 span 추가 -->
+												<dt class="ui-form__key ui-form__key--small">환자 정보<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<!-- Case : 환자 선택 전 -->
+													<div class="info-box">
+														<div class="info-box__row">
+															<div class="info-box__title"></div>
+														</div>
+														<div class="info-box__row"></div>
+														<div class="info-box__row"></div>
+													</div>
+													<!-- //Case : 환자 선택 전 -->
+
+													<!-- Case : 환자 선택 후 -->
+													<div class="info-box">
+														<div class="info-box__row">
+															<div class="info-box__title">
+																<div class="info-box__title-text">P20220301001</div>
+																<div class="info-box__title-sub">모찌</div>
+															</div>
+														</div>
+														<div class="info-box__row">
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<span class="info-tags__item color-gray">Cat</span>
+																	<span class="info-tags__item color-gray">Abyssinian</span>
+																	<span class="info-tags__item color-gray">중성화 암컷</span>
+																	<span class="info-tags__item color-gray">2년 6개월</span>
+																</div>
+															</div>
+														</div>
+														<div class="info-box__row">
+															<div class="info-tags">
+																<div class="info-tags__inner">
+																	<span class="info-tags__item color-gray">G20220301002</span>
+																	<span class="info-tags__item color-gray">김민지</span>
+																	<span class="info-tags__item color-gray">010-0000-0000</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- //Case : 환자 선택 후 -->
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal ui-form--auto ui-form--medium-margin row-contents-group-small">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<!-- 2022.11.03 : mod : dt에 span 추가 -->
+												<dt class="ui-form__key ui-form__key--small">입원일<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-date">
+														<input type="text" class="ui-input js-datepicker" title="입원일" placeholder="연도.월.일" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<!-- 2022.11.03 : mod : dt에 span 추가 -->
+												<dt class="ui-form__key ui-form__key--auto">퇴원 예정일<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-date">
+														<input type="text" class="ui-input js-datepicker" title="퇴원 예정일" placeholder="연도.월.일" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<!-- 2022.11.03 : mod : dt에 span 추가 -->
+												<dt class="ui-form__key ui-form__key--auto">담당자(정)<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small input-width-regular">
+														<select class="ui-select" title="담당자(정)">
+															<option value="-1" disabled selected>-</option>
+															<option value="">김민수</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">담당자(부)</dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small input-width-regular">
+														<select class="ui-select" title="담당자(부)">
+															<option value="-1" disabled selected>-</option>
+															<option value="">김민수</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--align-top">
+												<dt class="ui-form__key ui-form__key--small">입원 사유</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input input-height-small" title="입원 사유" placeholder="입원 사유를 입력하세요."></textarea>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="hr hr--secondary row-group"></div>
+
+									<div class="ui-table ui-table--light">
+										<table>
+											<colgroup>
+												<col style="width: 45px" />
+												<col />
+												<col />
+												<col />
+											</colgroup>
+											<thead>
+												<tr>
+													<th></th>
+													<th>구분</th>
+													<th>입원실</th>
+													<th>사용여부</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio1" />
+															<label for="tableRadio1" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>격리입원 (고양이)</td>
+													<td>격리 입원실1</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio2" />
+															<label for="tableRadio2" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>격리입원 (고양이)</td>
+													<td>격리 입원실2</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio3" />
+															<label for="tableRadio3" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>격리입원 (고양이)</td>
+													<td>격리 입원실3</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio4" />
+															<label for="tableRadio4" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>일반입원 (고양이)</td>
+													<td>101</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio5" />
+															<label for="tableRadio5" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>일반입원 (고양이)</td>
+													<td>102</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio6" />
+															<label for="tableRadio6" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>ICU (개)</td>
+													<td>ICU1</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio7" />
+															<label for="tableRadio7" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>ICU (개)</td>
+													<td>ICU2</td>
+													<td class="align-center">빈방</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ui-radio-block ui-radio-block--small">
+															<input type="radio" class="ui-radio ui-table__row-check" name="tableRadio" id="tableRadio8" />
+															<label for="tableRadio8" class="ui-label">
+																<span class="ui-radio-object"></span>
+																<span class="for-a11y">선택</span>
+															</label>
+														</div>
+													</td>
+													<td>ICU (개)</td>
+													<td>ICU3</td>
+													<td class="align-center">빈방</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--right ui-buttons--min-width">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+											<span class="ui-basic-button__text">입원하기</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 입원 수속 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-hospitalization-procedure');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

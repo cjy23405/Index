@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-deposit-management">예치금 관리</a>
+
+		<!-- layer: 예치금 관리 -->
+		<div class="layer-wrap" data-layer="layer-deposit-management">
+			<div class="layer-container">
+				<!-- 2022.11.03 : del : form태그 삭제
+				<form action="">
+				-->
+				<section class="ui-layer ui-layer--regular">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<h2 class="ui-layer-header__title">예치금 관리</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.10.11 : mod : line-section -> section 클래스 값 변경 -->
+								<div class="section">
+									<!-- 2022.10.24 : mod : 환자정보 구조 수정 -->
+									<div class="flex-box row-group">
+										<div class="flex-box__cell flex-box__cell--regular-margin">
+											<h3 class="chart-title">G20220301001&nbsp;&nbsp;홍길동</h3>
+										</div>
+										<div class="flex-box__cell flex-box__cell--regular-margin">
+											<p class="basic-text color-blue-black font-weight-medium">010-4879-9873</p>
+										</div>
+									</div>
+									<!-- //2022.10.24 : mod : 환자정보 구조 수정 -->
+									<div class="flex-box">
+										<div class="flex-box__cell">
+											<div class="ui-select-block ui-select-block--small input-width-regular">
+												<select class="ui-select js-select-tab" title="예치금 설정 종류">
+													<option value="" data-select-tab="selectTab1">예치금 추가</option>
+													<option value="" data-select-tab="selectTab2">예치금 반환</option>
+												</select>
+											</div>
+										</div>
+										<!-- 예치금 추가 -->
+										<div class="flex-box__cell flex-box__cell--small-margin flex-box__cell--flexible" data-select-tab-panel="selectTab1">
+											<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+												<input type="number" pattern="\d*" class="ui-input" title="예치금" placeholder="추가할 예치금을 입력하세요" />
+												<div class="ui-input-unit">원</div>
+											</div>
+										</div>
+										<div class="flex-box__cell" data-select-tab-panel="selectTab1">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small">
+												<span class="ui-basic-button__text">추가</span>
+											</button>
+										</div>
+										<!-- //예치금 추가 -->
+										<!-- 예치금 반환 -->
+										<div class="flex-box__cell flex-box__cell--small-margin flex-box__cell--flexible" data-select-tab-panel="selectTab2">
+											<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+												<input type="number" pattern="\d*" class="ui-input" title="예치금" placeholder="반환할 예치금을 입력하세요" />
+												<div class="ui-input-unit">원</div>
+											</div>
+										</div>
+										<div class="flex-box__cell" data-select-tab-panel="selectTab2">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small">
+												<span class="ui-basic-button__text">반환</span>
+											</button>
+										</div>
+										<!-- //예치금 반환 -->
+									</div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal row-item-group">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--align-right">
+												<!-- 2022.10.11 : mod : ui-form__key--medium-margin 클래스 추가 -->
+												<dt class="ui-form__key ui-form__key--auto ui-form__key--medium-margin">잔여 예치금</dt>
+												<dd class="ui-form__val ui-form__val--auto">
+													<div class="value color-primary-medium">
+														<div class="value__num">150,000</div>
+														<div class="value__unit value__unit--small">원</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+
+								<!-- 2022.10.11 : add : .hr 추가 -->
+								<div class="hr hr--secondary row-group"></div>
+								<!-- //2022.10.11 : add : .hr 추가 -->
+
+								<!-- 2022.10.11 : mod : line-section -> section 클래스 값 변경 -->
+								<section class="section">
+									<div class="section-head">
+										<h4 class="section-head__title section-head__title--basic font-weight-medium">예치금 이력</h4>
+									</div>
+									<div class="ui-table ui-table--light">
+										<table>
+											<colgroup>
+												<col style="width: 100px" />
+												<col style="width: 80px" />
+												<col />
+												<col />
+												<col style="width: 75px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th>날짜</th>
+													<th>구분</th>
+													<th>금액</th>
+													<th>잔여 예치금</th>
+													<!-- 2022.12.23 : mod : 문구 수정 (관리자 → 담당자) -->
+													<th>담당자</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="align-center">2022.05.10</td>
+													<td class="align-center">사용취소</td>
+													<td class="align-right">100,000</td>
+													<td class="align-right">200,000</td>
+													<td class="align-center">홍민아</td>
+												</tr>
+												<tr>
+													<td class="align-center">2022.05.10</td>
+													<td class="align-center color-red">사용</td>
+													<td class="align-right color-red">-100,000</td>
+													<td class="align-right">100,000</td>
+													<td class="align-center">홍민아</td>
+												</tr>
+												<tr>
+													<td class="align-center">2022.05.10</td>
+													<td class="align-center color-red">반환</td>
+													<td class="align-right color-red">-100,000</td>
+													<td class="align-right">200,000</td>
+													<td class="align-center">홍민아</td>
+												</tr>
+												<tr>
+													<td class="align-center">2022.05.10</td>
+													<td class="align-center color-secondary">추가</td>
+													<td class="align-right color-secondary">+200,000</td>
+													<td class="align-right">300,000</td>
+													<td class="align-center">홍민아</td>
+												</tr>
+												<tr>
+													<td class="align-center">2022.05.10</td>
+													<td class="align-center color-secondary">추가</td>
+													<td class="align-right color-secondary">+100,000</td>
+													<td class="align-right">100,000</td>
+													<td class="align-center">홍민아</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="ui-table__foot">
+											<div class="ui-table__cell-center">
+												<nav class="pagination">
+													<h3 class="for-a11y">Pagination</h3>
+													<ul class="pagination__list">
+														<li class="pagination__item">
+															<!-- DD : 첫번째 페이지일 경우 disabled 속성 추가 -->
+															<button type="button" class="ui-button pagination__link pagination__link--prev">
+																<span class="for-a11y">이전</span>
+															</button>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">1</a>
+														</li>
+														<li class="pagination__item">
+															<span class="pagination__ellipsis">...</span>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">7</a>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">8</a>
+														</li>
+														<li class="pagination__item">
+															<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+															<a href="" class="pagination__link is-active">9</a>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">10</a>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">11</a>
+														</li>
+														<li class="pagination__item">
+															<span class="pagination__ellipsis">...</span>
+														</li>
+														<li class="pagination__item">
+															<a href="" class="pagination__link">999</a>
+														</li>
+														<li class="pagination__item">
+															<!-- DD : 마지막 페이지일 경우 disabled 속성 추가 -->
+															<button type="button" class="ui-button pagination__link pagination__link--next">
+																<span class="for-a11y">다음</span>
+															</button>
+														</li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--right ui-buttons--min-width">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+										<span class="ui-basic-button__text">닫기</span>
+									</button>
+								</li>
+								<!-- 2022.11.03 : del : 버튼 삭제
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+											<span class="ui-basic-button__text">저장</span>
+										</button>
+									</li>
+									-->
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- 2022.11.03 : del : form 태그 삭제
+				</form>
+				-->
+			</div>
+		</div>
+		<!-- //layer: 예치금 관리 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-deposit-management');
+
+				// 2022.11.03 : del : test 스크립트 삭제
+				// $('form').on('submit', function (e) {
+				// 	alert('submit test');
+
+				// 	e.preventDefault();
+				// });
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <g data-name="그룹 23806" transform="translate(-1163 -372)">
+        <path data-name="다각형 104" d="M33.079 11.939a8 8 0 0 1 13.842 0l26.115 45.049A8 8 0 0 1 66.115 69h-52.23a8 8 0 0 1-6.921-12.012z" transform="translate(1163 375)" style="fill:#e5e5e5"/>
+        <path data-name="빼기 385" d="M17134.113 10223h-3.986a8 8 0 0 0 6.908-12.013l-26.113-45.048a7.9 7.9 0 0 0-4.922-3.736 8.155 8.155 0 0 1 2-.249 7.917 7.917 0 0 1 6.92 3.985l26.117 45.048a8 8 0 0 1-6.924 12.013z" transform="translate(-15905 -9779)" style="fill:#dcdcdc"/>
+        <path data-name="패스 17626" d="M2 0h2a2 2 0 0 1 2 2L5 20a2 2 0 0 1-2 2 2 2 0 0 1-2-2L0 2a2 2 0 0 1 2-2z" transform="translate(1200 403)" style="fill:#c8c8c8"/>
+        <circle data-name="타원 2853" cx="2.5" cy="2.5" r="2.5" transform="translate(1200.5 428)" style="fill:#c8c8c8"/>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="40" viewBox="0 0 46 40">
+    <g transform="translate(-1336 -365)">
+        <rect data-name="사각형 24921" width="34" height="6" rx="3" transform="translate(1342 369)" style="fill:#243b57"/>
+        <g data-name="그룹 21499" transform="translate(1346.278 371.258)">
+            <path data-name="빼기 349" d="m798.917 616.069-3.068-2.471a.769.769 0 0 0-.966 0l-3.073 2.476a.273.273 0 0 1-.444-.215v-29.631h24v29.631a.273.273 0 0 1-.444.215l-3.073-2.476a.769.769 0 0 0-.966 0l-3.034 2.443a.769.769 0 0 1-.966 0l-3.034-2.443a.769.769 0 0 0-.966 0l-3.067 2.471a.716.716 0 0 1-.899 0z" transform="translate(-790.646 -585.486)" style="fill:#d9dfe5"/>
+            <rect data-name="사각형 23635" width="3.5" height="2" rx="1" transform="translate(16.721 12.742)" style="fill:#243b57"/>
+            <rect data-name="사각형 23636" width="3.5" height="2" rx="1" transform="translate(5.222 12.742)" style="fill:#243b57"/>
+            <g data-name="패스 17425" style="isolation:isolate">
+                <path data-name="패스 17426" d="M300 424.75a1 1 0 0 1-.895-.553l-1.605-3.211-1.605 3.211a1.047 1.047 0 0 1-.911.553 1 1 0 0 1-.892-.581l-3-6.5a1 1 0 1 1 1.816-.838l2.128 4.611 1.569-3.139a1.042 1.042 0 0 1 1.79 0l1.569 3.139 2.128-4.611a1 1 0 0 1 1.816.838l-3 6.5a1 1 0 0 1-.892.581z" style="fill:#243b57" transform="translate(-284.78 -406.508)"/>
+            </g>
+        </g>
+    </g>
+</svg>

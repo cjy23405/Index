@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-schedule-registration">일정 등록</a>
+
+		<!-- layer: 일정 등록 -->
+		<div class="layer-wrap" data-layer="layer-schedule-registration">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">일정 등록</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<div class="ui-form ui-form--small">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key">구분<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab radio-tab--small row-item-group">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_1" data-checkbox-tab="radioTab01" checked />
+																	<label for="radioTab1_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">개인</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_2" data-checkbox-tab="radioTab02" />
+																	<label for="radioTab1_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">공통</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+
+											<!-- DD : 개인 선택시, 노출 -->
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab01">
+												<dt class="ui-form__key">직원<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<select class="ui-select" title="직원">
+															<option value="">김민수</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab01">
+												<dt class="ui-form__key">타입<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<select class="ui-select" title="타입">
+															<option value="">직원 휴무</option>
+															<option value="">수술</option>
+															<option value="">촬영</option>
+															<option value="">검사</option>
+															<option value="">외출</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 개인 선택시, 노출 -->
+
+											<!-- DD : 공통 선택시, 노출 -->
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab02">
+												<dt class="ui-form__key">타입<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<select class="ui-select" title="타입">
+															<option value="">병원 휴무</option>
+															<option value="">식사</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 공통 선택시, 노출 -->
+
+											<div class="ui-form__item">
+												<!-- 2022.11.03 : mod : 스위치 버튼 추가로 구조 수정 -->
+												<dt class="ui-form__key">
+													<div class="flex-box">
+														<div class="flex-box__cell flex-box__cell--flexible">반복 설정</div>
+														<div class="flex-box__cell">
+															<div class="ui-switch-block ui-switch-block--small">
+																<input type="checkbox" class="ui-checkbox" id="switch1" data-area-disabled="repeat" />
+																<label for="switch1" class="ui-label">
+																	<span class="ui-switch-object"></span>
+																	<span class="for-a11y">On</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</dt>
+												<!-- //2022.11.03 : mod : 스위치 버튼 추가로 구조 수정 -->
+												<!-- 2022.11.03 : mod : data-area-disabled-target 속성 추가 -->
+												<dd class="ui-form__val" data-area-disabled-target="repeat">
+													<div class="box-check box-check--auto box-check--small">
+														<ul class="box-check__list">
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_1" />
+																	<label for="boxCheck1_1" class="box-check__link">
+																		<span class="box-check__link-text">월</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_2" />
+																	<label for="boxCheck1_2" class="box-check__link">
+																		<span class="box-check__link-text">화</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_3" />
+																	<label for="boxCheck1_3" class="box-check__link">
+																		<span class="box-check__link-text">수</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_4" />
+																	<label for="boxCheck1_4" class="box-check__link">
+																		<span class="box-check__link-text">목</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_5" />
+																	<label for="boxCheck1_5" class="box-check__link">
+																		<span class="box-check__link-text">금</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_6" />
+																	<label for="boxCheck1_6" class="box-check__link">
+																		<span class="box-check__link-text">토</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_7" />
+																	<label for="boxCheck1_7" class="box-check__link">
+																		<span class="box-check__link-text">일</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<!-- 2022.11.03 : mod : 텍스트 수정 -->
+												<dt class="ui-form__key">일정<span class="ui-require" aria-label="(필수)"></span></dt>
+												<!-- 2022.11.03 : mod : data-area-disabled-target, data-area-disabled-reverse 속성 추가 -->
+												<dd class="ui-form__val" data-area-disabled-target="repeat" data-area-disabled-reverse="true">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date">
+														<!-- 2022.11.03 : mod : title값 수정 -->
+														<input type="text" class="ui-input js-datepicker" title="일정" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">시간<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="flex-box">
+														<div class="flex-box__cell flex-box__cell--flexible">
+															<div class="ui-input-block ui-input-block--small ui-input-block--time">
+																<input type="text" class="ui-input js-timepicker" title="시작시간" placeholder="00:00" />
+															</div>
+														</div>
+														<div class="flex-box__cell flex-box__cell--small-margin">~</div>
+														<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--small-margin">
+															<div class="ui-input-block ui-input-block--small ui-input-block--time">
+																<input type="text" class="ui-input js-timepicker" title="종료시간" placeholder="00:00" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">메모</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input" title="메모" placeholder="입력하세요"></textarea>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--primary">
+											<!-- 2022.10.11 : mod : 버튼명 수정 -->
+											<span class="ui-basic-button__text">등록</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 일정 등록 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-schedule-registration');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

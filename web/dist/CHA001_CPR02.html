@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- DD : 프린트 화면에서만 추가 -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/print-style.css" />
+		<!-- //DD : 프린트 화면에서만 추가 -->
+		<!-- //style -->
+	</head>
+	<body>
+		<!-- Page 1 -->
+		<div class="document">
+			<!-- 2022.10.24 : mod : .row-contents 에서 .row-item-group로 클래스 수정  -->
+			<div class="flex-box row-item-group">
+				<div class="flex-box__cell">
+					<!-- 2022.10.24 : mod : 클래스 수정 -->
+					<h2 class="chart-title color-primary-black">G20220301001&nbsp;&nbsp;홍길동</h2>
+				</div>
+				<!-- 2022.10.24 : mod : flex-box__cell--regular-margin 클래스 추가 -->
+				<div class="flex-box__cell flex-box__cell--regular-margin">
+					<!-- 2022.10.24 : mod : color-blue-black 클래스 삭제  -->
+					<p class="mini-text font-weight-medium">010-4879-9873</p>
+				</div>
+			</div>
+
+			<!-- 2022.10.24 : mod : color-blue-black 클래스 삭제, .row-item에서 .row-item-small로 클래스 수정  -->
+			<p class="mini-text font-weight-medium row-item-small">P20220301001&nbsp;&nbsp;반려동물이름</p>
+
+			<div class="info-tags">
+				<div class="info-tags__inner">
+					<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+					<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">Cat</span>
+					</span>
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">Abyssinian</span>
+					</span>
+					<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">중성화 수컷</span>
+					</span>
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">2년 6개월</span>
+					</span>
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">3.4kg</span>
+					</span>
+					<!-- //2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+				</div>
+			</div>
+
+			<div class="hr row-contents-group"></div>
+
+			<div class="info-tags info-tags--regular row-contents">
+				<div class="info-tags__inner">
+					<span class="info-tags__item">
+						<strong class="display-block">2022.07.04</strong>
+					</span>
+					<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+					<span class="info-tags__item color-gray-secondary">
+						<span class="mini-text display-block">김민수</span>
+					</span>
+				</div>
+			</div>
+
+			<section class="section">
+				<div class="section-head">
+					<h3 class="section-head__title">Subjective</h3>
+				</div>
+				<div class="nano-text">
+					CC : 재채기, 콧물, 출혈<br />
+					원인 : 알 수 없음<br />
+					증상발현 : 7일전<br /><br />
+
+					외견에는 특이 사항 발견하지 못함<br />
+					보호자가 X-ray 촬영 요청<br />
+					콧물, 재채기에 대한 확인 결과 전형적인 고양이 헤르페스로 판단<br />
+					X-RAY 촬영 결과 소간증으로 판단
+				</div>
+			</section>
+
+			<!-- 2022.10.24 : mod : row-contents 클래스 row-contents-group으로 수정 -->
+			<div class="hr row-contents-group"></div>
+
+			<section class="section">
+				<div class="section-head">
+					<h3 class="section-head__title">Objective</h3>
+				</div>
+
+				<div class="section section--small">
+					<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+					<div class="print-table">
+						<div class="print-table__table">
+							<table>
+								<colgroup>
+									<col style="width: 95px" />
+									<col style="width: 95px" />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>측정일자</th>
+										<th>측정시간</th>
+										<th>체중</th>
+										<th>체온</th>
+										<th>심박수</th>
+										<th>호흡수</th>
+										<th>혈압(수축)</th>
+										<th>혈압(이완)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="align-center">2022.07.04</td>
+										<td class="align-center">10:03</td>
+										<td class="align-right">3.7</td>
+										<td class="align-right">31.3</td>
+										<td class="align-right">95</td>
+										<td class="align-right">38</td>
+										<td class="align-right">125</td>
+										<td class="align-right">90</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+				</div>
+
+				<section class="section section--indent section--small">
+					<div class="section-head">
+						<h3 class="section-head__title">
+							<div class="small-text">첨부파일</div>
+						</h3>
+					</div>
+
+					<section class="section section--indent section--small">
+						<div class="section-head">
+							<h3 class="section-head__title">
+								<div class="mini-text">Comment</div>
+							</h3>
+						</div>
+						<div class="nano-text row-item-group">Nullam quis risus eget urna mollis ornare</div>
+						<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+						<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+						<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+					</section>
+				</section>
+			</section>
+		</div>
+		<!-- //Page 1 -->
+
+		<!-- Page 2 -->
+		<div class="document">
+			<section class="section section--indent section--small">
+				<div class="section-head">
+					<h3 class="section-head__title">
+						<div class="small-text">진단검사</div>
+					</h3>
+				</div>
+
+				<section class="order order--box row-item-group">
+					<div class="order__block">
+						<div class="flex-box order__row">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<h4 class="order__title">간 기능 검사</h4>
+								<div class="info-tags">
+									<div class="info-tags__inner">
+										<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">2022.07.04 18:39:45</span>
+										</span>
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">김민수</span>
+										</span>
+										<!-- //2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell">
+								<span class="status">검사 완료</span>
+							</div>
+						</div>
+
+						<div class="hr row-contents"></div>
+
+						<section class="section row-contents">
+							<div class="section-head row-item">
+								<h5 class="section-head__title">
+									<div class="mini-text">Comment</div>
+								</h5>
+							</div>
+							<div class="nano-text">중성화 수술 진행함, 알부민 수치가 높으니 물 많이 마시게 하세요</div>
+						</section>
+
+						<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+						<div class="print-table">
+							<div class="print-table__table">
+								<table>
+									<colgroup>
+										<col style="width: 100px" />
+										<col style="width: 100px" />
+										<col />
+										<col style="width: 60px" />
+										<col style="width: 60px" />
+										<col style="width: 60px" />
+										<col style="width: 70px" />
+										<col style="width: 60px" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>검사 구분</th>
+											<th>카테고리</th>
+											<th>항목명</th>
+											<th>결과</th>
+											<th>L/N/H</th>
+											<th>Min</th>
+											<th>단위</th>
+											<th>Max</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+					</div>
+				</section>
+
+				<section class="order order--box row-item-group">
+					<div class="order__block">
+						<div class="flex-box order__row">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<h4 class="order__title">간 기능 검사</h4>
+								<div class="info-tags">
+									<div class="info-tags__inner">
+										<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">2022.07.04 18:39:45</span>
+										</span>
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">김민수</span>
+										</span>
+										<!-- //2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell">
+								<span class="status">검사 완료</span>
+							</div>
+						</div>
+
+						<div class="hr row-contents"></div>
+
+						<section class="section row-contents">
+							<div class="section-head row-item">
+								<h5 class="section-head__title">
+									<div class="mini-text">Comment</div>
+								</h5>
+							</div>
+							<div class="nano-text">중성화 수술 진행함, 알부민 수치가 높으니 물 많이 마시게 하세요</div>
+						</section>
+
+						<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+						<div class="print-table">
+							<div class="print-table__table">
+								<table>
+									<colgroup>
+										<col style="width: 100px" />
+										<col style="width: 100px" />
+										<col />
+										<col style="width: 60px" />
+										<col style="width: 60px" />
+										<col style="width: 60px" />
+										<col style="width: 70px" />
+										<col style="width: 60px" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>검사 구분</th>
+											<th>카테고리</th>
+											<th>항목명</th>
+											<th>결과</th>
+											<th>L/N/H</th>
+											<th>Min</th>
+											<th>단위</th>
+											<th>Max</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+										<tr>
+											<td>약속 진단검사</td>
+											<td>01. 종합검진</td>
+											<td>Protein-Total</td>
+											<td class="align-right">4</td>
+											<td class="align-center">낮음</td>
+											<td class="align-right">5.2</td>
+											<td class="align-center">g/dL</td>
+											<td class="align-right">5.2</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+					</div>
+				</section>
+			</section>
+		</div>
+		<!-- //Page 2 -->
+
+		<!-- Page 3 -->
+		<div class="document">
+			<!-- 2022.11.03 : add : 영상병리검사 추가 -->
+			<!-- 2022.11.14 : mod : section--small에서 section--regular로 클래스 수정  -->
+			<section class="section section--indent section--regular">
+				<div class="section-head">
+					<h3 class="section-head__title">
+						<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+						<div class="small-text">병리검사</div>
+					</h3>
+				</div>
+				<section class="order order--box row-item-group">
+					<div class="order__block">
+						<div class="flex-box order__row">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<h4 class="order__title">심장사상충, 코로나 항원 검사</h4>
+								<div class="info-tags">
+									<div class="info-tags__inner">
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">2022.07.04 18:39</span>
+										</span>
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">김민수</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell">
+								<span class="status">검사 완료</span>
+							</div>
+						</div>
+
+						<div class="hr row-contents"></div>
+
+						<section class="section section--indent row-contents">
+							<div class="section-head row-item">
+								<h5 class="section-head__title">
+									<div class="mini-text">Comment</div>
+								</h5>
+							</div>
+							<div class="nano-text">심장사상충, 코로나 항원 검사 모두 정상임</div>
+						</section>
+
+						<div class="print-table">
+							<div class="print-table__table">
+								<table>
+									<colgroup>
+										<col />
+										<col style="width: 200px" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>키트 명</th>
+											<th>Result</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>항원 - 심장사상충 검사 (Heartworm Ag Test)</td>
+											<td>Negative</td>
+										</tr>
+										<tr>
+											<td>항원 - 코로나바이러스 검사 (CCV Ag Test)</td>
+											<td>Negative</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<section class="section section--indent row-contents">
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+						</section>
+					</div>
+				</section>
+			</section>
+			<!-- //2022.11.03 : add : 영상병리검사 추가 -->
+
+			<!-- 2022.11.14 : mod : section--small에서 section--regular로 클래스 수정  -->
+			<section class="section section--indent section--regular">
+				<div class="section-head">
+					<h3 class="section-head__title">
+						<div class="small-text">영상검사</div>
+					</h3>
+				</div>
+
+				<section class="order order--box row-item-group">
+					<div class="order__block">
+						<div class="flex-box order__row">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<h4 class="order__title">기관지 X-ray 촬영</h4>
+								<div class="info-tags">
+									<div class="info-tags__inner">
+										<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">2022.07.04 18:39:45</span>
+										</span>
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">김민수</span>
+										</span>
+										<!-- //2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell">
+								<span class="status">판독 완료</span>
+							</div>
+						</div>
+
+						<div class="hr row-contents"></div>
+
+						<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+						<div class="print-table">
+							<div class="print-table__table">
+								<table>
+									<colgroup>
+										<col style="width: 200px" />
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>장비</th>
+											<th>대분류</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>DX</td>
+											<td>Abdomen</td>
+										</tr>
+										<tr>
+											<td>DX</td>
+											<td>Thorax</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+
+						<section class="section section--indent row-contents">
+							<div class="section-head row-item">
+								<h5 class="section-head__title">
+									<div class="mini-text">Comment</div>
+								</h5>
+							</div>
+							<div class="nano-text">소간증으로 판단, 000 투약 필요</div>
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+							<p class="nano-text row-item">Timo_video_220831.mp4</p>
+						</section>
+					</div>
+				</section>
+
+				<section class="order order--box row-item-group">
+					<div class="order__block">
+						<div class="flex-box order__row">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<h4 class="order__title">기관지 X-ray 촬영</h4>
+								<div class="info-tags">
+									<div class="info-tags__inner">
+										<!-- 2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">2022.07.04 18:39:45</span>
+										</span>
+										<span class="info-tags__item color-gray-secondary">
+											<span class="mini-text display-block">김민수</span>
+										</span>
+										<!-- //2022.10.24 : mod : color-gray에서 color-gray-secondary로 클래스 수정 -->
+									</div>
+								</div>
+							</div>
+							<div class="flex-box__cell">
+								<span class="status">판독 완료</span>
+							</div>
+						</div>
+
+						<div class="hr row-contents"></div>
+
+						<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+						<div class="print-table">
+							<div class="print-table__table">
+								<table>
+									<colgroup>
+										<col style="width: 200px" />
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>장비</th>
+											<th>대분류</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>DX</td>
+											<td>Abdomen</td>
+										</tr>
+										<tr>
+											<td>DX</td>
+											<td>Thorax</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+
+						<section class="section section--indent row-contents">
+							<div class="section-head row-item">
+								<h5 class="section-head__title">
+									<div class="mini-text">Comment</div>
+								</h5>
+							</div>
+							<div class="nano-text">소간증으로 판단, 000 투약 필요</div>
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+							<p class="nano-text row-item">Timo_외관사진1_220831.png</p>
+							<p class="nano-text row-item">Timo_video_220831.mp4</p>
+						</section>
+					</div>
+				</section>
+			</section>
+		</div>
+		<!-- //Page 3 -->
+
+		<!-- Page 4 -->
+		<div class="document">
+			<section class="section">
+				<div class="section-head">
+					<h3 class="section-head__title">Assessment</h3>
+				</div>
+
+				<section class="section section--indent">
+					<div class="section-head">
+						<h4 class="section-head__title">
+							<div class="small-text">Comment</div>
+						</h4>
+					</div>
+					<div class="nano-text">소견 : 유상피 세포와 염증성 세포 관찰됨, 지속적인 경과를 지켜보고 후속 처치 필요.</div>
+				</section>
+
+				<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+				<div class="print-table row-contents">
+					<div class="print-table__table">
+						<table>
+							<colgroup>
+								<col />
+								<col style="width: 200px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>진단명</th>
+									<th>진단 타입</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Porto Systemic Shunt</td>
+									<td class="align-center">진단</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+			</section>
+
+			<!-- 2022.10.24 : mod : row-contents 클래스 row-contents-group으로 수정 -->
+			<div class="hr row-contents-group"></div>
+
+			<section class="section">
+				<div class="section-head">
+					<h3 class="section-head__title">Plan</h3>
+				</div>
+
+				<!-- 2022.10.11 : mod : Comment 위치 변경 -->
+				<section class="section section--indent row-contents">
+					<div class="section-head">
+						<h3 class="section-head__title">
+							<div class="small-text">Comment</div>
+						</h3>
+					</div>
+					<div class="nano-text">
+						&middot; 치료계획 : 향후 지속적인 모니터링 필요<br />
+						&middot; 복약지도 : 식후 1일 2회 복용<br />
+						&middot; 처방지도 : 처음 2일분은 tid로 조제하세요.
+					</div>
+				</section>
+				<!-- //2022.10.11 : mod : Comment 위치 변경 -->
+
+				<!-- 2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+				<div class="print-table">
+					<div class="print-table__table">
+						<table>
+							<colgroup>
+								<col />
+								<col style="width: 60px" />
+								<col style="width: 50px" />
+								<col style="width: 50px" />
+								<col style="width: 50px" />
+								<col style="width: 50px" />
+								<col style="width: 60px" />
+								<col style="width: 50px" />
+								<col style="width: 90px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>Tx/Rx</th>
+									<th>단위</th>
+									<th>용법</th>
+									<th>용량</th>
+									<th>횟수</th>
+									<th>날수</th>
+									<th>총용량</th>
+									<th>수량</th>
+									<th>합계</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>초진 진찰료</td>
+									<td class="align-center"></td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right">1</td>
+									<td class="align-right">4,400</td>
+								</tr>
+								<tr>
+									<td>피하주사-일반</td>
+									<td class="align-center"></td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right">1</td>
+									<td class="align-right">4,400</td>
+								</tr>
+								<tr>
+									<td>내복약-3일치</td>
+									<td class="align-center"></td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right"></td>
+									<td class="align-right">1</td>
+									<td class="align-right">4,400</td>
+								</tr>
+								<tr>
+									<td>Cephradine Inj.</td>
+									<td class="align-center">mg/kg</td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center">SC</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">1</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">0</td>
+								</tr>
+								<tr>
+									<td>Ampicillin Cap.</td>
+									<td class="align-center">T/kg</td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center">SC</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">1</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">0</td>
+								</tr>
+								<tr>
+									<td>Prednisolone Tab.</td>
+									<td class="align-center">mg/kg</td>
+									<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+									<td class="align-center">SC</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">1</td>
+									<td class="align-right">100</td>
+									<td class="align-right">1</td>
+									<td class="align-right">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- //2022.10.24 : mod : 클래스 값 변경(ui-table -> print-table) 및 .print-table__table 추가 -->
+			</section>
+
+			<!-- 2022.11.03 : add : 접종 이력 추가 -->
+			<div class="hr row-contents-group"></div>
+
+			<section class="section">
+				<div class="section-head">
+					<h3 class="section-head__title">접종 이력</h3>
+				</div>
+
+				<div class="print-table">
+					<div class="print-table__table">
+						<table>
+							<colgroup>
+								<col />
+								<col style="width: 110px" />
+								<col style="width: 110px" />
+								<col style="width: 110px" />
+								<col style="width: 126px" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>분류</th>
+									<th>백신</th>
+									<th>접종유형</th>
+									<th>차수</th>
+									<th>접종일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="align-center">외부기생충</td>
+									<td class="align-center">에드보킷~4</td>
+									<td class="align-center">추가접종</td>
+									<td class="align-right">-</td>
+									<td class="align-center">2022-05-10</td>
+								</tr>
+								<tr>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">일반접종</td>
+									<td class="align-right">4</td>
+									<td class="align-center">2022-04-11</td>
+								</tr>
+								<tr>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">일반접종</td>
+									<td class="align-right">3</td>
+									<td class="align-center">2022-03-10</td>
+								</tr>
+								<tr>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">일반접종</td>
+									<td class="align-right">2</td>
+									<td class="align-center">2022-02-05</td>
+								</tr>
+								<tr>
+									<td class="align-center">외부기생충</td>
+									<td class="align-center">에드보킷~4</td>
+									<td class="align-center">추가접종</td>
+									<td class="align-right">-</td>
+									<td class="align-center">2021-12-01</td>
+								</tr>
+								<tr>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">DHPPL</td>
+									<td class="align-center">일반접종</td>
+									<td class="align-right">1</td>
+									<td class="align-center">2021-12-01</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<!-- //2022.11.03 : add : 접종 이력 추가 -->
+		</div>
+		<!-- //Page 4 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

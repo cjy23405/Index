@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="btn-view" transform="translate(3 3)">
+        <g data-name="그룹 22752" transform="translate(1 1)">
+            <g data-name="타원 2714" style="stroke:#888;stroke-width:1.5px;fill:none">
+                <circle cx="7.084" cy="7.084" r="7.084" style="stroke:none"/>
+                <circle cx="7.084" cy="7.084" r="6.334" style="fill:none"/>
+            </g>
+            <rect data-name="사각형 32005" width="1.5" height="6" rx=".75" transform="rotate(-45 19.54 -7.034)" style="fill:#888"/>
+        </g>
+        <rect data-name="사각형 32006" width="1.5" height="7" rx=".75" transform="translate(7.49 4.572)" style="fill:#888"/>
+        <rect data-name="사각형 32007" width="1.5" height="7" rx=".75" transform="rotate(90 2.196 9.526)" style="fill:#888"/>
+    </g>
+</svg>

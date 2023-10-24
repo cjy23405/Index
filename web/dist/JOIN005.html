@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents page-contents--signup">
+						<form action="">
+							<div class="signup">
+								<div class="signup__head">
+									<h1 class="signup__logo">
+										<a href="" class="signup__logo-link">
+											<span class="for-a11y">X Caliber EVR</span>
+										</a>
+									</h1>
+									<div class="progress">
+										<div class="progress__item"></div>
+										<div class="progress__item"></div>
+										<div class="progress__item"></div>
+										<div class="progress__item progress__item--active"></div>
+										<div class="progress__item"></div>
+									</div>
+									<h2 class="signup__title">가입 정보 입력</h2>
+								</div>
+								<div class="signup__body">
+									<div class="ui-form">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key">이메일</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="이메일" placeholder="이메일" readonly value="Gildong.h@gmail.com" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="이름" placeholder="이름" value="홍길동" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">전화번호<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="flex-box">
+														<div class="flex-box__cell">
+															<div class="ui-select-block input-width-small">
+																<select class="ui-select" title="국가번호">
+																	<option value="" selected>+82</option>
+																	<option value="">option 2</option>
+																	<option value="">option 3</option>
+																	<option value="">option 4</option>
+																	<option value="">option 5</option>
+																	<option value="">option 6</option>
+																	<option value="">option 7</option>
+																</select>
+															</div>
+														</div>
+														<div class="flex-box__cell flex-box__cell--flexible">
+															<div class="ui-input-block">
+																<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 -->
+																<input type="text" class="ui-input js-phone-input" title="전화번호" placeholder="숫자 기입" value="01012345678" readonly />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">
+													비밀번호<span class="ui-require" aria-label="(필수)"></span
+													><span class="tooltip">
+														<span class="tooltip__block js-ui-dropdown-hover" tabindex="0">
+															<span class="tooltip__head">
+																<span class="tooltip__opener js-ui-dropdown-hover__opener">
+																	<span class="ui-icon ui-icon--question">
+																		<span class="for-a11y">도움말:</span>
+																	</span>
+																</span>
+															</span>
+															<span class="tooltip__layer js-ui-dropdown-hover__layer">
+																<span class="tooltip__bubble">
+																	<span class="tooltip__bubble-message">
+																		10자리 이상의 영문, 숫자, 특수문자 중<br />
+																		2가지 이상 조합 또는 8자리이상의<br />
+																		영문, 숫자, 특수문자 중 3가지 이상 조합
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="password" class="ui-input" title="비밀번호" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">비밀번호 확인<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="password" class="ui-input" title="비밀번호 확인" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">병원명<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="병원명" placeholder="병원명" value="ABC동물병원" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">수의사 면허번호<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="수의사 면허번호" placeholder="숫자 기입" value="12-34-567-8900" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">병원 전화번호</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 -->
+														<input type="text" class="ui-input js-phone-input" title="병원 전화번호" placeholder="숫자 기입" value="0212345678" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">병원 대표사진</dt>
+												<dd class="ui-form__val">
+													<div class="ui-file-input">
+														<div class="ui-file-input__inner">
+															<input type="file" class="ui-file-input__input" title="병원 대표사진" id="photo" data-file-watch="photo" />
+															<div class="ui-file-input__watch" data-file-watch-target="photo"></div>
+															<label for="photo" class="ui-file-input__button">
+																<span class="ui-file-input__button-text">찾아보기</span>
+															</label>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">전문 진료과목</dt>
+												<dd class="ui-form__val">
+													<div class="box-check box-check--auto">
+														<ul class="box-check__list">
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_1" checked />
+																	<label for="boxCheck1_1" class="box-check__link">
+																		<span class="box-check__link-text">내과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_2" checked />
+																	<label for="boxCheck1_2" class="box-check__link">
+																		<span class="box-check__link-text">외과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_3" />
+																	<label for="boxCheck1_3" class="box-check__link">
+																		<span class="box-check__link-text">정형외과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_4" />
+																	<label for="boxCheck1_4" class="box-check__link">
+																		<span class="box-check__link-text">산과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_5" checked />
+																	<label for="boxCheck1_5" class="box-check__link">
+																		<span class="box-check__link-text">피부과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_6" />
+																	<label for="boxCheck1_6" class="box-check__link">
+																		<span class="box-check__link-text">안과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_7" checked />
+																	<label for="boxCheck1_7" class="box-check__link">
+																		<span class="box-check__link-text">치과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_8" />
+																	<label for="boxCheck1_8" class="box-check__link">
+																		<span class="box-check__link-text">임상병리과</span>
+																	</label>
+																</div>
+															</li>
+															<li class="box-check__item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="boxCheck1_9" />
+																	<label for="boxCheck1_9" class="box-check__link">
+																		<!-- 2022.10.11 : mod : 텍스트 수정 -->
+																		<span class="box-check__link-text">영상의학과</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">앱 예약기능 여부</dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_1" />
+																	<label for="radioTab1_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">예</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_2" checked />
+																	<label for="radioTab1_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">아니오</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">야간 응급진료 여부</dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_1" checked />
+																	<label for="radioTab2_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">예</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_2" />
+																	<label for="radioTab2_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">아니오</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">특수동물 취급 여부</dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab3" id="radioTab3_1" checked />
+																	<label for="radioTab3_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">예</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab3" id="radioTab3_2" />
+																	<label for="radioTab3_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">아니오</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="ui-buttons">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="submit" class="ui-button ui-basic-button">
+													<!-- 2022.10.11 : mod : 버튼명 수정 -->
+													<span class="ui-basic-button__text">가입완료</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

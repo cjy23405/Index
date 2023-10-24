@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-reception-detail">접수 정보</a>
+
+		<!-- layer: 접수 정보 -->
+		<div class="layer-wrap" data-layer="layer-reception-detail">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--medium">
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<div class="flex-box row-contents-group-small">
+									<div class="flex-box__cell">
+										<span class="status status--regular status--waiting display-block">진료 대기</span>
+									</div>
+									<!-- 2022.12.09 : del : 정보 삭제
+									<div class="flex-box__cell flex-box__cell--regular-margin flex-box__cell--flexible align-right">
+										<p class="regular-text color-blue-black font-weight-bold">김민수 (진료실 1)</p>
+									</div>
+									-->
+								</div>
+
+								<h2 class="for-a11y">접수 정보</h2>
+
+								<div class="box">
+									<div class="box__inner">
+										<!-- 2022.12.09 : mod : 노출 순서 변경 -->
+										<div class="info-tags info-tags--regular row-contents-group">
+											<div class="info-tags__inner">
+												<span class="info-tags__item font-weight-medium color-blue-black">보호자&nbsp;&nbsp;G20220301001</span>
+												<span class="info-tags__item font-weight-medium color-blue-black">홍길동&nbsp;&nbsp;010-4879-9873</span>
+											</div>
+										</div>
+										<!-- //2022.12.09 : mod : 노출 순서 변경 -->
+										<h3 class="chart-title">P20220301001&nbsp;&nbsp;반려동물이름</h3>
+										<div class="pet-tags row-item-group">
+											<ul class="pet-tags__list">
+												<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Cat</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Abyssinian</div>
+												</li>
+												<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">중성화 수컷</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">2년 6개월</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">3.4kg</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<!-- 2022.12.09 : mod : 제공 컨텐츠 구조 변경 -->
+								<div class="row-group">
+									<div class="flex-box flex-box--align-top row-contents-group-small">
+										<div class="flex-box__cell flex-box__cell--flexible">
+											<section>
+												<div class="section-head">
+													<div class="section-head__icon section-head__icon--006"></div>
+													<h4 class="section-head__title section-head__title--basic">방문 목적</h4>
+												</div>
+												<p class="small-text color-gray">초진, 감기</p>
+											</section>
+										</div>
+										<div class="flex-box__cell flex-box__cell--regular-margin">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+												<span class="ui-basic-button__text">진료 우선 대기</span>
+											</button>
+										</div>
+									</div>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--002"></div>
+											<h4 class="section-head__title section-head__title--basic">수의사</h4>
+										</div>
+										<p class="small-text color-gray">김민수 (진료실 1)</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--003"></div>
+											<h4 class="section-head__title section-head__title--basic">접수 메모</h4>
+										</div>
+										<p class="small-text color-gray">같은 증상으로 두번째 방문</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--004"></div>
+											<h4 class="section-head__title section-head__title--basic">환자 메모</h4>
+										</div>
+										<p class="small-text color-gray">특발성 방광염 발생 이력 있으므로 주의 요망, 소간증으로 인한 합병증 의심</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--005"></div>
+											<h4 class="section-head__title section-head__title--basic">보호자 메모</h4>
+										</div>
+										<p class="small-text color-gray">병원장님 지인, VIP, 특별 관리 필요***</p>
+									</section>
+								</div>
+								<!-- //2022.12.09 : mod : 제공 컨텐츠 구조 변경 -->
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="flex-box">
+							<div class="flex-box__cell">
+								<!-- 2022.10.11 : mod : ui-buttons--min-width 클래스 추가 -->
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--left">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+												<span class="ui-basic-button__text">닫기</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<!-- 2022.10.11 : mod : ui-buttons--min-width 클래스 추가 -->
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--right">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary">
+												<span class="ui-basic-button__text">접수 변경</span>
+											</button>
+										</li>
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary">
+												<span class="ui-basic-button__text">수납</span>
+											</button>
+										</li>
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary">
+												<span class="ui-basic-button__text">차트</span>
+											</button>
+										</li>
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular">
+												<span class="ui-basic-button__text">입장 요청</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 접수 정보 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-reception-detail');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

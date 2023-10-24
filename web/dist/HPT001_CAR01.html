@@ -1,0 +1,4051 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-inpatient-care">입원 환자 케어</a>
+
+		<!-- layer: 입원 환자 케어 -->
+		<div class="layer-wrap" data-layer="layer-inpatient-care">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer ui-layer--large-small">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">입원 환자 케어</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<div class="chart-head chart-head--inner row-group">
+										<div class="chart-head__left">
+											<div class="chart-head__title-area">
+												<h2 class="chart-title">P20220301001&nbsp;&nbsp;반려동물이름</h2>
+											</div>
+
+											<div class="pet-tags">
+												<ul class="pet-tags__list">
+													<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">Cat</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">Abyssinian</div>
+													</li>
+													<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">중성화 수컷</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">2년 6개월</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">3.4kg</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="chart-head__right">
+											<div class="chart-head__cell">
+												<p class="basic-text color-blue-black">보호자&nbsp;&nbsp;G20220301001</p>
+											</div>
+											<div class="chart-head__cell">
+												<p class="basic-text color-blue-black">홍길동&nbsp;&nbsp;010-4879-9873</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal ui-form--auto ui-form--medium-margin">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">입원일</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-date">
+														<input type="text" class="ui-input js-datepicker" title="입원일" placeholder="연도.월.일" value="2022.07.01" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">퇴원 예정일</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-date">
+														<input type="text" class="ui-input js-datepicker" title="퇴원 예정일" placeholder="연도.월.일" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">입원실</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small input-width-regular">
+														<input type="text" class="ui-input" title="입원실" value="입원실 001" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">담당자(정)</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small input-width-regular">
+														<input type="text" class="ui-input" title="담당자(정)" value="김민수" readonly />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">담당자(부)</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small input-width-regular">
+														<input type="text" class="ui-input" title="담당자(부)" value="김민창" readonly />
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal row-contents-group-small">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--align-top">
+												<dt class="ui-form__key ui-form__key--auto">수의사 지시사항</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input input-height-small" title="수의사 지시사항"></textarea>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="hr hr--secondary row-group"></div>
+
+									<div class="flex-box row-contents-group-small">
+										<div class="flex-box__cell flex-box__cell--flexible">
+											<div class="ui-form ui-form--small ui-form--horizontal ui-form--auto ui-form--medium-margin">
+												<dl class="ui-form__list">
+													<div class="ui-form__item">
+														<dt class="ui-form__key ui-form__key--auto">케어 일자</dt>
+														<dd class="ui-form__val">
+															<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-date">
+																<input type="text" class="ui-input js-datepicker" title="케어 일자" placeholder="연도.월.일" value="2022.07.02" />
+															</div>
+														</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+										<div class="flex-box__cell">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary">
+												<span class="ui-basic-button__text">메모 불러오기</span>
+											</button>
+										</div>
+										<div class="flex-box__cell">
+											<button
+												type="button"
+												class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary ui-basic-button--icon-only ui-basic-button--icon-only-zoomin"
+												data-zooming-in="layerInpatientCareTable"
+											>
+												<span class="for-a11y">표 확대</span>
+											</button>
+										</div>
+									</div>
+
+									<div class="zooming-contents" data-zooming-target="layerInpatientCareTable">
+										<div class="zooming-contents__buttons">
+											<button
+												type="button"
+												class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary ui-basic-button--icon-only ui-basic-button--icon-only-zoomout"
+												data-zooming-out="layerInpatientCareTable"
+											>
+												<span class="for-a11y">표 축소</span>
+											</button>
+										</div>
+										<div class="zooming-contents__frame">
+											<div class="zooming-contents__scroller ui-scroller">
+												<div class="ui-table ui-table--light">
+													<table>
+														<colgroup>
+															<col style="width: 72px" />
+															<col style="width: 180px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+															<col style="width: 70px" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th>케어</th>
+																<th>메모</th>
+																<th>00시</th>
+																<th>01시</th>
+																<th>02시</th>
+																<th>03시</th>
+																<th>04시</th>
+																<th>05시</th>
+																<th>06시</th>
+																<th>07시</th>
+																<th>08시</th>
+																<th>09시</th>
+																<th>10시</th>
+																<th>11시</th>
+																<th>12시</th>
+																<th>13시</th>
+																<th>14시</th>
+																<th>15시</th>
+																<th>16시</th>
+																<th>17시</th>
+																<th>18시</th>
+																<th>19시</th>
+																<th>20시</th>
+																<th>21시</th>
+																<th>22시</th>
+																<th>23시</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="align-center">수액</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사1</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사2</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사3</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사4</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사5</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">주사6</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">내복약</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">처치</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">검사</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">급수</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">급식</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">배변</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">배뇨</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">뇨량</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">구토</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">체온</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">심박수</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">호흡수</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">혈압</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="align-center">혈당</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input" title="메모" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="00시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="01시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="02시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="03시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="04시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="05시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="06시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="07시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="08시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="09시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="10시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="11시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="12시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="13시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="14시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="15시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="16시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="17시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="18시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="19시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="20시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="21시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="22시" />
+																		</div>
+																	</div>
+																</td>
+																<td>
+																	<div class="ui-table__input-cell">
+																		<div class="ui-input-block ui-input-block--cell">
+																			<input type="text" class="ui-input align-right" title="23시" />
+																		</div>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="hr hr--secondary row-group"></div>
+
+									<div class="ui-form ui-form--small ui-form--horizontal">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--align-top">
+												<dt class="ui-form__key ui-form__key--auto">1일 케어 메모</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input input-height-small" title="1일 케어 메모"></textarea>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--right ui-buttons--min-width">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+											<span class="ui-basic-button__text">저장</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 입원 환자 케어 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-inpatient-care');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

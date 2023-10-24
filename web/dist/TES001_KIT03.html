@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-clinical-pathology-order-lookup">병리 검사 오더 조회</a>
+
+		<!-- layer: 병리 검사 오더 조회 -->
+		<div class="layer-wrap" data-layer="layer-clinical-pathology-order-lookup">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--medium-large">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<!-- 2022.12.23 : mod : 문구 수정 (임상병리 → 병리) -->
+								<h2 class="ui-layer-header__title">병리 검사 오더 조회</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.10.14 : mod : 상단 환자정보 구조 수정 -->
+								<div class="chart-head chart-head--inner row-group">
+									<div class="chart-head__left">
+										<div class="chart-head__title-area">
+											<h3 class="chart-title">P20220301001&nbsp;&nbsp;티모</h3>
+										</div>
+										<div class="pet-tags">
+											<ul class="pet-tags__list">
+												<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Cat</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Abyssinian</div>
+												</li>
+												<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">중성화 수컷</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">2년 6개월</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">3.4kg</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.10.14 : mod : 상단 환자정보 구조 수정 -->
+								<div class="ui-table ui-table--light">
+									<table>
+										<thead>
+											<tr>
+												<th>오더 일시</th>
+												<th>결과 등록 일시</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center">2022.08.30 13:01</td>
+												<td class="align-center">-</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- 2022.10.11 : mod : 검사명, 담당자 구조 수정 -->
+								<div class="flex-box row-contents-group">
+									<div class="flex-box__cell flex-box__cell--flexible">
+										<section class="section">
+											<div class="section-head">
+												<h3 class="section-head__title">검사명</h3>
+											</div>
+											<!-- 2022.10.14 : mod : color-gray 클래스 제거-->
+											<p class="small-text">심장사상충, 코로나 항원 검사</p>
+										</section>
+									</div>
+									<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--medium-margin">
+										<section class="section">
+											<div class="section-head">
+												<h3 class="section-head__title">담당자</h3>
+											</div>
+											<!-- 2022.10.14 : mod : color-gray 클래스 제거-->
+											<p class="small-text">김민수</p>
+										</section>
+									</div>
+								</div>
+								<!-- //2022.10.11 : mod : 검사명, 담당자 구조 수정 -->
+								<div class="ui-table ui-table--light">
+									<table>
+										<thead>
+											<tr>
+												<th>키트명</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>항원 - 심장사상충 검사 (Heartworm Ag Test)</td>
+											</tr>
+											<tr>
+												<td>항원 - 디스템퍼 검사 (CDV Ag Test)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="flex-box">
+							<div class="flex-box__cell">
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary ui-basic-button--icon-only ui-basic-button--icon-only-delete">
+												<span class="for-a11y">삭제</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--right">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+												<span class="ui-basic-button__text">닫기</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 병리 검사 오더 조회 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-clinical-pathology-order-lookup');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

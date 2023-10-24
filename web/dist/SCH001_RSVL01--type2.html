@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-reservation-detail">예약정보</a>
+
+		<!-- layer: 예약정보 -->
+		<div class="layer-wrap" data-layer="layer-reservation-detail">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--medium">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<h2 class="ui-layer-header__title">예약정보</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<div class="box">
+									<div class="box__inner">
+										<div class="info-tags info-tags--regular row-contents-group">
+											<div class="info-tags__inner">
+												<span class="info-tags__item font-weight-medium color-blue-black">보호자</span>
+												<span class="info-tags__item font-weight-medium color-blue-black">홍길동&nbsp;&nbsp;010-4879-9873</span>
+											</div>
+										</div>
+
+										<!-- Case : 환자 기입 안했을 때 -->
+										<h3 class="chart-title color-gray-secondary">환자가 지정되지 않았습니다.</h3>
+										<!-- //Case : 환자 기입 안했을 때 -->
+
+										<!-- Case : 환자 기입 했을 때 -->
+										<h3 class="chart-title color-gray-secondary">반려동물이름</h3>
+										<!-- //Case : 환자 기입 했을 때 -->
+									</div>
+								</div>
+
+								<div class="row-group">
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--006"></div>
+											<h4 class="section-head__title section-head__title--basic">방문 목적</h4>
+										</div>
+										<p class="small-text color-gray">초진, 감기</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--002"></div>
+											<h4 class="section-head__title section-head__title--basic">수의사</h4>
+										</div>
+
+										<!-- Case : 수의사 지정 안했을 때 -->
+										<p class="small-text color-gray">미지정</p>
+										<!-- //Case : 수의사 지정 안했을 때 -->
+
+										<!-- Case : 수의사 지정 했을 때 -->
+										<p class="small-text color-gray">김민수</p>
+										<!-- //Case : 수의사 지정 했을 때 -->
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--001"></div>
+											<h4 class="section-head__title section-head__title--basic">예약 일정</h4>
+										</div>
+										<p class="small-text color-gray">2022.08.30 10:30 ~ 11:00</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--004"></div>
+											<h4 class="section-head__title section-head__title--basic">환자 메모</h4>
+										</div>
+										<p class="small-text color-gray">-</p>
+									</section>
+									<section class="row-contents-group-small">
+										<div class="section-head">
+											<div class="section-head__icon section-head__icon--005"></div>
+											<h4 class="section-head__title section-head__title--basic">보호자 메모</h4>
+										</div>
+										<p class="small-text color-gray">-</p>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="flex-box">
+							<div class="flex-box__cell">
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--left">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+												<span class="ui-basic-button__text">닫기</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--right">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--quaternary">
+												<span class="ui-basic-button__text">예약 변경</span>
+											</button>
+										</li>
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular">
+												<span class="ui-basic-button__text">고객 등록</span>
+											</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 예약정보 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-reservation-detail');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

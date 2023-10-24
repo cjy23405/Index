@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- toast-alert -->
+				<div class="ui-toast-alert" id="globalToastAlert"></div>
+				<!-- //toast-alert -->
+
+				<!-- contents -->
+				<article class="contents-wrap">
+					<div class="page-contents page-contents--login">
+						<form action="">
+							<h1 class="login-logo">
+								<a href="" class="login-logo__link">
+									<span class="for-a11y">X Caliber EVR</span>
+								</a>
+							</h1>
+							<div class="signup-tab">
+								<ul class="signup-tab__list">
+									<li class="signup-tab__item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="type" id="type1" data-checkbox-tab="type1" checked />
+											<label for="type1" class="signup-tab__link">
+												<!-- 2022.12.23 : mod : 문구 수정 (병원장 → 관리자) -->
+												<span class="signup-tab__link-text">관리자</span>
+											</label>
+										</div>
+									</li>
+									<li class="signup-tab__item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="type" id="type2" data-checkbox-tab="type2" />
+											<label for="type2" class="signup-tab__link">
+												<span class="signup-tab__link-text">임직원</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="signup signup--login">
+								<div class="signup__body">
+									<div class="ui-form">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key">이메일</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="이메일" placeholder="이메일" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">비밀번호</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block">
+														<input type="password" class="ui-input" title="비밀번호" placeholder="비밀번호" />
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="ui-checkbox-block row-contents-group">
+										<input type="checkbox" class="ui-checkbox" id="saveID" />
+										<label for="saveID" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label__text">이메일 저장</span>
+										</label>
+									</div>
+									<div class="recaptcha">
+										<div style="background-color: #eee; height: 80px">리캡챠 영역</div>
+									</div>
+									<div class="ui-buttons">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="submit" class="ui-button ui-basic-button">
+													<span class="ui-basic-button__text">로그인</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+									<div class="signup__foot" data-checkbox-tab-panel="type1">
+										<div class="signup__foot-left">
+											<p class="signup__foot-text">EVR이 처음인가요?<a href="" class="signup__foot-link">회원가입</a></p>
+										</div>
+										<div class="signup__foot-right">
+											<div class="signup-menu">
+												<ul class="signup-menu__list">
+													<li class="signup-menu__item">
+														<a href="" class="signup-menu__link">이메일 찾기</a>
+													</li>
+													<li class="signup-menu__item">
+														<a href="" class="signup-menu__link">비밀번호 찾기</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="signup__foot" data-checkbox-tab-panel="type2">
+										<div class="signup__foot-left">
+											<!-- 2022.12.23 : mod : 문구 수정 (병원장 → 관리자) -->
+											<p class="signup__foot-text align-center">로그인 정보는 관리자에게 문의하세요.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</article>
+				<!-- //contents -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

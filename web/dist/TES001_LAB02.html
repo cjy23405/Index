@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-test-order">진단 검사 오더</a>
+
+		<!-- layer: 진단 검사 오더 -->
+		<div class="layer-wrap" data-layer="layer-test-order">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer ui-layer--large-small">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">진단 검사 오더</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<!-- 2022.10.14 : mod : 상단 환자정보 구조 수정 -->
+									<div class="chart-head chart-head--inner row-group">
+										<div class="chart-head__left">
+											<div class="chart-head__title-area">
+												<h3 class="chart-title">P20220301001&nbsp;&nbsp;티모</h3>
+											</div>
+											<div class="pet-tags">
+												<ul class="pet-tags__list">
+													<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">Cat</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">Abyssinian</div>
+													</li>
+													<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">중성화 수컷</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">2년 6개월</div>
+													</li>
+													<li class="pet-tags__item">
+														<div class="pet-tags__block">3.4kg</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- //2022.10.14 : mod : 상단 환자정보 구조 수정 -->
+									<div class="flex-box">
+										<div class="flex-box__cell">
+											<div class="board-table board-table--secondary board-table--no-margin widget-width-small widget-height-small">
+												<div class="board-table__body">
+													<div class="board-table__table-wrap" role="table">
+														<div class="board-table__thead">
+															<table role="rowgroup" class="board-table__table">
+																<thead>
+																	<tr>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">검사 구분</div>
+																			</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="board-table__tbody">
+															<div class="board-table__tbody-scroller ui-scroller">
+																<table role="rowgroup" class="board-table__table">
+																	<tbody>
+																		<tr class="is-selected">
+																			<td class="js-table-select align-left" tabindex="0" role="button">약속 진단검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">진단검사 목록</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--regular-margin">
+											<div class="board-table board-table--secondary board-table--no-margin widget-width-small widget-height-small">
+												<div class="board-table__body">
+													<div class="board-table__table-wrap" role="table">
+														<div class="board-table__thead">
+															<table role="rowgroup" class="board-table__table">
+																<thead>
+																	<tr>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">카테고리</div>
+																			</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="board-table__tbody">
+															<div class="board-table__tbody-scroller ui-scroller">
+																<table role="rowgroup" class="board-table__table">
+																	<tbody>
+																		<tr class="is-selected">
+																			<td class="js-table-select align-left" tabindex="0" role="button">01. 종합검진</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">02. 수술 전/후 검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">03. 설사증상 검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">04. 탈수 검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">05. 구토증상시 검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">06.간기능 검사</td>
+																		</tr>
+																		<tr>
+																			<td class="js-table-select align-left" tabindex="0" role="button">07.골 질환 검사</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--regular-margin">
+											<div class="board-table board-table--secondary board-table--no-margin widget-height-small">
+												<div class="board-table__body">
+													<div class="board-table__table-wrap" role="table">
+														<div class="board-table__thead">
+															<table role="rowgroup" class="board-table__table">
+																<colgroup>
+																	<col style="width: 60px" />
+																	<col />
+																	<col style="width: 150px" />
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">
+																					<div class="ui-checkbox-block ui-checkbox-block--small">
+																						<input type="checkbox" class="ui-checkbox" id="boardTableCheckboxAll1" data-checkbox-group="boardTableCheckbox1" checked />
+																						<label for="boardTableCheckboxAll1" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="for-a11y">전체선택</span>
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																		</th>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">항목명</div>
+																			</div>
+																		</th>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">단위</div>
+																			</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="board-table__tbody">
+															<div class="board-table__tbody-scroller ui-scroller">
+																<table role="rowgroup" class="board-table__table">
+																	<colgroup>
+																		<col style="width: 60px" />
+																		<col />
+																		<col style="width: 150px" />
+																	</colgroup>
+																	<tbody>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_1" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">Protein-Total</td>
+																			<td>g/dL</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_2" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">Albumin</td>
+																			<td>g/dL</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_3" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_3" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">Glucose</td>
+																			<td>mg/dL</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_4" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_4" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">AST</td>
+																			<td>U/L</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_5" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_5" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">ALT</td>
+																			<td>U/L</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_6" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_5" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">ALKP</td>
+																			<td>U/L</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1_7" data-checkbox-group-child="boardTableCheckbox1" checked />
+																					<label for="boardTableCheckbox1_7" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<td class="align-left">BUN</td>
+																			<td>mg/dL</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ui-buttons ui-buttons--right ui-buttons--no-margin row-contents">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+													<span class="ui-basic-button__text">항목 추가</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+									<div class="hr row-group"></div>
+									<div class="ui-form ui-form--horizontal ui-form--auto ui-form--small ui-form--medium-margin">
+										<dl class="ui-form__list">
+											<div class="ui-form__item ui-form__item--flexible">
+												<dt class="ui-form__key ui-form__key--auto">검사명<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="검사명" placeholder="검사명을 입력하세요." />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key ui-form__key--auto">담당자</dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small input-width-regular-medium">
+														<select class="ui-select" title="담당자">
+															<option value="">박민우</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="ui-table ui-table--light row-contents">
+										<table>
+											<colgroup>
+												<col style="width: 172px" />
+												<col style="width: 172px" />
+												<col />
+												<col style="width: 120px" />
+												<col style="width: 120px" />
+												<col style="width: 120px" />
+												<col style="width: 46px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th>검사 구분</th>
+													<th>카테고리</th>
+													<th>항목명</th>
+													<th>단위</th>
+													<th>Min</th>
+													<th>Max</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>Protein-Total</td>
+													<td class="align-center">g/dL</td>
+													<td class="align-right">5</td>
+													<td class="align-right">7.2</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>Albumin</td>
+													<td class="align-center">g/dL</td>
+													<td class="align-right">2.6</td>
+													<td class="align-right">4</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>Glucose</td>
+													<td class="align-center">mg/dL</td>
+													<td class="align-right">75</td>
+													<td class="align-right">128</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>AST</td>
+													<td class="align-center">U/L</td>
+													<td class="align-right">17</td>
+													<td class="align-right">44</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>ALT</td>
+													<td class="align-center">U/L</td>
+													<td class="align-right">17</td>
+													<td class="align-right">78</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>ALKP</td>
+													<td class="align-center">U/L</td>
+													<td class="align-right">47</td>
+													<td class="align-right">254</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>BUN</td>
+													<td class="align-center">mg/dL</td>
+													<td class="align-right">9.2</td>
+													<td class="align-right">29.2</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>Creatinine</td>
+													<td class="align-center">mg/dL</td>
+													<td class="align-right">0.4</td>
+													<td class="align-right">1.4</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>Na+</td>
+													<td class="align-center">mmol/L</td>
+													<td class="align-right">144</td>
+													<td class="align-right">160</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+												<tr>
+													<td>약속 진단검사</td>
+													<td>01. 종합검진</td>
+													<td>K+</td>
+													<td class="align-center">mmol/L</td>
+													<td class="align-right">3.5</td>
+													<td class="align-right">5.8</td>
+													<td>
+														<button type="button" class="ui-button row-remove-button">
+															<span class="for-a11y">행 삭제</span>
+														</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="flex-box">
+								<div class="flex-box__cell flex-box__cell--flexible">
+									<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--right">
+										<ul class="ui-buttons__list">
+											<li class="ui-buttons__item">
+												<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+													<span class="ui-basic-button__text">닫기</span>
+												</button>
+											</li>
+											<li class="ui-buttons__item">
+												<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+													<!-- 2022.10.14 : mod : 버튼명 수정 -->
+													<span class="ui-basic-button__text">저장</span>
+												</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 진단 검사 오더 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-test-order');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

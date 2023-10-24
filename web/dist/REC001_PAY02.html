@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-payment-modify">결제 정보 수정하기</a>
+
+		<!-- layer: 결제정보 수정하기 -->
+		<div class="layer-wrap" data-layer="layer-payment-modify">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">결제정보 수정하기</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<div class="line-section">
+										<div class="receipt">
+											<div class="receipt__body">
+												<div class="ui-form ui-form--horizontal ui-form--small ui-form--small-margin">
+													<dl class="ui-form__list">
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular color-primary-black font-weight-medium">청구 금액</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text font-weight-medium">60,551 원</div>
+															</dd>
+														</div>
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular">총 금액</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text color-gray">58,000 원</div>
+															</dd>
+														</div>
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular">총 할인금액</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text color-gray">- 3,000 원</div>
+															</dd>
+														</div>
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular">총 할증금액</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text color-gray">+ 0 원</div>
+															</dd>
+														</div>
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular">총 부가세</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text color-gray">+ 5,550 원</div>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+											<div class="receipt__foot">
+												<div class="ui-form ui-form--horizontal ui-form--small">
+													<dl class="ui-form__list">
+														<div class="ui-form__item">
+															<dt class="ui-form__key ui-form__key--regular">절사 금액</dt>
+															<dd class="ui-form__val align-right">
+																<div class="small-text">
+																	<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+																		<input type="text" class="ui-input" title="절사 금액" value="1" readonly />
+																		<div class="ui-input-unit">원</div>
+																	</div>
+																</div>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+										</div>
+										<div class="ui-form ui-form--horizontal ui-form--small row-contents-group-small">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key color-primary-black font-weight-medium">실 결제 금액</dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+															<input type="text" class="ui-input" title="실 결제 금액" value="60,500" />
+															<div class="ui-input-unit">원</div>
+														</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+									<section class="line-section">
+										<div class="section-head">
+											<h3 class="section-head__title section-head__title--basic font-weight-medium">결제수단</h3>
+										</div>
+										<div class="ui-form ui-form--horizontal ui-form--small">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key">예치금</dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+															<input type="text" class="ui-input" title="예치금" value="20,000" />
+															<div class="ui-input-unit">원</div>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">카드</dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+															<input type="text" class="ui-input" title="카드" value="0" />
+															<div class="ui-input-unit">원</div>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">현금</dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+															<input type="text" class="ui-input" title="현금" value="0" />
+															<div class="ui-input-unit">원</div>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key">계좌이체</dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--unit">
+															<input type="text" class="ui-input" title="계좌이체" value="20,000" />
+															<div class="ui-input-unit">원</div>
+														</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+										<div class="ui-form ui-form--horizontal ui-form--small ui-form--small-margin row-contents-group-small">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key color-blur">잔여 예치금</dt>
+													<dd class="ui-form__val align-right">
+														<div class="small-text color-gray-secondary">10,000 원</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key color-blur">남은 결제 금액</dt>
+													<dd class="ui-form__val align-right">
+														<div class="small-text color-gray-secondary">20,500 원</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+											<span class="ui-basic-button__text">저장</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 결제정보 수정하기 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-payment-modify');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

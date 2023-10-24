@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-add-patient">환자 등록</a>
+
+		<!-- layer: 환자 등록 -->
+		<div class="layer-wrap" data-layer="layer-add-patient">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">환자 등록</h2>
+								</div>
+							</div>
+							<div class="progress" id="addPatientStepProgress">
+								<div class="progress__item progress__item--active"></div>
+								<div class="progress__item"></div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<!-- Step 1 -->
+								<div class="ui-layer__body-inner" data-step="addPatientStep1">
+									<div class="inner-head">
+										<p class="inner-head__title">
+											우리 병원에 보호자가<br />
+											방문한적 있나요?
+										</p>
+										<div class="radio-tab radio-tab--small row-item-group">
+											<ul class="radio-tab__list">
+												<li class="radio-tab__item">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_1" data-checkbox-tab="radioTab01" checked />
+														<label for="radioTab1_1" class="radio-tab__link">
+															<span class="radio-tab__link-text">네</span>
+														</label>
+													</div>
+												</li>
+												<li class="radio-tab__item">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_2" data-checkbox-tab="radioTab02" />
+														<label for="radioTab1_2" class="radio-tab__link">
+															<span class="radio-tab__link-text">아니요</span>
+														</label>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="ui-form ui-form--small">
+										<dl class="ui-form__list">
+											<!-- DD : '네' 선택시 노출 -->
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab01">
+												<dt class="ui-form__key">보호자 검색</dt>
+												<dd class="ui-form__val">
+													<div class="auto-complete auto-complete--small">
+														<div class="ui-input-block ui-input-block--small ui-input-block--search">
+															<input type="text" class="ui-input" title="보호자 검색" placeholder="보호자 명, 휴대전화번호로 검색" autocomplete="off" />
+														</div>
+														<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+														<div class="auto-complete__layer">
+															<div class="auto-complete__scroller ui-scroller">
+																<ul class="auto-complete__list">
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="auto-complete__text">G20220301001 <mark>홍</mark>길동 (010-1111-1111)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="auto-complete__text">G20220301002 <mark>홍</mark>길동 (010-2222-2222)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="auto-complete__text">G20220301003 <mark>홍</mark>길동 (010-3333-3333)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="auto-complete__text">G20220301004 <mark>홍</mark>길동 (010-4444-4444)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link js-auto-complete-close">
+																			<span class="auto-complete__text">G20220301005 <mark>홍</mark>길동 (010-5555-5555)</span>
+																		</button>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab01">
+												<dt class="ui-form__key">보호자 명</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="보호자 명" disabled />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab01">
+												<dt class="ui-form__key">휴대전화번호</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 -->
+														<input type="text" class="ui-input js-phone-input" title="휴대전화번호" disabled />
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : '네' 선택시 노출 -->
+
+											<!-- DD : '아니오' 선택시 노출 -->
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab02">
+												<dt class="ui-form__key">보호자 명<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="보호자 명" placeholder="입력하세요" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab02">
+												<dt class="ui-form__key">휴대전화번호<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 -->
+														<input type="text" class="ui-input js-phone-input" title="휴대전화번호" placeholder="숫자만 입력하세요" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item" data-checkbox-tab-panel="radioTab02">
+												<dt class="ui-form__key">메모</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input input-height-regular" title="메모"></textarea>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : '아니오' 선택시 노출 -->
+										</dl>
+									</div>
+								</div>
+								<!-- //Step 1 -->
+
+								<!-- Step 2 -->
+								<div class="ui-layer__body-inner" data-step="addPatientStep2" style="display: none">
+									<div class="ui-form ui-form--small">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key">환자 명<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="환자 명" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">종<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<select class="ui-select" title="종">
+															<option value="">Dog</option>
+															<option value="">Cat</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">품종<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="auto-complete auto-complete--small">
+														<div class="ui-input-block ui-input-block--small ui-input-block--search">
+															<input type="text" class="ui-input js-auto-complete-target" title="품종" autocomplete="off" />
+														</div>
+														<!-- DD : 매칭 된 목록이 없을 경우 .auto-complete__layer 에 is-empty 클래스값 추가 -->
+														<div class="auto-complete__layer">
+															<div class="auto-complete__scroller ui-scroller">
+																<ul class="auto-complete__list">
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="아비시니안 (Abyssinian)">
+																			<!-- 2022.12.02 : mod : ellipsis 클래스 값 추가 -->
+																			<span class="auto-complete__text ellipsis"><mark>아</mark>비시니안 (Abyssinian)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="아메리칸 쇼트헤어 (American Shorthair)">
+																			<!-- 2022.12.02 : mod : ellipsis 클래스 값 추가 -->
+																			<span class="auto-complete__text ellipsis"><mark>아</mark>메리칸 쇼트헤어 (American Shorthair)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="아메리칸 밥테일 (American Bobtail)">
+																			<!-- 2022.12.02 : mod : ellipsis 클래스 값 추가 -->
+																			<span class="auto-complete__text ellipsis"><mark>아</mark>메리칸 밥테일 (American Bobtail)</span>
+																		</button>
+																	</li>
+																	<li class="auto-complete__item">
+																		<button type="button" class="ui-button auto-complete__link" data-auto-complete-keyword="아이리쉬 소프트코티드 휘튼 테리어 (Irish Soft-Coated Wheaten Terrier)">
+																			<!-- 2022.12.02 : mod : ellipsis 클래스 값 추가 -->
+																			<span class="auto-complete__text ellipsis"><mark>아</mark>이리쉬 소프트코티드 휘튼 테리어 (Irish Soft-Coated Wheaten Terrier)</span>
+																		</button>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">성별<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab radio-tab--small row-item-group">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item radio-tab__item--per-200">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_1" checked />
+																	<label for="radioTab2_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">수컷</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item radio-tab__item--per-200">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_2" />
+																	<label for="radioTab2_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">암컷</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_3" />
+																	<label for="radioTab2_3" class="radio-tab__link">
+																		<span class="radio-tab__link-text">중성화 수컷</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab2" id="radioTab2_4" />
+																	<label for="radioTab2_4" class="radio-tab__link">
+																		<span class="radio-tab__link-text">중성화 암컷</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">피모 색</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="피모 색" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">생년월일<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small ui-input-block--date">
+														<input type="text" class="ui-input js-datepicker" title="생년월일" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">나이</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="나이" disabled />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">동물 등록 방식<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<!-- 2022.12.02 : mod : js-select-tab 클래스 추가 -->
+														<select class="ui-select js-select-tab" title="동물 등록 방식">
+															<!-- 2022.12.02 : mod : 텍스트 수정 및 data-select-tab 속성 추가 -->
+															<option value="" data-select-tab="seletTab01">미등록</option>
+															<option value="" data-select-tab="seletTab02">내장형</option>
+															<option value="" data-select-tab="seletTab02">외장형</option>
+															<option value="" data-select-tab="seletTab02">인식표</option>
+															<option value="" data-select-tab="seletTab02">기타</option>
+															<!-- //2022.12.02 : mod : 텍스트 수정 및 data-select-tab 속성 추가 -->
+														</select>
+													</div>
+												</dd>
+											</div>
+											<!-- 2022.12.02 : mod : data-select-tab-panel 속성 추가 -->
+											<div class="ui-form__item" data-select-tab-panel="seletTab02">
+												<dt class="ui-form__key">동물 등록 번호</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<!-- 2022.12.20 : mod : data-maxlength 속성 추가 -->
+														<input type="text" class="ui-input" title="동물 등록 번호" placeholder="국가코드 3자리와 개체 일련번호 12자리 입력" data-maxlength="15" />
+													</div>
+												</dd>
+											</div>
+											<!-- 2022.12.02 : add : 추가 -->
+											<div class="ui-form__item" data-select-tab-panel="seletTab01">
+												<dt class="ui-form__key">동물 등록 번호</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="동물 등록 번호" disabled />
+													</div>
+												</dd>
+											</div>
+											<!-- //2022.12.02 : add : 추가 -->
+											<div class="ui-form__item">
+												<dt class="ui-form__key">메모</dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<textarea class="ui-input input-height-regular" title="메모"></textarea>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //Step 2 -->
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<!-- Step 1 -->
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular" data-step="addPatientStep1">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--primary" id="addPatientStepNext">
+											<span class="ui-basic-button__text">다음</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //Step 1 -->
+
+							<!-- Step 2 -->
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular" data-step="addPatientStep2" style="display: none">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<!-- 2022.10.24 : mod : 버튼명 수정 -->
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--primary">
+											<span class="ui-basic-button__text">저장</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //Step 2 -->
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 환자 등록 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-add-patient');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+
+				$('#addPatientStepNext').on('click', function () {
+					$('#addPatientStepProgress .progress__item').removeClass('progress__item--active').eq(1).addClass('progress__item--active');
+
+					$('[data-step="addPatientStep1"]').css('display', 'none');
+					$('[data-step="addPatientStep2"]').css('display', '');
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

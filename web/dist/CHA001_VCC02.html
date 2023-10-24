@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-add-Inoculation">접종이력 추가</a>
+
+		<!-- layer: 접종이력 추가 -->
+		<div class="layer-wrap" data-layer="layer-add-Inoculation">
+			<div class="layer-container">
+				<!-- 2022.11.03 : del : form태그 삭제 
+				<form action="">
+					-->
+				<section class="ui-layer ui-layer--large">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<h2 class="ui-layer-header__title">접종이력 추가</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.10.24 : mod : 상단 환자정보 구조 수정 -->
+								<div class="chart-head chart-head--inner row-group">
+									<div class="chart-head__left">
+										<div class="chart-head__title-area">
+											<h3 class="chart-title">P20220301001&nbsp;&nbsp;티모</h3>
+										</div>
+										<div class="pet-tags">
+											<ul class="pet-tags__list">
+												<!-- 2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Cat</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">Abyssinian</div>
+												</li>
+												<!-- //2022.12.09 : mod : 품종 분리 노출로 변경 -->
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">중성화 수컷</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">2년 6개월</div>
+												</li>
+												<li class="pet-tags__item">
+													<div class="pet-tags__block">3.4kg</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.10.24 : mod : 상단 환자정보 구조 수정 -->
+
+								<!-- Case : 강아지 -->
+								<!-- 2022.10.24 : del : form 태그 삭제
+									<form action=""> 
+									-->
+								<div class="flex-box">
+									<div class="flex-box__cell flex-box__cell--flexible">
+										<div class="ui-form ui-form--horizontal ui-form--small ui-form--auto ui-form--medium-margin">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종 분류</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular">
+															<select class="ui-select js-select-tab" title="접종 분류">
+																<option value="" data-select-tab="selectTab01-1">DHPPL</option>
+																<option value="" data-select-tab="selectTab01-2">코로나</option>
+																<option value="" data-select-tab="selectTab01-3">컨넬코프</option>
+																<option value="" data-select-tab="selectTab01-4">인플루엔자</option>
+																<option value="" data-select-tab="selectTab01-5">광견병</option>
+																<option value="" data-select-tab="selectTab01-6">외부기생충</option>
+																<option value="" data-select-tab="selectTab01-7">항체검사</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">백신</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-1">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">DHPPL</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-2">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">코로나</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-3">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">컨넬코프</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-4">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">인플루엔자</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-5">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">광견병</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-6">
+															<select class="ui-select" title="백신">
+																<option value="">하트가드 블루</option>
+																<option value="">하트가드 그린</option>
+																<option value="">넥스가드 XS</option>
+																<option value="">넥스가드 S</option>
+																<option value="">넥스가드 M</option>
+																<option value="">넥스가드 L</option>
+																<option value="">넥스가드 XL</option>
+																<option value="">애드보킷 ~4</option>
+																<option value="">애드보킷 4~10</option>
+																<option value="">애드보킷 10~25</option>
+																<option value="">애드보킷 25~40</option>
+																<option value="">레볼루션</option>
+																<option value="">프론트라인 독</option>
+																<option value="">브라벡토 독 2~4.5</option>
+																<option value="">브라벡토 독 4.5~10</option>
+																<option value="">브라벡토 독 10~20</option>
+																<option value="">브라벡토 독 20~40</option>
+																<option value="">브라벡토 독 40~56</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab01-7">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">항체검사</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종 유형</dt>
+													<dd class="ui-form__val">
+														<div class="check-list check-list--auto">
+															<ul class="check-list__list">
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio01" name="type" data-area-disabled="disabled01-1" checked />
+																		<label for="radio01" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">일반 접종</span>
+																		</label>
+																	</div>
+																</li>
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio02" name="type" data-area-disabled="disabled01-2" />
+																		<label for="radio02" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">추가 접종</span>
+																		</label>
+																	</div>
+																</li>
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio03" name="type" data-area-disabled="disabled01-2" />
+																		<label for="radio03" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">부스터 샷</span>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종일<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-regular">
+															<input type="text" class="ui-input js-datepicker" title="접종일" placeholder="연도.월.일" value="2022.08.30" />
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">예정 접종일<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-regular">
+															<input type="text" class="ui-input js-datepicker" title="예정 접종일" placeholder="연도.월.일" value="2022.08.30" />
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<!-- 2022.11.03 : mod : dt 에 span 추가 -->
+													<dt class="ui-form__key ui-form__key--auto">차수<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small input-width-regular">
+															<input type="text" class="ui-input" title="차수" data-area-disabled-target="disabled01-1" disabled />
+														</div>
+													</dd>
+												</div>
+												<!-- 2022.11.14 : add : 추가 -->
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">Sign</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular">
+															<select class="ui-select" title="Sign">
+																<option value="">김민수</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<!-- //2022.11.14 : add : 추가 -->
+											</dl>
+										</div>
+									</div>
+									<div class="flex-box__cell">
+										<!-- 2022.10.24 : mod : 버튼 타입 수정 -->
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+											<span class="ui-basic-button__text">추가</span>
+										</button>
+									</div>
+								</div>
+								<!-- 2022.10.24 : del : form 태그 삭제
+									</form> 
+									-->
+								<!-- //Case : 강아지 -->
+
+								<!-- Case : 고양이 -->
+								<!-- 2022.10.24 : del : form 태그 삭제
+									<form action=""> 
+									-->
+								<div class="flex-box">
+									<div class="flex-box__cell flex-box__cell--flexible">
+										<div class="ui-form ui-form--horizontal ui-form--small ui-form--auto ui-form--medium-margin">
+											<dl class="ui-form__list">
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종 분류</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular">
+															<select class="ui-select js-select-tab" title="접종 분류">
+																<option value="" data-select-tab="selectTab02-1">CVRP</option>
+																<option value="" data-select-tab="selectTab02-2">광견병</option>
+																<option value="" data-select-tab="selectTab02-3">외부기생충</option>
+																<option value="" data-select-tab="selectTab02-4">항체검사</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">백신</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab02-1">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">CVRP</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab02-2">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">광견병</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab02-3">
+															<select class="ui-select" title="백신">
+																<option value="">에드보킷</option>
+																<option value="">레볼루션</option>
+																<option value="">브로드라인</option>
+																<option value="">프론트라인 캣</option>
+																<option value="">브라벡토 캣 1.2~2.8</option>
+																<option value="">브라벡토 캣 2.8~6.25</option>
+																<option value="">브라벡토 캣 6.25~12.5</option>
+																<option value="">안텔민정 뽀삐</option>
+																<option value="">안텔민정 킹</option>
+																<option value="">파라캅정 S</option>
+																<option value="">파라캅정 L</option>
+																<option value="">드론탈 플러스</option>
+																<option value="">옴니큐어 산</option>
+																<option value="">옴니큐어 과립</option>
+																<option value="">파나쿠어정 250mg</option>
+																<option value="">파나쿠어정 500mg</option>
+																<option value="">프로펜더</option>
+															</select>
+														</div>
+														<div class="ui-select-block ui-select-block--small input-width-regular" data-select-tab-panel="selectTab02-4">
+															<select class="ui-select" title="백신" disabled>
+																<option value="">항체검사</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종 유형</dt>
+													<dd class="ui-form__val">
+														<div class="check-list check-list--auto">
+															<ul class="check-list__list">
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio04" name="type01" data-area-disabled="disabled02-1" checked />
+																		<label for="radio04" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">일반 접종</span>
+																		</label>
+																	</div>
+																</li>
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio05" name="type01" data-area-disabled="disabled02-2" />
+																		<label for="radio05" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">추가 접종</span>
+																		</label>
+																	</div>
+																</li>
+																<li class="check-list__item">
+																	<div class="ui-radio-block ui-radio-block--small">
+																		<input type="radio" class="ui-radio" id="radio06" name="type01" data-area-disabled="disabled02-2" />
+																		<label for="radio06" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label__text">부스터 샷</span>
+																		</label>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">접종일<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-regular">
+															<input type="text" class="ui-input js-datepicker" title="접종일" placeholder="연도.월.일" value="2022.08.30" />
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">예정 접종일<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small ui-input-block--date input-width-regular">
+															<input type="text" class="ui-input js-datepicker" title="예정 접종일" placeholder="연도.월.일" value="2022.08.30" />
+														</div>
+													</dd>
+												</div>
+												<div class="ui-form__item">
+													<!-- 2022.11.03 : mod : dt 에 span 추가 -->
+													<dt class="ui-form__key ui-form__key--auto">차수<span class="ui-require" aria-label="(필수)"></span></dt>
+													<dd class="ui-form__val">
+														<div class="ui-input-block ui-input-block--small input-width-regular">
+															<input type="text" class="ui-input" title="차수" data-area-disabled-target="disabled02-1" disabled />
+														</div>
+													</dd>
+												</div>
+												<!-- 2022.11.14 : add : 추가 -->
+												<div class="ui-form__item">
+													<dt class="ui-form__key ui-form__key--auto">Sign</dt>
+													<dd class="ui-form__val">
+														<div class="ui-select-block ui-select-block--small input-width-regular">
+															<select class="ui-select" title="Sign">
+																<option value="">김민수</option>
+															</select>
+														</div>
+													</dd>
+												</div>
+												<!-- //2022.11.14 : add : 추가 -->
+											</dl>
+										</div>
+									</div>
+									<div class="flex-box__cell">
+										<!-- 2022.10.24 : mod : 버튼 타입 수정 -->
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+											<span class="ui-basic-button__text">추가</span>
+										</button>
+									</div>
+								</div>
+								<!-- 2022.10.24 : del : form 태그 삭제
+									</form> 
+									-->
+								<!-- //Case : 고양이 -->
+
+								<div class="hr hr--secondary row-group"></div>
+
+								<div class="ui-dropdown ui-dropdown--small js-ui-dropdown input-width-regular row-item-group">
+									<div class="ui-dropdown__head">
+										<div class="ui-dropdown__text js-ui-dropdown__watch">분류</div>
+										<button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+											<span class="for-a11y">
+												menu
+												<span class="open-text">open</span>
+												<span class="close-text">close</span>
+											</span>
+										</button>
+									</div>
+									<div class="ui-dropdown__layer js-ui-dropdown__layer">
+										<div class="ui-dropdown__contents">
+											<ul class="ui-dropdown__list">
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="분류">분류</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="분류1">분류1</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="분류2">분류2</button>
+												</li>
+												<li class="ui-dropdown__item">
+													<button type="button" class="ui-button ui-dropdown__link js-ui-dropdown__closer" data-dropdown-option="분류3">분류3</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="ui-table ui-table--light">
+									<table>
+										<!-- 2022.11.14 : mod : 항목 추가 및 width값 수정 -->
+										<colgroup>
+											<col />
+											<col style="width: 278px" />
+											<col style="width: 279px" />
+											<col style="width: 105px" />
+											<col style="width: 170px" />
+											<col style="width: 170px" />
+											<col style="width: 139px" />
+											<col style="width: 46px" />
+										</colgroup>
+										<!-- //2022.11.14 : mod : 항목 추가 및 width값 수정 -->
+										<thead>
+											<tr>
+												<th>분류</th>
+												<th>백신</th>
+												<th>접종 유형</th>
+												<th>차수</th>
+												<th>접종일</th>
+												<th>예정 접종일</th>
+												<th>Sign</th>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<th></th>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center">외부기생충</td>
+												<td class="align-center">에드보킷~4</td>
+												<td class="align-center">추가 접종</td>
+												<td class="align-center">-</td>
+												<td class="align-center">2022.05.10</td>
+												<td class="align-center">2022.06.12</td>
+												<td class="align-center">김민수</td>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<td>
+													<button type="button" class="ui-button row-remove-button">
+														<span class="for-a11y">행 삭제</span>
+													</button>
+												</td>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+											<tr>
+												<td class="align-center">외부기생충</td>
+												<td class="align-center">에드보킷~4</td>
+												<td class="align-center">일반 접종</td>
+												<td class="align-center">1</td>
+												<td class="align-center">2022.05.10</td>
+												<td class="align-center">2022.06.12</td>
+												<td class="align-center">김민수</td>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<td>
+													<button type="button" class="ui-button row-remove-button">
+														<span class="for-a11y">행 삭제</span>
+													</button>
+												</td>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+											<tr>
+												<td class="align-center">외부기생충</td>
+												<td class="align-center">에드보킷~4</td>
+												<td class="align-center">일반 접종</td>
+												<td class="align-center">1</td>
+												<td class="align-center">2022.05.10</td>
+												<td class="align-center">2022.06.12</td>
+												<td class="align-center">김민수</td>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<td>
+													<button type="button" class="ui-button row-remove-button">
+														<span class="for-a11y">행 삭제</span>
+													</button>
+												</td>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+											<tr>
+												<td class="align-center">외부기생충</td>
+												<td class="align-center">에드보킷~4</td>
+												<td class="align-center">일반 접종</td>
+												<td class="align-center">1</td>
+												<td class="align-center">2022.05.10</td>
+												<td class="align-center">2022.06.12</td>
+												<td class="align-center">김민수</td>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<td>
+													<button type="button" class="ui-button row-remove-button">
+														<span class="for-a11y">행 삭제</span>
+													</button>
+												</td>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+											<tr>
+												<td class="align-center">외부기생충</td>
+												<td class="align-center">에드보킷~4</td>
+												<td class="align-center">일반 접종</td>
+												<td class="align-center">1</td>
+												<td class="align-center">2022.05.10</td>
+												<td class="align-center">2022.06.12</td>
+												<td class="align-center">김민수</td>
+												<!-- 2022.11.14 : add : row 삭제 기능 추가 -->
+												<td>
+													<button type="button" class="ui-button row-remove-button">
+														<span class="for-a11y">행 삭제</span>
+													</button>
+												</td>
+												<!-- //2022.11.14 : add : row 삭제 기능 추가 -->
+											</tr>
+										</tbody>
+									</table>
+									<div class="ui-table__foot">
+										<div class="ui-table__cell-center">
+											<nav class="pagination">
+												<h3 class="for-a11y">Pagination</h3>
+												<ul class="pagination__list">
+													<li class="pagination__item">
+														<!-- DD : 첫번째 페이지일 경우 disabled 속성 추가 -->
+														<button type="button" class="ui-button pagination__link pagination__link--prev">
+															<span class="for-a11y">이전</span>
+														</button>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">1</a>
+													</li>
+													<li class="pagination__item">
+														<span class="pagination__ellipsis">...</span>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">7</a>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">8</a>
+													</li>
+													<li class="pagination__item">
+														<!-- DD : 현재 페이지면 is-active 클래스 값 추가 -->
+														<a href="" class="pagination__link is-active">9</a>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">10</a>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">11</a>
+													</li>
+													<li class="pagination__item">
+														<span class="pagination__ellipsis">...</span>
+													</li>
+													<li class="pagination__item">
+														<a href="" class="pagination__link">999</a>
+													</li>
+													<li class="pagination__item">
+														<!-- DD : 마지막 페이지일 경우 disabled 속성 추가 -->
+														<button type="button" class="ui-button pagination__link pagination__link--next">
+															<span class="for-a11y">다음</span>
+														</button>
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="flex-box">
+							<div class="flex-box__cell flex-box__cell--flexible">
+								<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--min-width ui-buttons--right">
+									<ul class="ui-buttons__list">
+										<li class="ui-buttons__item">
+											<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+												<span class="ui-basic-button__text">닫기</span>
+											</button>
+										</li>
+										<!-- 2022.11.03 : del : 버튼 삭제
+										<li class="ui-buttons__item">
+											<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular">
+												<span class="ui-basic-button__text">저장</span>
+											</button>
+										</li>
+										-->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 2022.11.03 : del : form태그 삭제
+				</form>
+				-->
+			</div>
+		</div>
+		<!-- //layer: 접종이력 추가 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-add-Inoculation');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

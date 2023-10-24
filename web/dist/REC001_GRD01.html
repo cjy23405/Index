@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-guardian-search">보호자 조회 선택</a>
+
+		<!-- layer: 보호자 조회 선택 -->
+		<div class="layer-wrap" data-layer="layer-guardian-search">
+			<div class="layer-container">
+				<section class="ui-layer">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<h2 class="ui-layer-header__title">보호자 조회</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.09.13 : del : 불필요 태그 제거
+								<div>
+								-->
+								<div class="ui-form ui-form--small">
+									<dl class="ui-form__list">
+										<div class="ui-form__item">
+											<dt class="ui-form__key">보호자 ID</dt>
+											<dd class="ui-form__val">
+												<div class="ui-input-block ui-input-block--small">
+													<input type="text" class="ui-input" title="보호자 ID" placeholder="보호자 ID" value="G2022030101" readonly />
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form__item">
+											<dt class="ui-form__key">대표 보호자 명</dt>
+											<dd class="ui-form__val">
+												<div class="ui-input-block ui-input-block--small">
+													<input type="text" class="ui-input" title="대표 보호자 명" placeholder="대표 보호자 명" value="홍길동" readonly />
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form__item">
+											<dt class="ui-form__key">휴대전화번호</dt>
+											<dd class="ui-form__val">
+												<div class="ui-input-block ui-input-block--small">
+													<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 및 type 속성 변경 및 pattern 속성 제거 -->
+													<input type="text" class="ui-input js-phone-input" title="휴대전화번호" placeholder="휴대전화번호" value="01012345678" readonly />
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form__item">
+											<dt class="ui-form__key">부가 보호자 정보</dt>
+											<dd class="ui-form__val">
+												<div class="ui-table ui-table--light">
+													<table>
+														<colgroup>
+															<col style="width: 120px" />
+															<col />
+														</colgroup>
+														<thead>
+															<tr>
+																<th>보호자명</th>
+																<th>휴대전화번호</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+																<td class="align-center">김민아</td>
+																<td class="align-center">010-1234-5678</td>
+																<!-- //2022.10.24 : mod : align-center 클래스 추가 -->
+															</tr>
+															<tr>
+																<!-- 2022.10.24 : mod : align-center 클래스 추가 -->
+																<td class="align-center">홍진우</td>
+																<td class="align-center">010-1234-5678</td>
+																<!-- //2022.10.24 : mod : align-center 클래스 추가 -->
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</dd>
+										</div>
+									</dl>
+								</div>
+								<!-- 2022.09.13 : del : 불필요 태그 제거
+								</div>
+								-->
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+										<span class="ui-basic-button__text">닫기</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 보호자 조회 선택 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-guardian-search');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

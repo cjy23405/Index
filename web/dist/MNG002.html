@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-employee-registration">직원 등록</a>
+
+		<!-- layer: 직원 등록 -->
+		<div class="layer-wrap" data-layer="layer-employee-registration">
+			<div class="layer-container">
+				<form action="">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="ui-layer-header">
+								<div class="ui-layer-header__left">
+									<h2 class="ui-layer-header__title">직원 등록</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-scroller ui-scroller">
+								<div class="ui-layer__body-inner">
+									<div class="ui-form ui-form--small">
+										<dl class="ui-form__list">
+											<div class="ui-form__item">
+												<dt class="ui-form__key">역할<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-select-block ui-select-block--small">
+														<select class="ui-select" title="역할">
+															<!-- 2022.12.23 : add : 병원장 옵션 추가 -->
+															<option value="">병원장</option>
+															<!-- //2022.12.23 : add : 병원장 옵션 추가 -->
+															<option value="">매니저</option>
+															<option value="">보건사</option>
+															<option value="" selected>수의사</option>
+														</select>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">이메일<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="flex-box">
+														<div class="flex-box__cell flex-box__cell--flexible">
+															<div class="ui-input-block ui-input-block--small">
+																<input type="text" class="ui-input" title="이메일" />
+															</div>
+														</div>
+														<!-- 2022.10.24 : mod : flex-box__cell--small-margin 클래스 추가 -->
+														<div class="flex-box__cell flex-box__cell--small-margin">
+															<button type="button" class="ui-button ui-basic-button ui-basic-button--tertiary ui-basic-button--small">
+																<span class="ui-basic-button__text">중복 확인</span>
+															</button>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">이름<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="이름" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">전화번호<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="ui-input-block ui-input-block--small">
+														<!-- 2022.12.09 : mod : js-phone-input 클래스 값 추가 -->
+														<input type="text" class="ui-input js-phone-input" title="전화번호" placeholder="숫자만 입력하세요" />
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form__item">
+												<dt class="ui-form__key">계정 상태<span class="ui-require" aria-label="(필수)"></span></dt>
+												<dd class="ui-form__val">
+													<div class="radio-tab radio-tab--small row-item-group">
+														<ul class="radio-tab__list">
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_1" checked />
+																	<label for="radioTab1_1" class="radio-tab__link">
+																		<span class="radio-tab__link-text">활성</span>
+																	</label>
+																</div>
+															</li>
+															<li class="radio-tab__item">
+																<div class="ui-radio-block">
+																	<input type="radio" class="ui-radio" name="radioTab1" id="radioTab1_2" />
+																	<label for="radioTab1_2" class="radio-tab__link">
+																		<span class="radio-tab__link-text">비활성</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+											<span class="ui-basic-button__text">닫기</span>
+										</button>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--primary">
+											<span class="ui-basic-button__text">저장</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: 직원 등록 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-employee-registration');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

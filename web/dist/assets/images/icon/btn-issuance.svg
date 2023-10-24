@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g transform="translate(-1247 -229)">
+        <g data-name="합치기 65" style="fill:none">
+            <path d="M-3765-14736h-2a4.006 4.006 0 0 1-4-4v-10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5a1 1 0 0 1 1 1 1 1 0 0 1-1 1z" style="stroke:none" transform="translate(5032 14996)"/>
+            <path d="M-3761.999-14736.001h-5.002a4.006 4.006 0 0 1-4-3.999v-10.001a4.004 4.004 0 0 1 4-3.999h8.001a4.001 4.001 0 0 1 4 3.999v2.999c0 .556-.449 1.004-1 1.004-.552 0-1-.448-1-1.004v-2.999a2 2 0 0 0-2-1.999H-3767a2 2 0 0 0-2 1.999v10.001c0 1.104.896 2 2 2h5.002a1 1 0 0 1 0 1.999z" style="fill:#fff;stroke:none" transform="translate(5032 14996)"/>
+        </g>
+        <rect data-name="사각형 21381" width="2" height="7" rx="1" transform="rotate(90 512.25 760.25)" style="fill:#fff"/>
+        <rect data-name="사각형 22383" width="2" height="8" rx="1" transform="rotate(90 512 767)" style="fill:#fff"/>
+        <rect data-name="사각형 22384" width="8" height="2" rx="1" transform="rotate(90 512 764)" style="fill:#fff"/>
+    </g>
+</svg>

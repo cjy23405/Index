@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <g transform="translate(-945 -541.775)">
+        <path data-name="사각형 19261" transform="translate(945 541.775)" style="fill:none" d="M0 0h80v80H0z"/>
+        <rect data-name="사각형 23680" width="50" height="56" rx="6" transform="translate(959 557.775)" style="fill:#e5e5e5"/>
+        <rect data-name="사각형 23682" width="28" height="8" rx="2" transform="translate(970 553.775)" style="fill:#c8c8c8"/>
+        <path data-name="사각형 23683" d="M6 0a6 6 0 0 1 6 6v9H0V6a6 6 0 0 1 6-6z" transform="translate(978 546.775)" style="fill:#c8c8c8"/>
+        <rect data-name="사각형 23684" width="20" height="6" rx="1" transform="translate(974 579.775)" style="fill:#c8c8c8"/>
+        <rect data-name="사각형 23686" width="30" height="4" rx="2" transform="translate(969 599.775)" style="fill:#c8c8c8"/>
+        <rect data-name="사각형 23685" width="6" height="20" rx="1" transform="translate(981 572.775)" style="fill:#c8c8c8"/>
+        <path data-name="빼기 20" d="M-7217 353.775h-2.995a5.007 5.007 0 0 0 4.995-5v-46a5.008 5.008 0 0 0-5-5h3a6.006 6.006 0 0 1 6 6v44a6.006 6.006 0 0 1-6 6z" transform="translate(8220 260)" style="fill:#111;opacity:.04"/>
+    </g>
+</svg>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- DD : 프린트 화면에서만 추가 -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/print-style.css" />
+		<!-- //DD : 프린트 화면에서만 추가 -->
+		<!-- //style -->
+	</head>
+	<body>
+		<!-- Page 1 -->
+		<div class="document">
+			<div class="document-head">
+				<div class="document-head__row">
+					<h1 class="document-head__title">입 &middot; 퇴원 확인서</h1>
+				</div>
+			</div>
+
+			<p class="nano-text color-gray-tertiary row-item">Serial:<span class="inline-block" style="width: 400px"></span>No.</p>
+
+			<!-- 2022.11.03 : mod : row-item-group클래스 삭제 -->
+			<div class="print-table">
+				<div class="print-table__table">
+					<table>
+						<tbody>
+							<tr>
+								<th rowspan="2">고객</th>
+								<th>이름</th>
+								<td></td>
+								<th>연락처</th>
+								<td></td>
+								<th>핸드폰</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td colspan="5"></td>
+							</tr>
+							<tr>
+								<th rowspan="2">동물</th>
+								<th>이름</th>
+								<td></td>
+								<th>Breed</th>
+								<td></td>
+								<th>피모색</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th>Species</th>
+								<td></td>
+								<th>생년월일</th>
+								<td></td>
+								<th>성별</th>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row-group">
+				<section>
+					<div class="print-line-group">
+						<h2 class="nano-text color-gray align-center font-weight-medium">입원내용</h2>
+					</div>
+					<section class="print-memo-section print-memo-section--contents">
+						<p class="nano-text color-gray row-item">진료과:</p>
+						<p class="nano-text color-gray row-item">입원기간:</p>
+						<p class="nano-text color-gray align-center" style="margin-top: 40px">위와 같이 입·퇴원을 확인함</p>
+					</section>
+				</section>
+
+				<div class="hr row-contents-group"></div>
+
+				<p class="nano-text row-contents-group-small">
+					발행일:<span class="inline-block" style="width: 60px"></span>년<span class="inline-block" style="width: 40px"></span>월<span class="inline-block" style="width: 40px"></span>일
+				</p>
+
+				<p class="nano-text row-contents-group-small">
+					병원명: 24시스카이동물의료센터<br />
+					주소 및 명칭: 인천광역시 남동구 남동대로 799번길 34 3F<br />
+					전화 및 팩스: 032-715-7959
+				</p>
+
+				<div class="flex-box row-contents-group-small">
+					<div class="flex-box__cell flex-box__cell--flexible">
+						<p class="nano-text font-weight-medium">진료수의사: 면허번호<span class="inline-block" style="width: 12px"></span>제<span class="inline-block" style="width: 80px"></span>호</p>
+					</div>
+					<div class="flex-box__cell">
+						<!-- 2022.11.03 : mod : span.inline-block의 width값 수정 -->
+						<p class="nano-text"><span class="font-weight-medium">성명:</span><span class="inline-block" style="width: 155px"></span><span class="color-blur">(서명 또는 인)</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Page 1 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

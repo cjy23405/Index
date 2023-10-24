@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-subscription-auth-key">EVR 구독 인증키 입력</a>
+
+		<!-- layer: EVR 구독 인증키 입력 -->
+		<div class="layer-wrap" data-layer="layer-subscription-auth-key">
+			<div class="layer-container">
+				<form action="">
+					<div class="signup">
+						<div class="signup__head">
+							<h2 class="signup__title">EVR 구독 인증키 입력</h2>
+							<p class="signup__text">X Caliber EVR을 구독하고 발급받은 인증키를 입력하세요.</p>
+						</div>
+						<div class="signup__body">
+							<div class="ui-form">
+								<dl class="ui-form__list">
+									<div class="ui-form__item">
+										<dt class="ui-form__key">병원명</dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="병원명" value="ABC동물병원" readonly />
+											</div>
+										</dd>
+									</div>
+									<div class="ui-form__item">
+										<dt class="ui-form__key">인증키<span class="ui-require" aria-label="(필수)"></span></dt>
+										<dd class="ui-form__val">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="인증키" placeholder="인증키 입력" />
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="ui-buttons">
+								<ul class="ui-buttons__list">
+									<li class="ui-buttons__item">
+										<a href="" class="ui-basic-button ui-basic-button--tertiary">
+											<span class="ui-basic-button__text">로그아웃</span>
+										</a>
+									</li>
+									<li class="ui-buttons__item">
+										<button type="submit" class="ui-button ui-basic-button">
+											<!-- 2022.10.11 : mod : 버튼명 수정 -->
+											<span class="ui-basic-button__text">인증</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="signup__foot">
+							<div class="signup__foot-left">
+								<p class="signup__foot-text">인증키 확인이 필요한가요?<a href="" class="signup__foot-link">X Caliber로 이동</a></p>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //layer: EVR 구독 인증키 입력 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-subscription-auth-key');
+
+				$('form').on('submit', function (e) {
+					alert('submit test');
+
+					e.preventDefault();
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

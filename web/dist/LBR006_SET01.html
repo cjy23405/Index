@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<a href="" class="basic-link" data-layer-open="layer-appointment-check-setting">약속검사 항목 설정</a>
+
+		<!-- layer: 약속검사 항목 설정 -->
+		<div class="layer-wrap layer-appointment-check-setting" data-layer="layer-appointment-check-setting">
+			<div class="layer-container">
+				<section class="ui-layer ui-layer--medium-large">
+					<div class="ui-layer__head">
+						<div class="ui-layer-header">
+							<div class="ui-layer-header__left">
+								<h2 class="ui-layer-header__title">약속검사 항목 설정</h2>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-scroller ui-scroller">
+							<div class="ui-layer__body-inner">
+								<section class="section">
+									<div class="section-head">
+										<h3 class="section-head__title">검사 카테고리</h3>
+									</div>
+									<p class="small-text">01. 종합검진 (기본)</p>
+								</section>
+
+								<div class="hr hr--secondary row-group"></div>
+
+								<div class="flex-box">
+									<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--medium-margin">
+										<section class="section">
+											<!-- 2022.12.23 : mod : 검사타입 셀렉트 추가로 구조 수정 -->
+											<div class="section-head">
+												<h3 class="section-head__title">전체항목</h3>
+											</div>
+											<div class="flex-box row-item-group">
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<div class="ui-select-block ui-select-block--small input-width-regular-small">
+														<select class="ui-select" title="검사타입">
+															<option value="-1" disabled selected>검사타입</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+												<div class="flex-box__cell flex-box__cell--small-margin flex-box__cell--flexible">
+													<div class="ui-input-block ui-input-block--small">
+														<input type="text" class="ui-input" title="항목 조회" />
+													</div>
+												</div>
+												<div class="flex-box__cell flex-box__cell--small-margin">
+													<button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quaternary">
+														<span class="ui-basic-button__text">조회</span>
+													</button>
+												</div>
+											</div>
+											<!-- //2022.12.23 : mod : 검사타입 셀렉트 추가로 구조 수정 -->
+
+											<!-- Table -->
+											<!--
+												2022.12.23 : mod :
+												board-table--no-margin 클래스 값 추가 및 widget-height-regular → widget-height-regular-small 클래스 값 변경
+											-->
+											<div class="board-table board-table--secondary board-table--no-margin widget-height-regular-small">
+												<div class="board-table__body">
+													<div class="board-table__table-wrap" role="table">
+														<div class="board-table__thead">
+															<table role="rowgroup" class="board-table__table">
+																<colgroup>
+																	<col style="width: 44px" />
+																	<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																	<col style="width: 138px" />
+																	<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																	<col />
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">
+																					<div class="ui-checkbox-block ui-checkbox-block--small">
+																						<input type="checkbox" class="ui-checkbox" id="boardTableCheckboxAll" data-checkbox-group="boardTableCheckbox" />
+																						<label for="boardTableCheckboxAll" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="for-a11y">전체선택</span>
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																		</th>
+																		<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">검사타입</div>
+																			</div>
+																		</th>
+																		<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																		<th>
+																			<div class="board-table__colhead">
+																				<!-- 2022.12.23 : mod : 문구 변경 (항목명 → 항목 이름) -->
+																				<div class="board-table__colhead-text">항목 이름</div>
+																			</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="board-table__tbody">
+															<div class="board-table__tbody-scroller ui-scroller">
+																<table role="rowgroup" class="board-table__table">
+																	<colgroup>
+																		<col style="width: 44px" />
+																		<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																		<col style="width: 138px" />
+																		<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																		<col />
+																	</colgroup>
+																	<tbody>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox1" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Fibrinogen</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hematocrit(Hct)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox3" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox3" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox4" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox4" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox5" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox5" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCHC</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox6" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox6" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox7" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox7" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox8" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox8" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCHC</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox9" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox9" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox10" data-checkbox-group-child="boardTableCheckbox" />
+																					<label for="boardTableCheckbox10" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //Table -->
+										</section>
+									</div>
+
+									<div class="flex-box__cell flex-box__cell--medium-margin">
+										<button type="button" class="ui-button swap-button swap-button--right row-contents-group">
+											<span class="for-a11y">오른쪽으로 이동</span>
+										</button>
+										<button type="button" class="ui-button swap-button swap-button--left row-contents-group">
+											<span class="for-a11y">왼쪽으로 이동</span>
+										</button>
+									</div>
+
+									<div class="flex-box__cell flex-box__cell--flexible flex-box__cell--medium-margin">
+										<section class="section">
+											<div class="section-head">
+												<h3 class="section-head__title">선택항목</h3>
+											</div>
+
+											<!-- Table -->
+											<!--
+												2022.12.23 : mod :
+												board-table--no-margin 클래스 값 추가 및 widget-height-regular → widget-height-regular-small 클래스 값 변경
+											-->
+											<div class="board-table board-table--secondary board-table--no-margin widget-height-regular-small">
+												<div class="board-table__body">
+													<div class="board-table__table-wrap" role="table">
+														<div class="board-table__thead">
+															<table role="rowgroup" class="board-table__table">
+																<colgroup>
+																	<col style="width: 44px" />
+																	<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																	<col style="width: 138px" />
+																	<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																	<col />
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">
+																					<div class="ui-checkbox-block ui-checkbox-block--small">
+																						<input type="checkbox" class="ui-checkbox" id="boardTableCheckbox2All" data-checkbox-group="boardTableCheckbox2" />
+																						<label for="boardTableCheckbox2All" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="for-a11y">전체선택</span>
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																		</th>
+																		<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																		<th>
+																			<div class="board-table__colhead">
+																				<div class="board-table__colhead-text">검사타입</div>
+																			</div>
+																		</th>
+																		<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																		<th>
+																			<div class="board-table__colhead">
+																				<!-- 2022.12.23 : mod : 문구 변경 (항목명 → 항목 이름) -->
+																				<div class="board-table__colhead-text">항목 이름</div>
+																			</div>
+																		</th>
+																	</tr>
+																</thead>
+															</table>
+														</div>
+														<div class="board-table__tbody">
+															<div class="board-table__tbody-scroller ui-scroller">
+																<table role="rowgroup" class="board-table__table">
+																	<colgroup>
+																		<col style="width: 44px" />
+																		<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																		<col style="width: 138px" />
+																		<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																		<col />
+																	</colgroup>
+																	<tbody>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_1" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Fibrinogen</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_2" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hematocrit(Hct)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_3" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_3" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_4" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_4" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_5" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_5" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCHC</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_6" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_6" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_7" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_7" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_8" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_8" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCHC</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_9" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_9" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Hemoglobin(Hb)</td>
+																		</tr>
+																		<tr>
+																			<td>
+																				<div class="ui-checkbox-block ui-checkbox-block--small">
+																					<input type="checkbox" class="ui-checkbox board-table__row-check" id="boardTableCheckbox2_10" data-checkbox-group-child="boardTableCheckbox2" />
+																					<label for="boardTableCheckbox2_10" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="for-a11y">선택</span>
+																					</label>
+																				</div>
+																			</td>
+																			<!-- 2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">Chemistry</td>
+																			<!-- //2022.12.23 : add : 검사타입 항목 추가 -->
+																			<td class="align-left">MCH</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //Table -->
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__foot">
+						<div class="ui-buttons ui-buttons--no-margin ui-buttons--regular ui-buttons--right ui-buttons--min-width">
+							<ul class="ui-buttons__list">
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ui-basic-button--tertiary" data-role="layerClose">
+										<span class="ui-basic-button__text">닫기</span>
+									</button>
+								</li>
+								<li class="ui-buttons__item">
+									<button type="button" class="ui-button ui-basic-button ui-basic-button--regular">
+										<span class="ui-basic-button__text">저장</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 약속검사 항목 설정 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-appointment-check-setting');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

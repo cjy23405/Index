@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Spoqa Han Sans Neo Thin'),
+    url('./eot/SpoqaHanSansNeo-Thin.eot'),
+    url('./eot/SpoqaHanSansNeo-Thin.eot?#iefix') format('embedded-opentype'),
+    url('./woff/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('./woff2/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('./ttf/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Spoqa Han Sans Neo Light'),
+    url('./eot/SpoqaHanSansNeo-Light.eot'),
+    url('./eot/SpoqaHanSansNeo-Light.eot?#iefix') format('embedded-opentype'),
+    url('./woff/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('./woff2/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('./ttf/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Spoqa Han Sans Neo Regular'),
+    url('./eot/SpoqaHanSansNeo-Regular.eot'),
+    url('./eot/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./woff/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('./woff2/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('./ttf/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Spoqa Han Sans Neo Medium'),
+    url('./eot/SpoqaHanSansNeo-Medium.eot'),
+    url('./eot/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./woff/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('./woff2/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('./ttf/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Spoqa Han Sans Neo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Spoqa Han Sans Neo Bold'),
+    url('./eot/SpoqaHanSansNeo-Bold.eot'),
+    url('./eot/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./woff/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('./woff2/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('./ttf/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}

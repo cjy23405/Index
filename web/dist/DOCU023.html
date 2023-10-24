@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>SKT 펫케어 EVR</title>
+
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/lib/simplebar/simplebar.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/tempus-dominus/tempus-dominus.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/lib/swiper/swiper-bundle.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<!-- DD : 프린트 화면에서만 추가 -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/print-style.css" />
+		<!-- //DD : 프린트 화면에서만 추가 -->
+		<!-- //style -->
+	</head>
+	<body>
+		<!-- Page 1 -->
+		<div class="document">
+			<!-- 2022.11.03 : mod : row-item 클래스 추가 -->
+			<div class="document-head row-item">
+				<div class="document-head__row">
+					<h1 class="document-head__title">마취 모니터링 차트</h1>
+				</div>
+				<!-- 2022.11.03 : mod : row-item에서 row-item-group으로 클래스 수정 -->
+				<p class="nano-text color-gray-tertiary row-item-group align-right">Date.<span class="print-underline inline-block" style="width: 140px; margin-left: 4px"></span></p>
+			</div>
+
+			<!-- 2022.11.03 : mod : row-item-group클래스 삭제 -->
+			<div class="print-table">
+				<div class="print-table__table">
+					<table>
+						<tbody>
+							<tr>
+								<th>이름</th>
+								<td>Cat</td>
+								<th>체중</th>
+								<td></td>
+								<th>나이</th>
+								<td></td>
+								<th>성별</th>
+								<td></td>
+							</tr>
+							<tr>
+								<th colspan="2">수맥종류/속도</th>
+								<td colspan="2"></td>
+								<th colspan="2">ET tube size</th>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<th rowspan="2" colspan="2">Premedication</th>
+								<td rowspan="2" colspan="2"></td>
+								<th colspan="2">Induction</th>
+								<td colspan="2"></td>
+							</tr>
+							<tr>
+								<th colspan="2">Maintenance</th>
+								<td colspan="2">Isoflurance</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- 2022.11.03 : add : div.row-item-group 추가 -->
+			<div class="row-item-group">
+				<p class="nano-text">Procedure :</p>
+				<div class="print-table row-item">
+					<div class="print-table__table">
+						<table>
+							<colgroup>
+								<col class="print-table__head" />
+								<col class="print-table__head" />
+								<col />
+								<col />
+								<col />
+								<col />
+								<col class="print-table__head" />
+								<col />
+								<col class="print-table__double-head" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>시간</th>
+									<th>Iso/O₂</th>
+									<th>HR</th>
+									<th>SpO₂</th>
+									<th>RR</th>
+									<th>EtCO₂</th>
+									<th>BP</th>
+									<th>BT</th>
+									<th>Note</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+									<td rowspan="23"></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td class="align-center">:</td>
+									<td class="align-center">/</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="align-right">
+										<span class="inline-block" style="width: 10px"></span>/<span class="inline-block" style="width: 24px"></span>(<span class="inline-block" style="width: 24px"></span>)
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- //2022.11.03 : add : div.row-item-group 추가 -->
+
+			<div class="nano-text row-item-group">마취시작 :<span class="inline-block" style="width: 261px"></span>마취종료 :<span class="inline-block" style="width: 258px"></span>Extubation time :</div>
+		</div>
+		<!-- //Page 1 -->
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/lib/jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/simplebar/simplebar.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/popperjs-core/popper.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/tempus-dominus.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/tempus-dominus/plugins/customDateFormat.js"></script>
+		<script type="text/javascript" src="./assets/lib/luxon/luxon.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/split/split.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/swiper/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/amcharts.js"></script>
+		<script type="text/javascript" src="./assets/lib/amcharts/serial.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<!-- //script -->
+	</body>
+</html>
