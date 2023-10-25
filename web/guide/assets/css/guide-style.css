@@ -1,58 +1,311 @@
 @charset "utf-8";
 
 body {
-    margin: 0;
+  margin: 0;
+  background-color: #fff;
 }
 
 /* _guideIndexWrap */
 ._guideIndexWrap {
-    min-width: 1580px;
+  min-width: 1900px;
 }
 
 /* _guideHeader */
 ._guideHeader {
-    padding: 16px;
-    border-bottom: 2px solid var(--guidePrimary500);
+  padding: 16px;
+  border-bottom: 4px solid var(--guidePrimary500);
 }
 ._guideHeader__title {
-    margin: 0;
-    font-size: 32px;
-    text-align: center;
-    color: var(--guideGray900);
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  color: var(--guideGray900);
 }
 ._guideHeader__titleLink {
-    display: block;
-    color: inherit;
-    text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 32px;
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
 }
 ._guideHeader__nav {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 ._guideHeader__navList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-    text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
 }
 ._guideHeader__navItem {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
 ._guideHeader__navItem + ._guideHeader__navItem {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 ._guideHeader__navLink {
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 1.3;
-    font-weight: 700;
-    color: var(--guideWhite);
-    padding: 6px 16px;
-    border-radius: 4px;
-    background-color: var(--guidePrimary900);
+  display: block;
+  text-decoration: none;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--guideWhite);
+  padding: 6px 16px;
+  border-radius: 4px;
+  background-color: var(--guidePrimary900);
 }
 
-/**/
+/* _guideIndexSection */
+._guideIndexSection + ._guideIndexSection {
+  border-top: 8px solid var(--guideGray50);
+}
+._guideIndexSection__title {
+  margin: 0;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--guideWhite);
+  padding: 8px 16px;
+  background-color: var(--guideGray900);
+}
+._guideIndexSection.isClicked {
+  animation: _guideIndexSection__clicked 0.8s linear;
+}
+@keyframes _guideIndexSection__clicked {
+  0% {
+    background-color: rgba(var(--guideErrorRgb), 0);
+  }
+  30% {
+    background-color: rgba(var(--guideErrorRgb), 0.4);
+  }
+  70% {
+    background-color: rgba(var(--guideErrorRgb), 0.4);
+  }
+  100% {
+    background-color: rgba(var(--guideErrorRgb), 0);
+  }
+}
+
+/* _guideIndexTable */
+._guideIndexTable > table {
+  width: 100%;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-sizing: border-box;
+}
+._guideIndexTable > table > thead > tr > th,
+._guideIndexTable > table > tbody > tr > td,
+._guideIndexTable > table > tfoot > tr > td {
+  box-sizing: border-box;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--guideGray900);
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 8px;
+  word-break: break-all;
+  border: 0 solid var(--guideGray100);
+}
+._guideIndexTable > table > thead > tr > th + th,
+._guideIndexTable > table > tbody > tr > td + td,
+._guideIndexTable > table > tfoot > tr > td + td {
+  border-left-width: 1px;
+}
+._guideIndexTable > table > thead > tr > th {
+  border-color: var(--guidePrimary300);
+  border-bottom-width: 1px;
+  background-color: var(--guidePrimary100);
+}
+._guideIndexTable > table > tbody > tr > td {
+  border-bottom-width: 1px;
+}
+._guideIndexTable > table > tbody > tr:hover > td {
+  background-color: rgba(var(--guideGray50Rgb), 0.3);
+}
+._guideIndexTable > table > tbody > tr.isEmphasis > td {
+  background-color: rgba(var(--guideWarningRgb), 0.2);
+}
+._guideIndexTable > table > tbody > tr.isEmphasis:hover > td {
+  background-color: rgba(var(--guideWarningRgb), 0.4);
+}
+._guideIndexTable > table > tbody > tr.isDelete > td {
+  background-color: var(--guideGray50);
+}
+._guideIndexTable > table > tbody > tr.isDelete > td,
+._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexTable__link,
+._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexLog,
+._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexLog__date {
+  color: var(--guideGray200);
+  text-decoration: line-through;
+}
+._guideIndexTable > table > tbody > tr > td._guideIndexTable__type {
+  color: var(--guidePrimary600);
+}
+._guideIndexTable > table > tbody > tr > td._guideIndexTable__status {
+  font-size: 0;
+  line-height: 0;
+}
+._guideIndexTable > table > tbody > tr > td._guideIndexTable__create.isEmphasis,
+._guideIndexTable > table > tbody > tr > td._guideIndexTable__update.isEmphasis {
+  font-weight: 700;
+  color: var(--guideError);
+}
+
+/* _guideIndexLog */
+._guideIndexLog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--guideGray900);
+}
+._guideIndexLog__item + ._guideIndexLog__item {
+  margin-top: 8px;
+}
+._guideIndexLog__item {
+  position: relative;
+  padding-left: 70px;
+}
+._guideIndexLog__date {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--guideGray500);
+}
+._guideIndexLog__text {
+  display: block;
+}
+._guideIndexLog__item.isEmphasis,
+._guideIndexLog__item.isEmphasis ._guideIndexLog__date {
+  font-weight: 700;
+  color: var(--guideError);
+}
+
+/* _guideStatus */
+._guideStatus {
+  display: inline-block;
+  vertical-align: top;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--guideGray900);
+  padding: 4px 8px;
+  margin: -4px 0;
+  border-radius: 4px;
+  color: var(--guideWhite);
+  background-color: var(--guideGray500);
+}
+._guideStatus--ing {
+  background-color: var(--guideYellow500);
+}
+._guideStatus--end {
+  background-color: var(--guideComplete);
+}
+._guideStatus--moding {
+  background-color: var(--guideRed500);
+}
+._guideStatus--pending {
+  background-color: var(--guideGreen500);
+}
+._guideStatus--delete {
+  background-color: var(--guideGray300);
+}
+
+/* _guideIndexStatus */
+._guideIndexStatus {
+  padding: 16px;
+  font-family: var(--guideFontFamilyCode);
+}
+._guideIndexStatus__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+}
+._guideIndexStatus__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+._guideIndexStatus__item + ._guideIndexStatus__item {
+  margin-left: 33px;
+}
+._guideIndexStatus__item + ._guideIndexStatus__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -17px;
+  width: 1px;
+  height: 24px;
+  margin-top: -12px;
+  background-color: var(--guideGray50);
+}
+._guideIndexStatus__itemTitle {
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--guideGray600);
+}
+._guideIndexStatus__itemText {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--guideGray900);
+}
+
+/* _guideIndexNav */
+._guideIndexNav__block {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 1900px;
+  border-top: 1px solid rgba(var(--guideGray100Rgb), 0.8);
+  background-color: rgba(var(--guideWhiteRgb), 0.8);
+  overflow: hidden;
+}
+._guideIndexNav__list {
+  list-style: none;
+  margin: -8px 0 0 -8px;
+  padding: 8px;
+  font-size: 0;
+  line-height: 0;
+}
+._guideIndexNav__item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 0 0 8px;
+}
+._guideIndexNav__link {
+  display: block;
+  text-decoration: none;
+  font-family: var(--guideFontFamilyCode);
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--guideWhite);
+  padding: 6px 16px;
+  border-radius: 4px;
+  background-color: var(--guideGreen800);
+}
