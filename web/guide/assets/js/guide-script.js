@@ -1,4 +1,4 @@
-// ui-script.js
+// guide-script.js
 
 (function ($) {
   // common
