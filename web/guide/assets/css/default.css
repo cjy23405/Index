@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import '../lib/monaco-editor/min/vs/editor/editor.main.css';
-
 @import '../fonts/D2Coding-ligature/style.css';
 
 @import './theme.css';

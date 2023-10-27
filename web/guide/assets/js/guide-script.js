@@ -84,32 +84,32 @@
       var headHtml = '';
       var navHtml = '';
 
-      colHtml += '                <col style="width: 50px" />';
-      headHtml += '                    <th class="_guideIndexTable__no">No</th>';
+      colHtml += '          <col style="width: 50px" />';
+      headHtml += '          <th class="_guideIndexTable__no">No</th>';
 
       for (var h = 0; h < head.length; h++) {
-        colHtml += '                <col style="' + (head[h].width ? 'width: ' + head[h].width : '') + '" />';
-        headHtml += '                    <th class="_guideIndexTable__' + head[h].name + '">' + head[h].text + '</th>';
+        colHtml += '          <col style="' + (head[h].width ? 'width: ' + head[h].width : '') + '" />';
+        headHtml += '          <th class="_guideIndexTable__' + head[h].name + '">' + head[h].text + '</th>';
       }
 
       for (var s = 0; s < data.length; s++) {
         html += '<section class="_guideIndexSection" id="guideIndexSection' + s + '">';
-        html += '    <h2 class="_guideIndexSection__title">' + data[s].depth1 + '</h2>';
-        html += '    <div class="_guideIndexTable">';
-        html += '        <table>';
-        html += '            <colgroup>';
+        html += '  <h2 class="_guideIndexSection__title">' + data[s].depth1 + '</h2>';
+        html += '  <div class="_guideIndexTable">';
+        html += '    <table>';
+        html += '      <colgroup>';
         html += colHtml;
-        html += '            </colgroup>';
-        html += '            <thead>';
-        html += '                <tr>';
+        html += '      </colgroup>';
+        html += '      <thead>';
+        html += '        <tr>';
         html += headHtml;
-        html += '                </tr>';
-        html += '            </thead>';
-        html += '            <tbody>';
+        html += '        </tr>';
+        html += '      </thead>';
+        html += '      <tbody>';
         html += index.makeDataHtml(data[s].data);
-        html += '            </tbody>';
-        html += '        </table>';
-        html += '    </div>';
+        html += '      </tbody>';
+        html += '    </table>';
+        html += '  </div>';
         html += '</section>';
 
         navHtml += '<li class="_guideIndexNav__item">';
@@ -124,8 +124,8 @@
       var html = '';
 
       for (var i = 0; i < data.length; i++) {
-        html += '                <tr class="' + (data[i].status === 'delete' ? 'isDelete' : '') + '">';
-        html += '                    <td class="_guideIndexTable__no">' + (i + 1) + '</td>';
+        html += '        <tr class="' + (data[i].status === 'delete' ? 'isDelete' : '') + '">';
+        html += '          <td class="_guideIndexTable__no">' + (i + 1) + '</td>';
 
         for (var h = 0; h < head.length; h++) {
           if (head[h].name === 'path') {
@@ -141,11 +141,11 @@
           } else if (head[h].name.match(/id|depth/)) {
             html += index.makeCellHtml(head[h].name, data[i], i, data);
           } else {
-            html += '                    <td class="_guideIndexTable__' + head[h].name + '">' + data[i][head[h].name].replace(/\n/g, '<br />') + '</td>';
+            html += '          <td class="_guideIndexTable__' + head[h].name + '">' + data[i][head[h].name].replace(/\n/g, '<br />') + '</td>';
           }
         }
 
-        html += '                </tr>';
+        html += '        </tr>';
 
         if (index.count[data[i].status]) {
           index.count[data[i].status]++;
@@ -164,9 +164,9 @@
       var html = '';
 
       if (i > 0 && items[i - 1][name] === data[name]) {
-        html += '                    <td class="_guideIndexTable__' + name + '"></td>';
+        html += '          <td class="_guideIndexTable__' + name + '"></td>';
       } else {
-        html += '                    <td class="_guideIndexTable__' + name + '">' + data[name].replace(/\n/g, '<br />') + '</td>';
+        html += '          <td class="_guideIndexTable__' + name + '">' + data[name].replace(/\n/g, '<br />') + '</td>';
       }
 
       return html;
@@ -175,9 +175,9 @@
       var root = guideIndex.pathRoot;
       var html = '';
 
-      html += '                    <td class="_guideIndexTable__path">';
-      html += '                        <a href="' + root + path + '" class="_guideIndexTable__link" target="_blank">' + path + '</a>';
-      html += '                    </td>';
+      html += '          <td class="_guideIndexTable__path">';
+      html += '            <a href="' + root + path + '" class="_guideIndexTable__link" target="_blank">' + path + '</a>';
+      html += '          </td>';
 
       return html;
     },
@@ -186,11 +186,11 @@
       var html = '';
 
       if (status.length) {
-        html += '                    <td class="_guideIndexTable__status">';
-        html += '                        <span class="_guideStatus _guideStatus--' + status + '">' + statusObj[status] + '</span>';
-        html += '                    </td>';
+        html += '          <td class="_guideIndexTable__status">';
+        html += '            <span class="_guideStatus _guideStatus--' + status + '">' + statusObj[status] + '</span>';
+        html += '          </td>';
       } else {
-        html += '                    <td class="_guideIndexTable__status"></td>';
+        html += '          <td class="_guideIndexTable__status"></td>';
       }
 
       return html;
@@ -198,7 +198,7 @@
     makeCreateHtml: function (create) {
       var html = '';
 
-      html += '                    <td class="_guideIndexTable__create" data-date="' + create + '">' + create + '</td>';
+      html += '          <td class="_guideIndexTable__create" data-date="' + create + '">' + create + '</td>';
 
       if (index.dates.indexOf(create) === -1) {
         index.dates.push(create);
@@ -223,13 +223,13 @@
       if (log.length) {
         last = log[log.length - 1];
 
-        html += '                    <td class="_guideIndexTable__update" data-date="' + last.date + '">' + last.date + '</td>';
+        html += '          <td class="_guideIndexTable__update" data-date="' + last.date + '">' + last.date + '</td>';
 
         if (index.dates.indexOf(last.date) === -1) {
           index.dates.push(last.date);
         }
       } else {
-        html += '                    <td class="_guideIndexTable__update"></td>';
+        html += '          <td class="_guideIndexTable__update"></td>';
       }
 
       return html;
@@ -247,24 +247,24 @@
         return 0;
       });
 
-      html += '                    <td class="_guideIndexTable__log">';
+      html += '          <td class="_guideIndexTable__log">';
 
       if (log.length) {
-        html += '                        <ul class="_guideIndexLog">';
+        html += '            <ul class="_guideIndexLog">';
       }
 
       for (var i = 0; i < log.length; i++) {
-        html += '                            <li class="_guideIndexLog__item" data-date="' + log[i].date + '">';
-        html += '                                <span class="_guideIndexLog__date">' + log[i].date + '</span>';
-        html += '                                <span class="_guideIndexLog__text">' + log[i].text.replace(/\n/g, '<br />') + '</span>';
-        html += '                            </li>';
+        html += '              <li class="_guideIndexLog__item" data-date="' + log[i].date + '">';
+        html += '                <span class="_guideIndexLog__date">' + log[i].date + '</span>';
+        html += '                <span class="_guideIndexLog__text">' + log[i].text.replace(/\n/g, '<br />') + '</span>';
+        html += '              </li>';
       }
 
       if (log.length) {
-        html += '                        </ul>';
+        html += '            </ul>';
       }
 
-      html += '                    </td>';
+      html += '          </td>';
 
       return html;
     },
@@ -285,6 +285,180 @@
     });
   });
 
+  // monacoSet
+  function monacoSet($view, value, language, maxHeight, customOptions) {
+    if (!(typeof customOptions === 'object')) {
+      customOptions = {};
+    }
+
+    var options = $.extend(
+      {
+        value: value,
+        language: language,
+        automaticLayout: true,
+        theme: 'vs-dark',
+        renderWhitespace: 'all',
+        wordWrap: 'on',
+        hover: {
+          enabled: false,
+        },
+        fontFamily: "'D2Coding ligature', Consolas, 'Courier New', monospace",
+        fontSize: '16px',
+        fontWeight: '700',
+        scrollBeyondLastLine: false,
+        scrollbar: {
+          alwaysConsumeMouseWheel: false,
+        },
+      },
+      customOptions
+    );
+
+    require.config({ paths: { vs: './assets/lib/monaco-editor/min/vs' } });
+
+    require(['vs/editor/editor.main'], function () {
+      var editor = monaco.editor.create($view.get(0), options);
+
+      var ignoreEvent = false;
+
+      function updateHeight() {
+        var contentWidth = $view.width();
+        var contentHeight = Math.min(maxHeight, editor.getContentHeight());
+
+        try {
+          ignoreEvent = true;
+          editor.layout({
+            width: contentWidth,
+            height: contentHeight,
+          });
+        } finally {
+          ignoreEvent = false;
+        }
+      }
+
+      editor.onDidContentSizeChange(updateHeight);
+      updateHeight();
+    });
+  }
+
+  // component code
+  var componentCode = {
+    render: function () {
+      $('[type="component-code"]').each(function () {
+        var $this = $(this);
+        var text = $this.text().replace(/^\n+/, '');
+        var tab = text.match(/^( *|	*)./);
+        var value = '';
+        var html = '';
+
+        if (tab) {
+          value = text.replace(new RegExp('^' + tab[1], 'g'), '').replace(new RegExp('\n' + tab[1], 'g'), '\n');
+        } else {
+          value = text;
+        }
+
+        value = value.replace(/ *$|	*$/, '').replace(/<\\\/script>/g, '</script>');
+
+        html += '<div class="_guideComponentCode">';
+        html += '  <div role="button" tabindex="0" class="_guideComponentCode__button">Show Code ▼</div>';
+        html += '  <div class="_guideComponentCode__view"></div>';
+        html += '</div>';
+
+        var $wrap = $(html);
+        var $button = $wrap.find('._guideComponentCode__button');
+        var $view = $wrap.find('._guideComponentCode__view');
+
+        $this.after($wrap);
+
+        monacoSet($view, value, 'html', 500);
+
+        $button.on('click.guideJS', function (e) {
+          if ($wrap.hasClass('isShow')) {
+            $wrap.removeClass('isShow');
+            $button.text('Show Code ▼');
+          } else {
+            $wrap.addClass('isShow');
+            $button.text('Hide Code ▲');
+          }
+        });
+      });
+    },
+  };
+
+  // code view
+  var codeView = {
+    render: function () {
+      $('[type="code-view"]').each(function () {
+        var $this = $(this);
+        var $view = $('<div class="_guideCodeView"></div>');
+        var text = $this.text().replace(/^\n+/, '');
+        var tab = text.match(/^( *|	*)./);
+        var value = '';
+        var language = $this.attr('data-language');
+
+        if (tab) {
+          value = text.replace(new RegExp('^' + tab[1], 'g'), '').replace(new RegExp('\n' + tab[1], 'g'), '\n');
+        } else {
+          value = text;
+        }
+
+        value = value.replace(/ *$|	*$/, '').replace(/<\\\/script>/g, '</script>');
+
+        $this.after($view);
+
+        monacoSet($view, value, language, 300, {
+          minimap: {
+            enabled: false,
+          },
+        });
+      });
+    },
+  };
+
+  // guide nav
+  var guideNav = {
+    resize: function () {
+      var $nav = $('#guideNav');
+
+      if (!$nav.length) return;
+
+      var $navBlock = $nav.find('._guideNav__block');
+
+      $nav.height($navBlock.outerHeight());
+    },
+    scroll: function () {
+      var $nav = $('#guideNav');
+
+      if (!$nav.length) return;
+
+      var $navBlock = $nav.find('._guideNav__block');
+      var scrollLeft = $win.scrollLeft();
+
+      $navBlock.css('margin-left', -scrollLeft + 'px');
+    },
+    render: function () {
+      var $nav = $('#guideNav');
+
+      if (!$nav.length) return;
+
+      var html = '';
+      var $navList = $nav.find('._guideNav__list');
+      var $sections = $('._guideSection');
+
+      $sections.each(function (i) {
+        var $this = $(this);
+        var title = $this.find('._guideSection__title').text();
+
+        html += '<li class="_guideNav__item">';
+        html += '    <a href="#guideSection' + i + '" class="_guideNav__link">' + title + '</a>';
+        html += '</li>';
+
+        $this.attr('id', 'guideSection' + i);
+      });
+
+      $navList.html(html);
+    },
+  };
+
   // dom ready
   $(function () {
     var $html = $('html');
@@ -293,6 +467,14 @@
     index.render();
     index.resize();
     index.scroll();
+
+    componentCode.render();
+
+    codeView.render();
+
+    guideNav.render();
+    guideNav.resize();
+    guideNav.scroll();
   });
 
   // win load, scroll, resize
@@ -300,16 +482,27 @@
     .on('load.guideJS', function () {
       index.resize();
       index.scroll();
+
+      guideNav.resize();
+      guideNav.scroll();
     })
     .on('scroll.guideJS', function () {
       index.scroll();
+
+      guideNav.scroll();
     })
     .on('resize.guideJS', function () {
       index.resize();
       index.scroll();
+
+      guideNav.resize();
+      guideNav.scroll();
     })
     .on('orientationchange.guideJS', function () {
       index.resize();
       index.scroll();
+
+      guideNav.resize();
+      guideNav.scroll();
     });
 })(jQuery);

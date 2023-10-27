@@ -25,284 +25,892 @@
   </head>
   <body>
     <div id="wrap">
-      <div style="display: table"></div>
+      <div class="_guideWrap">
+        <header class="_guideHeader">
+          <h1 class="_guideHeader__title">
+            <span class="_guideHeader__titleLink">스크립트 가이드</span>
+          </h1>
+        </header>
 
-      <h1 class="test-title">Script</h1>
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">uiJSCommon</h2>
 
-      <div class="test-section">
-        <h2 class="test-title">uiJSCommon</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">uiJSCommon($root);</h3>
-          <div class="test-description">
+          <script type="code-view" data-language="javascript">
+            uiJSCommon([, $root]);
+          </script>
+
+          <div class="_guideDescription">
             ui 기능 관련 init 함수 (탭, 아코디언 등)<br />
             $root 인자는 선택값이며, 디폴트 $(document) 이다.<br />
             $root 안에 있는 객체들만 init을 적용한다.
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="test-section">
-        <h2 class="test-title">uiJSResize</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">uiJSResize();</h3>
-          <div class="test-description">ui 기능 관련 resize 함수</div>
-        </div>
-      </div>
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">uiJSResize</h2>
 
-      <div class="test-section">
-        <h2 class="test-title">userAgentCheck</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">userAgentCheck.ieMode;</h3>
-          <div class="test-description">익스플로러 버전</div>
-        </div>
-        <div class="test-section-sub">
-          <h3 class="test-title">userAgentCheck.isIos;</h3>
-          <div class="test-description">ios 여부</div>
-        </div>
-        <div class="test-section-sub">
-          <h3 class="test-title">userAgentCheck.isAndroid;</h3>
-          <div class="test-description">Android 여부</div>
-        </div>
-        <div class="test-section-sub">
-          <h3 class="test-title">userAgentCheck.androidVersion;</h3>
-          <div class="test-description">Android 버전</div>
-        </div>
-      </div>
+          <script type="code-view" data-language="javascript">
+            uiJSResize();
+          </script>
 
-      <div class="test-section">
-        <h2 class="test-title">uiJSAlert</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">uiJSAlert(options);</h3>
-          <div class="test-description">
+          <div class="_guideDescription">ui 기능 관련 resize 함수</div>
+        </section>
+
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">userAgentCheck</h2>
+
+          <div class="_guideTable">
+            <table>
+              <thead>
+                <tr>
+                  <th class="_guideTable__name">Name</th>
+                  <th class="_guideTable__type">Type</th>
+                  <th class="_guideTable__description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="_guideTable__name">userAgentCheck.ieMode</td>
+                  <td class="_guideTable__type">number | string</td>
+                  <td class="_guideTable__description">익스플로러 버전</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">userAgentCheck.isIos</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__description">ios 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">userAgentCheck.isAndroid</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__description">Android 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">userAgentCheck.androidVersion</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__description">Android 버전</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">uiJSAlert</h2>
+
+          <script type="code-view" data-language="javascript">
+            var alertObject = uiJSAlert({
+              title: '타이틀',
+              message: '여기에 내용이 표시될 예정입니다.\n줄바꿈은 \\n 이용.\n세 줄일 경우는 이렿게 표시됩니다.',
+            });
+          </script>
+
+          <div class="_guideDescription">
             디자인 얼럿 함수<br />
-            사용 예제는 [공통 > 얼럿 레이어 팝업] 화면 참고<br /><br />
-            options : object : 얼럿 옵션 오브젝트<br /><br />
-            options.title : string : 타이틀 텍스트 : default = ''<br /><br />
-            options.message : string : 메세지 텍스트 : default = ''<br /><br />
-            options.buttons : array : 버튼 배열 : default = [{}]<br /><br />
-            options.buttons[0].text : string : 버튼 텍스트 : default = '확인'<br /><br />
-            options.buttons[0].type : string : 버튼 스타일 (secondary|tertiary|quaternary) : default = ''<br /><br />
-            options.buttons[0].callback : function : 버튼을 클릭 했을때 실행 할 함수 : default = function (closeFn) { closeFn(); }<br /><br />
-            options.buttons[0].html : function : 버튼 html 만드는 함수
-            <div class="test-code">
-              // options.buttons[0].html default<br /><br />
-
-              function (options, triggerClassName) {<br />
-              &nbsp;&nbsp;var html = '';<br />
-              &nbsp;&nbsp;var type = options.type.length ? 'ui-basic-button--' + options.type : '';<br /><br />
-
-              &nbsp;&nbsp;html += &lt;button type="button" class="ui-button ui-basic-button ui-basic-button--regular ' + type + ' ' + triggerClassName + '"&gt;'; // triggerClassName 값으로 해당 요소를
-              클릭 요소로 지정<br />
-              &nbsp;&nbsp;html += '&lt;span class="ui-basic-button__text"&gt;' + options.text + '&lt;/span&gt;';<br />
-              &nbsp;&nbsp;html += '&lt;/button&gt;';<br /><br />
-
-              &nbsp;&nbsp;return html;<br />
-              }
-            </div>
+            사용 예제는 [공통 > 얼럿 레이어 팝업] 화면 참고
           </div>
-        </div>
-      </div>
 
-      <div class="test-section">
-        <h2 class="test-title">uiJSToastAlert</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">uiJSToastAlert(wrap, message);</h3>
-          <div class="test-description">
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">Options</h3>
+
+            <div class="_guideTable">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="_guideTable__name">Name</th>
+                    <th class="_guideTable__type">Type</th>
+                    <th class="_guideTable__default">Default</th>
+                    <th class="_guideTable__description">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="_guideTable__name">title</td>
+                    <td class="_guideTable__type">string</td>
+                    <td class="_guideTable__default">''</td>
+                    <td class="_guideTable__description">타이틀 텍스트 (줄바꿈은 \n 이용)</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">message</td>
+                    <td class="_guideTable__type">string</td>
+                    <td class="_guideTable__default">''</td>
+                    <td class="_guideTable__description">메세지 텍스트 (줄바꿈은 \n 이용)</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">buttons</td>
+                    <td class="_guideTable__type">object[]</td>
+                    <td class="_guideTable__default">[{}]</td>
+                    <td class="_guideTable__description">버튼 배열</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <section class="_guideSubSection">
+              <h4 class="_guideSubSection__title">Options.buttons</h4>
+
+              <script type="code-view" data-language="javascript">
+                var alertObject = uiJSAlert({
+                  title: '타이틀',
+                  message: '여기에 내용이 표시될 예정입니다.\n줄바꿈은 \\n 이용.\n세 줄일 경우는 이렿게 표시됩니다.',
+                  buttons: [
+                    {
+                      text: '취소',
+                      type: 'secondary',
+                      callback: function (closeFn) {
+                        console.log('취소');
+                        closeFn();
+                      },
+                    },
+                    {
+                      text: '확인',
+                      callback: function (closeFn) {
+                        console.log('확인');
+                        closeFn();
+                      },
+                    },
+                  ],
+                });
+              </script>
+
+              <div class="_guideTable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="_guideTable__name">Name</th>
+                      <th class="_guideTable__type">Type</th>
+                      <th class="_guideTable__default">Default</th>
+                      <th class="_guideTable__description">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="_guideTable__name">text</td>
+                      <td class="_guideTable__type">string</td>
+                      <td class="_guideTable__default">'확인'</td>
+                      <td class="_guideTable__description">버튼 텍스트</td>
+                    </tr>
+                    <tr>
+                      <td class="_guideTable__name">type</td>
+                      <td class="_guideTable__type">'secondary' | 'tertiary' | 'quaternary'</td>
+                      <td class="_guideTable__default">''</td>
+                      <td class="_guideTable__description">버튼 스타일</td>
+                    </tr>
+                    <tr>
+                      <td class="_guideTable__name">callback</td>
+                      <td class="_guideTable__type">function</td>
+                      <td class="_guideTable__default">Description 참고</td>
+                      <td class="_guideTable__description">
+                        버튼을 클릭 했을때 실행 할 함수
+
+                        <script type="code-view" data-language="javascript">
+                          function (closeFn) { closeFn(); }
+                        </script>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="_guideTable__name">html</td>
+                      <td class="_guideTable__type">function</td>
+                      <td class="_guideTable__default">Description 참고</td>
+                      <td class="_guideTable__description">
+                        버튼 html 만드는 함수
+
+                        <script type="code-view" data-language="javascript">
+                          function (options, triggerClassName) {
+                            var html = '';
+                            var type = options.type.length ? 'ui-basic-button--' + options.type : '';
+
+                            html += '<button type="button" class="ui-button ui-basic-button ui-basic-button--regular ' + type + ' ' + triggerClassName + '">'; // triggerClassName 값으로 해당 요소를 클릭 요소로 지정
+                            html += '<span class="ui-basic-button__text">' + options.text + '</span>';
+                            html += '</button>';
+
+                            return html;
+                          }
+                        </script>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </section>
+
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">uiJSToastAlert</h2>
+
+          <script type="code-view" data-language="javascript">
+            uiJSToastAlert(wrap, message);
+          </script>
+
+          <div class="_guideDescription">
             토스트 얼럿 함수<br />
-            사용 예제는 레이아웃 화면 참고<br />
-            wrap: string | HTMLElement | jQuerySelector : 토스트를 띄울 요소<br />
-            message : string : 얼럿 메세지 (줄바꿈은 \n 이용)
-          </div>
-        </div>
-      </div>
-
-      <div class="test-section">
-        <h2 class="test-title">.invalid()</h2>
-        <div class="test-description">
-          인풋 유효성 불가 스타일 넣는 함수<br />
-          사용 예제는 컴포넌트 가이드 Invalid 섹션 참고
-        </div>
-        <div class="test-section-sub">
-          <h3 class="test-title">$('input').invalid(isInvalid [, message]);</h3>
-          <div class="test-description">
-            isInvalid : boolean : 유효성 불가 여부 Boolean 값 불가하면 true<br />
-            message : string : 에러 메세지 (줄바꿈은 \n 이용)
-          </div>
-        </div>
-      </div>
-
-      <div class="test-section">
-        <style>
-          .test-guide-swiper {
-            position: relative;
-          }
-          .test-guide-swiper-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-          }
-          .test-guide-swiper-item a,
-          .test-guide-swiper-item img {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-          }
-          .test-guide-swiper .swiper-pagination {
-            position: static;
-          }
-          .test-guide-swiper .swiper-scrollbar {
-            height: 5px;
-          }
-          .test-guide-swiper .swiper-scrollbar-drag {
-            height: 100%;
-            background: blue;
-          }
-        </style>
-        <h2 class="test-title">.swiperSet()</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">controller 래퍼 지정 안했을 때</h3>
-
-          <div class="test-guide-swiper" id="testGuideSwiper1">
-            <ul class="test-guide-swiper-list">
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-            </ul>
+            사용 예제는 레이아웃 화면 참고
           </div>
 
-          <script type="module">
-            $('#testGuideSwiper1 .test-guide-swiper-list').swiperSet({
-              customClass: 'text-custom-class',
-              pageControl: true,
-              nextControl: true,
-              prevControl: true,
-              playControl: true,
-              pauseControl: true,
-              togglePlayControl: true,
-              scrollbarControl: true,
-              autoplay: {
-                disableOnInteraction: false,
-              },
-            });
+          <div class="_guideTable">
+            <table>
+              <thead>
+                <tr>
+                  <th class="_guideTable__name">Name</th>
+                  <th class="_guideTable__type">Type</th>
+                  <th class="_guideTable__default">Default</th>
+                  <th class="_guideTable__description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="_guideTable__name">wrap</td>
+                  <td class="_guideTable__type">string | HTMLElement | jQuerySelector</td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">토스트를 띄울 요소</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">message</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">얼럿 메세지 (줄바꿈은 \n 이용)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">.invalid()</h2>
+
+          <script type="code-view" data-language="javascript">
+            $('input').invalid(isInvalid [, message]);
           </script>
-        </div>
 
-        <div class="test-section-sub">
-          <h3 class="test-title">controller 래퍼 지정 했을 때</h3>
-
-          <div class="test-guide-swiper" id="testGuideSwiper2">
-            <div class="test-guide-swiper-controller"></div>
-            <ul class="test-guide-swiper-list">
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-              <li class="test-guide-swiper-item">
-                <a href="">
-                  <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
-                </a>
-              </li>
-            </ul>
+          <div class="_guideDescription">
+            인풋 유효성 불가 스타일 넣는 함수<br />
+            사용 예제는 컴포넌트 가이드 Invalid 섹션 참고
           </div>
 
-          <script type="module">
-            $('#testGuideSwiper2 .test-guide-swiper-list').each(function () {
-              var $this = $(this);
-              var $controller = $this.siblings('.test-guide-swiper-controller');
-              $this.swiperSet({
-                appendController: $controller,
-                customClass: 'text-custom-class',
-                pageControl: true,
-                nextControl: true,
-                prevControl: true,
-                playControl: true,
-                pauseControl: true,
-                togglePlayControl: true,
-                scrollbarControl: true,
-                autoplay: {
-                  disableOnInteraction: false,
-                },
-              });
-            });
-          </script>
-        </div>
-      </div>
+          <div class="_guideTable">
+            <table>
+              <thead>
+                <tr>
+                  <th class="_guideTable__name">Name</th>
+                  <th class="_guideTable__type">Type</th>
+                  <th class="_guideTable__default">Default</th>
+                  <th class="_guideTable__description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="_guideTable__name">isInvalid</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">유효성 불가 여부 Boolean 값 불가하면 true</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">message</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">에러 메세지 (줄바꿈은 \n 이용)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
-      <div class="test-section">
-        <style>
-          .js-ui-dropdown__opener,
-          .js-ui-dropdown__closer {
-            color: #000;
-          }
-        </style>
-        <h2 class="test-title">.uiDropDown()</h2>
-        <div class="test-section-sub">
-          <h3 class="test-title">Default</h3>
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">.swiperSet()</h2>
 
-          <div class="js-ui-dropdown">
-            <button type="button" class="js-ui-dropdown__opener">
-              <span class="open-text">open</span>
-              <span class="close-text">close</span>
-            </button>
-            <div class="js-ui-dropdown__layer">
-              피어나기 갑 천지는 그들에게 능히 것이다.<br />
-              목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다.<br />
-              창공에 풀이 새 불어 있다.<br />
-              <button type="button" class="js-ui-dropdown__closer">close</button>
+          <div class="_guideDescription">
+            Swiper 라이브러리를 제이쿼리 함수로 사용 가능케 한 함수<br />
+            라이브러리에 필요한 className 및 html 등을 자동 생성 해준다
+          </div>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">controller 래퍼 지정 안했을 때</h3>
+            <div class="_guideSubSection__view">
+              <!-- ########## view ########## -->
+
+              <style>
+                .testGuideSwiper {
+                  position: relative;
+                }
+                .testGuideSwiper__list {
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                }
+                .testGuideSwiper__item a,
+                .testGuideSwiper__item img {
+                  display: block;
+                  width: 100%;
+                  max-width: 600px;
+                  margin: 0 auto;
+                }
+                .testGuideSwiper .swiper-pagination {
+                  position: static;
+                }
+                .testGuideSwiper .swiper-scrollbar {
+                  height: 5px;
+                }
+                .testGuideSwiper .swiper-scrollbar-drag {
+                  height: 100%;
+                  background: blue;
+                }
+              </style>
+
+              <div class="testGuideSwiper" id="testGuideSwiper1">
+                <ul class="testGuideSwiper__list">
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <script type="module">
+                $('#testGuideSwiper1 .testGuideSwiper__list').swiperSet({
+                  customClass: 'text-custom-class',
+                  pageControl: true,
+                  nextControl: true,
+                  prevControl: true,
+                  playControl: true,
+                  pauseControl: true,
+                  togglePlayControl: true,
+                  scrollbarControl: true,
+                  autoplay: {
+                    disableOnInteraction: false,
+                  },
+                });
+              </script>
+
+              <!-- //########## view ########## -->
             </div>
+            <!-- ########## code ########## -->
+            <script type="component-code">
+              <style>
+                .testGuideSwiper {
+                  position: relative;
+                }
+                .testGuideSwiper__list {
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                }
+                .testGuideSwiper__item a,
+                .testGuideSwiper__item img {
+                  display: block;
+                  width: 100%;
+                  max-width: 600px;
+                  margin: 0 auto;
+                }
+                .testGuideSwiper .swiper-pagination {
+                  position: static;
+                }
+                .testGuideSwiper .swiper-scrollbar {
+                  height: 5px;
+                }
+                .testGuideSwiper .swiper-scrollbar-drag {
+                  height: 100%;
+                  background: blue;
+                }
+              </style>
+
+              <div class="testGuideSwiper" id="testGuideSwiper1">
+                <ul class="testGuideSwiper__list">
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <script type="module">
+                $('#testGuideSwiper1 .testGuideSwiper__list').swiperSet({
+                  customClass: 'text-custom-class',
+                  pageControl: true,
+                  nextControl: true,
+                  prevControl: true,
+                  playControl: true,
+                  pauseControl: true,
+                  togglePlayControl: true,
+                  scrollbarControl: true,
+                  autoplay: {
+                    disableOnInteraction: false,
+                  },
+                });
+              <\/script>
+            </script>
+            <!-- //########## code ########## -->
+          </section>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">controller 래퍼 지정 했을 때</h3>
+            <div class="_guideSubSection__view">
+              <!-- ########## view ########## -->
+
+              <div class="testGuideSwiper" id="testGuideSwiper2">
+                <div class="testGuideSwiper__controller"></div>
+                <ul class="testGuideSwiper__list">
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <script type="module">
+                $('#testGuideSwiper2 .testGuideSwiper__list').each(function () {
+                  var $this = $(this);
+                  var $controller = $this.siblings('.testGuideSwiper__controller');
+                  $this.swiperSet({
+                    appendController: $controller,
+                    customClass: 'text-custom-class',
+                    pageControl: true,
+                    nextControl: true,
+                    prevControl: true,
+                    playControl: true,
+                    pauseControl: true,
+                    togglePlayControl: true,
+                    scrollbarControl: true,
+                    autoplay: {
+                      disableOnInteraction: false,
+                    },
+                  });
+                });
+              </script>
+
+              <!-- //########## view ########## -->
+            </div>
+            <!-- ########## code ########## -->
+            <script type="component-code">
+              <div class="testGuideSwiper" id="testGuideSwiper2">
+                <div class="testGuideSwiper__controller"></div>
+                <ul class="testGuideSwiper__list">
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li class="testGuideSwiper__item">
+                    <a href="">
+                      <img src="../dist/assets/images/_dummy/image-1.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <script type="module">
+                $('#testGuideSwiper2 .testGuideSwiper__list').each(function () {
+                  var $this = $(this);
+                  var $controller = $this.siblings('.testGuideSwiper__controller');
+                  $this.swiperSet({
+                    appendController: $controller,
+                    customClass: 'text-custom-class',
+                    pageControl: true,
+                    nextControl: true,
+                    prevControl: true,
+                    playControl: true,
+                    pauseControl: true,
+                    togglePlayControl: true,
+                    scrollbarControl: true,
+                    autoplay: {
+                      disableOnInteraction: false,
+                    },
+                  });
+                });
+              <\/script>
+            </script>
+            <!-- //########## code ########## -->
+          </section>
+
+          <div class="_guideTable">
+            <table>
+              <thead>
+                <tr>
+                  <th class="_guideTable__name">Name</th>
+                  <th class="_guideTable__type">Type</th>
+                  <th class="_guideTable__default">Default</th>
+                  <th class="_guideTable__description">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="_guideTable__name">wrapTagName</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__default">'div'</td>
+                  <td class="_guideTable__description">스와이퍼의 최상위 래퍼의 태그 이름 설정</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">containerTagName</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__default">'div'</td>
+                  <td class="_guideTable__description">스와이퍼의 두번째 래퍼의 태그 이름 설정</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">customClass</td>
+                  <td class="_guideTable__type">string</td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">wrap 에 들어갈 커스텀 클래스</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">appendController</td>
+                  <td class="_guideTable__type">string | HTMLElement | jQuerySelector</td>
+                  <td class="_guideTable__default">wrap</td>
+                  <td class="_guideTable__description">컨트롤러 객체들을 담을 요소 지정</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">pageControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">pagination 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">nextControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">next 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">prevControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">prev 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">playControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">play 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">pauseControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">pause 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">togglePlayControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">togglePlay 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">scrollbarControl</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">scrollbar 컨트롤러 사용 여부</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">a11yHidden</td>
+                  <td class="_guideTable__type">boolean</td>
+                  <td class="_guideTable__default">false</td>
+                  <td class="_guideTable__description">접근성 관련 추가 보완 기능들을 제거</td>
+                </tr>
+                <tr>
+                  <td class="_guideTable__name">그 외 Swiper 라이브러리 내 옵션들</td>
+                  <td class="_guideTable__type"></td>
+                  <td class="_guideTable__default"></td>
+                  <td class="_guideTable__description">
+                    <a href="https://github.com/nolimits4web/swiper/tree/v8.3.2" target="_blank">참고</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="_guideSection">
+          <h2 class="_guideSection__title">.uiDropDown()</h2>
+
+          <div class="_guideSubSection__view">
+            <!-- ########## view ########## -->
+
+            <div class="js-ui-dropdown">
+              <button type="button" class="js-ui-dropdown__opener">
+                <span class="open-text">open</span>
+                <span class="close-text">close</span>
+              </button>
+              <div class="js-ui-dropdown__layer">
+                피어나기 갑 천지는 그들에게 능히 것이다.<br />
+                목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다.<br />
+                창공에 풀이 새 불어 있다.<br />
+                <button type="button" class="js-ui-dropdown__closer">close</button>
+              </div>
+            </div>
+
+            <!-- //########## view ########## -->
           </div>
 
-          <div class="test-section-child">
-            <h4 class="test-title">Event</h4>
-            <div class="test-code">$('.js-ui-dropdown').on('uiDropDownOpened', function(){...});</div>
-            <div class="test-description">레이어 열릴 때 발생</div>
-            <div class="test-code">$('.js-ui-dropdown').on('uiDropDownClosed', function(){...});</div>
-            <div class="test-description">레이어 닫힐 때 발생</div>
-          </div>
+          <div class="_guideDescription">드롭다운 기능을 위한 제이쿼리 함수</div>
 
-          <div class="test-section-child">
-            <h4 class="test-title">Method</h4>
-            <div class="test-code">$('.js-ui-dropdown').uiDropDown('close');</div>
-            <div class="test-description">레이어 닫기</div>
-            <div class="test-code">$('.js-ui-dropdown').uiDropDown('open');</div>
-            <div class="test-description">레이어 열기</div>
-            <div class="test-code">$('.js-ui-dropdown').uiDropDown('update');</div>
-            <div class="test-description">레이어 위치 업데이트</div>
-            <div class="test-code">$('.js-ui-dropdown').uiDropDown('btnClose');</div>
-            <div class="test-description">별도 버튼을 통해서 레이어 닫기 (접근성 포커스 관련 지원)</div>
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">Javascript</h3>
+
+            <script type="code-view" data-language="javascript">
+              $('.js-ui-dropdown').uiDropDown({
+                opener: '.js-ui-dropdown__opener',
+                layer: '.js-ui-dropdown__layer',
+              });
+
+              $(document).on('click', '.js-ui-dropdown__closer', function () {
+                var $this = $(this);
+                var $wrap = $this.closest('.js-ui-dropdown');
+
+                $wrap.uiDropDown('btnClose');
+              });
+            </script>
+          </section>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">HTML</h3>
+
+            <script type="code-view" data-language="html">
+              <div class="js-ui-dropdown">
+                <button type="button" class="js-ui-dropdown__opener">
+                  <span class="open-text">open</span>
+                  <span class="close-text">close</span>
+                </button>
+                <div class="js-ui-dropdown__layer">
+                  피어나기 갑 천지는 그들에게 능히 것이다.<br />
+                  목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다.<br />
+                  창공에 풀이 새 불어 있다.<br />
+                  <button type="button" class="js-ui-dropdown__closer">close</button>
+                </div>
+              </div>
+            </script>
+          </section>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">Options</h3>
+
+            <div class="_guideTable">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="_guideTable__name">Name</th>
+                    <th class="_guideTable__type">Type</th>
+                    <th class="_guideTable__default">Default</th>
+                    <th class="_guideTable__description">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="_guideTable__name">opener</td>
+                    <td class="_guideTable__type">string | jQuerySelector</td>
+                    <td class="_guideTable__default">null</td>
+                    <td class="_guideTable__description">레이어를 열고 닫을 버튼 혹은 영역</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">layer</td>
+                    <td class="_guideTable__type">string | jQuerySelector</td>
+                    <td class="_guideTable__default">null</td>
+                    <td class="_guideTable__description">드롭 다운 될 레이어</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">event</td>
+                    <td class="_guideTable__type">string</td>
+                    <td class="_guideTable__default">'click'</td>
+                    <td class="_guideTable__description">드롭 다운 실행 할 이벤트 트리거</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">marginTop</td>
+                    <td class="_guideTable__type">number</td>
+                    <td class="_guideTable__default">0</td>
+                    <td class="_guideTable__description">상단 여백</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">marginBottom</td>
+                    <td class="_guideTable__type">number</td>
+                    <td class="_guideTable__default">0</td>
+                    <td class="_guideTable__description">하단 여백</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">marginLeft</td>
+                    <td class="_guideTable__type">number</td>
+                    <td class="_guideTable__default">0</td>
+                    <td class="_guideTable__description">왼쪽 여백</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">marginRight</td>
+                    <td class="_guideTable__type">number</td>
+                    <td class="_guideTable__default">0</td>
+                    <td class="_guideTable__description">오른쪽 여백</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">align</td>
+                    <td class="_guideTable__type">string</td>
+                    <td class="_guideTable__default">'left'</td>
+                    <td class="_guideTable__description">레이어 좌우 정렬 방향</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">defaultVertical</td>
+                    <td class="_guideTable__type">string</td>
+                    <td class="_guideTable__default">'bottom'</td>
+                    <td class="_guideTable__description">
+                      기본적으로 위로 열릴것인지 아래로 열릴것인지 설정<br />
+                      허나 레이어 높이에 비해 공간이 없으면 반대 방향으로 열림
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">init</td>
+                    <td class="_guideTable__type">function</td>
+                    <td class="_guideTable__default">function () {}</td>
+                    <td class="_guideTable__description">처음 세팅 될때 실행 할 함수</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">Events</h3>
+
+            <script type="code-view" data-language="javascript">
+              $('.js-ui-dropdown').on('uiDropDownOpened', function(){
+                console.log('uiDropDownOpened');
+              });
+            </script>
+
+            <div class="_guideTable">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="_guideTable__name">Name</th>
+                    <th class="_guideTable__arguments">Arguments</th>
+                    <th class="_guideTable__description">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="_guideTable__name">uiDropDownOpened</td>
+                    <td class="_guideTable__arguments">(event)</td>
+                    <td class="_guideTable__description">레이어 열릴 때 발생</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__name">uiDropDownClosed</td>
+                    <td class="_guideTable__arguments">(event)</td>
+                    <td class="_guideTable__description">레이어 닫힐 때 발생</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="_guideSubSection">
+            <h3 class="_guideSubSection__title">Methods</h3>
+
+            <div class="_guideTable">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="_guideTable__methods">Method</th>
+                    <th class="_guideTable__description">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="_guideTable__methods">
+                      <script type="code-view" data-language="javascript">
+                        $('.js-ui-dropdown').uiDropDown('close');
+                      </script>
+                    </td>
+                    <td class="_guideTable__description">레이어 닫기</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__methods">
+                      <script type="code-view" data-language="javascript">
+                        $('.js-ui-dropdown').uiDropDown('open');
+                      </script>
+                    </td>
+                    <td class="_guideTable__description">레이어 열기</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__methods">
+                      <script type="code-view" data-language="javascript">
+                        $('.js-ui-dropdown').uiDropDown('update');
+                      </script>
+                    </td>
+                    <td class="_guideTable__description">레이어 위치 업데이트</td>
+                  </tr>
+                  <tr>
+                    <td class="_guideTable__methods">
+                      <script type="code-view" data-language="javascript">
+                        $('.js-ui-dropdown').uiDropDown('btnClose');
+                      </script>
+                    </td>
+                    <td class="_guideTable__description">별도 버튼을 통해서 레이어 닫기 (접근성 포커스 관련 지원)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <nav class="_guideNav" id="guideNav">
+          <div class="_guideNav__block">
+            <ul class="_guideNav__list"></ul>
           </div>
-        </div>
+        </nav>
       </div>
+    </div>
 
+    <div id="wrap" style="display: none">
       <div class="test-section">
         <style>
           .test-select {
@@ -1027,6 +1635,7 @@
     <!-- //script -->
 
     <!-- guide script -->
+    <script type="text/javascript" src="./assets/lib/monaco-editor/min/vs/loader.js"></script>
     <script type="text/javascript" src="./assets/js/guide-script.js"></script>
     <!-- //guide script -->
   </body>
