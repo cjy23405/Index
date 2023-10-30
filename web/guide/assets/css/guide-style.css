@@ -640,3 +640,13 @@ body {
 ._guideTable--secondary > table > thead > tr > th._guideTable__default {
   width: 150px;
 }
+
+/* _guidePopupWrap */
+._guidePopupWrap {
+  padding: 0 16px;
+}
+._guidePopupWrap::before,
+._guidePopupWrap::after {
+  content: '';
+  display: table;
+}
