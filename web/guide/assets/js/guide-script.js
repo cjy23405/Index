@@ -70,10 +70,13 @@
       $counts.each(function () {
         var $this = $(this);
         var name = $this.attr('data-index-count');
+        var val = 0;
 
         if (index.count[name]) {
-          $this.text(index.count[name]);
+          val = index.count[name];
         }
+
+        $this.text(val);
       });
     },
     makeHtml: function () {
