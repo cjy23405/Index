@@ -352,12 +352,36 @@ body {
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
   background-color: #f7f7f7;
 }
+
 ._guideSubSection > ._guideSubSection {
   margin: 24px 16px;
 }
 ._guideSubSection > ._guideSubSection > ._guideSubSection__title {
   font-size: 20px;
   line-height: 1.3;
+  margin-bottom: 16px;
+}
+._guideSubSection > ._guideSubSection > ._guideCodeView,
+._guideSubSection > ._guideSubSection > ._guideDescription,
+._guideSubSection > ._guideSubSection > ._guideTable {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+._guideSubSection > ._guideSubSection > ._guideSubSection {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+._guideSubSection > ._guideSubSection > ._guideSubSection > ._guideSubSection__title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+._guideSubSection > ._guideSubSection > ._guideSubSection > ._guideCodeView,
+._guideSubSection > ._guideSubSection > ._guideSubSection > ._guideDescription,
+._guideSubSection > ._guideSubSection > ._guideSubSection > ._guideTable {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 /* _guideComponentCode */
@@ -513,4 +537,36 @@ body {
 }
 ._guideTable > table > tbody > tr > td._guideTable__default {
   color: var(--guideRed600);
+}
+
+/* _guideTable--secondary */
+._guideTable--secondary {
+  margin: 8px 0 0;
+  background-color: var(--guidePrimary100);
+}
+._guideTable--secondary > table {
+  min-width: 0;
+}
+._guideTable--secondary > table > thead > tr > th,
+._guideTable--secondary > table > tbody > tr > td,
+._guideTable--secondary > table > tfoot > tr > td {
+  border-color: var(--guidePrimary200);
+}
+._guideTable > table > thead > tr > th {
+  border-color: var(--guidePrimary300);
+}
+._guideTable--secondary > table > thead > tr > th._guideTable__name {
+  width: 200px;
+}
+._guideTable--secondary > table > thead > tr > th._guideTable__type {
+  width: 150px;
+}
+._guideTable--secondary > table > thead > tr > th._guideTable__methods {
+  width: 350px;
+}
+._guideTable--secondary > table > thead > tr > th._guideTable__arguments {
+  width: 150px;
+}
+._guideTable--secondary > table > thead > tr > th._guideTable__default {
+  width: 150px;
 }
