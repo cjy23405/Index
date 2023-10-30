@@ -20,7 +20,7 @@
   </head>
   <body>
     <div id="wrap">
-      <div class="_guideIndexWrap">
+      <div class="_guideIndexWrap" id="guideIndexTop">
         <header class="_guideHeader">
           <h1 class="_guideHeader__title">
             <a href="./index.html" class="_guideHeader__titleLink"></a>
@@ -73,11 +73,69 @@
           </ul>
         </div>
 
+        <div class="_guideIndexSpec">
+          <table>
+            <thead>
+              <tr>
+                <th>인코딩</th>
+                <th>CSS class 네이밍</th>
+                <th>JS 변수 및 함수명 네이밍</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>utf-8</td>
+                <td>Camel Case + BEM</td>
+                <td>Camel Case</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="_guideIndexSettingCodeGroup">
+          <script type="setting-code" data-language="json" data-title=".vscode/extensions.json">
+            {
+              "recommendations": ["esbenp.prettier-vscode"]
+            }
+          </script>
+
+          <script type="setting-code" data-language="json" data-title=".vscode/settings.json">
+            {
+              "editor.tabSize": 2,
+              "editor.insertSpaces": true,
+              "editor.formatOnSave": true,
+              "editor.indentSize": "tabSize",
+              "editor.renderWhitespace": "all",
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "files.encoding": "utf8"
+            }
+          </script>
+
+          <script type="setting-code" data-language="json" data-title=".prettierrc">
+            {
+              "tabWidth": 2,
+              "printWidth": 200,
+              "semi": true,
+              "singleQuote": true,
+              "trailingComma": "es5"
+            }
+          </script>
+
+          <script type="setting-code" data-language="plaintext" data-title=".prettierignore">
+            **/fonts/**/style.css
+            **/lib
+          </script>
+        </div>
+
         <div id="guideIndexDatas"></div>
 
         <nav class="_guideIndexNav" id="guideIndexNav">
           <div class="_guideIndexNav__block">
-            <ul class="_guideIndexNav__list"></ul>
+            <ul class="_guideIndexNav__list">
+              <li class="_guideIndexNav__item">
+                <a href="#guideIndexTop" class="_guideIndexNav__link">최상위</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -88,6 +146,7 @@
     <!-- //script -->
 
     <!-- guide script -->
+    <script type="text/javascript" src="./guide/assets/lib/monaco-editor/min/vs/loader.js"></script>
     <script type="text/javascript" src="./guide/assets/js/guide-script.js"></script>
     <script type="text/javascript">
       var guideIndex = {

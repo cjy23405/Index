@@ -50,7 +50,7 @@
       $title.text(guideIndex.title);
       $headerTitle.text(guideIndex.title);
       $datas.html(html.data);
-      $navList.html(html.nav);
+      $navList.append(html.nav);
 
       if (index.dates.length) {
         index.dates.sort();
@@ -286,9 +286,12 @@
   });
 
   // monacoSet
-  function monacoSet($view, value, language, maxHeight, customOptions) {
+  function monacoSet($view, value, language, maxHeight, customOptions, customPaths) {
     if (!(typeof customOptions === 'object')) {
       customOptions = {};
+    }
+    if (!(typeof customPaths === 'object')) {
+      customPaths = {};
     }
 
     var options = $.extend(
@@ -312,8 +315,9 @@
       },
       customOptions
     );
+    var paths = $.extend({ vs: './assets/lib/monaco-editor/min/vs' }, customPaths);
 
-    require.config({ paths: { vs: './assets/lib/monaco-editor/min/vs' } });
+    require.config({ paths: paths });
 
     require(['vs/editor/editor.main'], function () {
       var editor = monaco.editor.create($view.get(0), options);
@@ -340,6 +344,59 @@
     });
   }
 
+  // setting code
+  var settingCode = {
+    render: function () {
+      $('[type="setting-code"]').each(function () {
+        var $this = $(this);
+        var text = $this.text().replace(/^\n+/, '');
+        var tab = text.match(/^( *|	*)./);
+        var value = '';
+        var html = '';
+        var isSet = false;
+        var language = $this.attr('data-language');
+        var title = $this.attr('data-title');
+
+        if (tab) {
+          value = text.replace(new RegExp('^' + tab[1], 'g'), '').replace(new RegExp('\n' + tab[1], 'g'), '\n');
+        } else {
+          value = text;
+        }
+
+        value = value.replace(/ *$|	*$/, '').replace(/<\\\/script>/g, '</script>');
+
+        html += '<div class="_guideIndexSettingCode">';
+        html += '  <div role="button" tabindex="0" class="_guideIndexSettingCode__button">';
+        html += '    ' + title + ' <span>▼</span>';
+        html += '  </div>';
+        html += '  <div class="_guideIndexSettingCode__view"></div>';
+        html += '</div>';
+
+        var $wrap = $(html);
+        var $button = $wrap.find('._guideIndexSettingCode__button');
+        var $buttonText = $wrap.find('._guideIndexSettingCode__button > span');
+        var $view = $wrap.find('._guideIndexSettingCode__view');
+
+        $this.after($wrap);
+
+        $button.on('click.guideJS', function (e) {
+          if (!isSet) {
+            isSet = true;
+            monacoSet($view, value, language, 300, null, { vs: './guide/assets/lib/monaco-editor/min/vs' });
+          }
+
+          if ($wrap.hasClass('isShow')) {
+            $wrap.removeClass('isShow');
+            $buttonText.text('▼');
+          } else {
+            $wrap.addClass('isShow');
+            $buttonText.text('▲');
+          }
+        });
+      });
+    },
+  };
+
   // component code
   var componentCode = {
     render: function () {
@@ -349,6 +406,7 @@
         var tab = text.match(/^( *|	*)./);
         var value = '';
         var html = '';
+        var isSet = false;
 
         if (tab) {
           value = text.replace(new RegExp('^' + tab[1], 'g'), '').replace(new RegExp('\n' + tab[1], 'g'), '\n');
@@ -369,9 +427,12 @@
 
         $this.after($wrap);
 
-        monacoSet($view, value, 'html', 500);
-
         $button.on('click.guideJS', function (e) {
+          if (!isSet) {
+            isSet = true;
+            monacoSet($view, value, 'html', 500);
+          }
+
           if ($wrap.hasClass('isShow')) {
             $wrap.removeClass('isShow');
             $button.text('Show Code ▼');
@@ -455,7 +516,7 @@
         $this.attr('id', 'guideSection' + i);
       });
 
-      $navList.html(html);
+      $navList.append(html);
     },
   };
 
@@ -467,6 +528,8 @@
     index.render();
     index.resize();
     index.scroll();
+
+    settingCode.render();
 
     componentCode.render();
 
