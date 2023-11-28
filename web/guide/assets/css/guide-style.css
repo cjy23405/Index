@@ -139,7 +139,7 @@ body {
 ._guideIndexTable > table > tbody > tr.isEmphasis > td {
   background-color: rgba(var(--guideWarningRgb), 0.2);
 }
-._guideIndexTable > table > tbody > tr.isEmphasis:hover > td {
+._guideIndexTable > table > tbody > tr.isEmphasis:not(.isDelete):hover > td {
   background-color: rgba(var(--guideWarningRgb), 0.4);
 }
 ._guideIndexTable > table > tbody > tr.isDelete > td {
