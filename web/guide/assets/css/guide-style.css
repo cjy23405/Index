@@ -146,8 +146,10 @@ body {
   background-color: var(--guideGray50);
 }
 ._guideIndexTable > table > tbody > tr.isDelete > td,
+._guideIndexTable > table > tbody > tr.isDelete > td._guideIndexTable__update.isEmphasis,
 ._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexTable__link,
 ._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexLog,
+._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexLog__item,
 ._guideIndexTable > table > tbody > tr.isDelete > td ._guideIndexLog__date {
   color: var(--guideGray200);
   text-decoration: line-through;
